@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chefoodu - Restaurant in your pocket</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if @current_user %>
+      <section class="user-main">
+        <p class="UserHeader">
+          Welcome <%= @current_user.name %> !
+          <%= link_to "Sign-out", destroy_session_path, method: "delete" %>
+        </p>
+      </section>
+    <% end %>
+
+
+      <% if flash[:error] %>
+        <p class="Flash-Error">
+          <%= flash[:error] %>
+        </p>
+      <% end %>
+
+    <%= yield %>
+  </body>
+</html>
