@@ -157,3 +157,21 @@ a.cart > span.counter {
 #count {
   display: none;
 }
+
+.fa-user {
+  font-size: 3.5em;
+  padding: 1rem;
+}
+
+.logout-link {
+  font-size: 17px;
+  margin-left: 22px;
+  color: black;
+}
+
+.user-welcome {
+  color: white;
+  font-size: 25px;
+  margin-top: 10px;
+  margin-left: 30px;
+}

@@ -275,15 +275,6 @@ Extra (xl) large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
 */
 
-.UserHeader {
-  padding: 10px;
-  background-color: lightgray;
-  font-size: 14px;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
 .Flash-Error {
   color: darkred;
   margin-bottom: 20px;

@@ -19,14 +19,11 @@
   </head>
 
   <body>
-    <% if @current_user %>
+    <!--<% if @current_user %>
       <section class="user-main">
-        <p class="UserHeader">
-          Welcome <%= @current_user.name %> !
-          <%= link_to "Sign-out", destroy_session_path, method: "delete" %>
-        </p>
+
       </section>
-    <% end %>
+    <% end %>-->
 
 
       <% if flash[:error] %>
