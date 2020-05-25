@@ -1,6 +1,6 @@
 <body data-count="5">
 <main class="cdash-main">
-<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
       <div class="container-fluid">
         <a href="#" class="navbar-brand"><img src="<%= asset_path('logo.png') %>" /></a>
         <p class="user-welcome">Welcome <%= @current_user.name %> !</p>
@@ -42,12 +42,32 @@
     </nav>
 
 
-    <div>
+    <!--<div>
       <a href="#" class="add-to-cart">add to cart</a>
     </div>
 
     <div>
       <a href="#" class="add-to-cart">add to cart</a>
-    </div>
+    </div>-->
 
+
+    <section  class="Menu-display">
+      <div class="Menu-category-section">
+        <% MenuItem.select(:category).distinct.each do |item| %>
+          <div class="category-link">
+            <a href="#<%= item.category %>">
+              <%= item.category %>
+            </a>
+        <% end %>
+      </div>
+
+      <div class="Menu-items-section">
+        <%= MenuItem.select(:category).distinct.each do |item| %>
+          <%= render partial: "menu-grid-section", locals: {
+            menu_items: MenuItem.where(category: item.category),
+            category: item.category }
+          %>
+        <% end %>
+      </div>
+    </section>
 </main>
