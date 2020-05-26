@@ -42,15 +42,6 @@
     </nav>
 
 
-    <!--<div>
-      <a href="#" class="add-to-cart">add to cart</a>
-    </div>
-
-    <div>
-      <a href="#" class="add-to-cart">add to cart</a>
-    </div>-->
-
-
     <section  class="Menu-display">
       <div class="Menu-category-section">
         <% MenuItem.select(:category).distinct.each do |item| %>
@@ -62,7 +53,7 @@
       </div>
 
       <div class="Menu-items-section">
-        <%= MenuItem.select(:category).distinct.each do |item| %>
+        <% MenuItem.select(:category).distinct.each do |item| %>
           <%= render partial: "menu-grid-section", locals: {
             menu_items: MenuItem.where(category: item.category),
             category: item.category }

@@ -1,33 +1,51 @@
-<div class="specific-category-section" id="<%= category %>">
+<p class="Category-title" id="<%= category %>"><%= category %></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="menu-items">
   <div class="row justify-content-center flex">
-    <p><%= category %></p>
-    <%= r = 1 %>
-    <% menu_items.sort.each do|mitem| %>
-      <% if r%4 == 1 %>
-        <div class="container-fluid">
+    <!--<% r = 1 %>-->
+    <% menu_items.each do |mitem| %>
+      <!--<% if r%4 == 1 && r != 1 %>
+        <div class="menu-items container-fluid">
           <div class="row justify-content-center">
-      <% end %>
+      <% end %>-->
+
       <div class="col-lg-3 col-sm-6">
-        <div class="card">
-          <div class="card-front">
-            <%= image_tag "slideshow4.jpg", class: "Item-image" %>
+        <div class="card middle">
+          <div class="front">
+            <img src="test.jpg" alt="">
           </div>
-        <div class="card-back">
-          <h2 class="Item-name">
-            <%= mitem.name %>
-            <br>
-            <span><%= mitem.description %></span>
-          </h2>
-          <div class="add-to-cart">
-            <a href="#" class="add-to-cart">add to cart</a>
+          <div class="back">
+            <div class="back-content middle">
+              <h2><%= mitem.name %></h2>
+              <span><%= mitem.description %></span>
+              <div class="add-cart">
+                <a href="#" class="add-to-cart">add to cart</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <% if r%4 == 1 %>
+
+      <!--<% if r%4 == 1 && r != 1  %>
           </div>
         </div>
-      <% end %>
-      <% r = r+1 %>
+      <% end %>-->
+      <!--<% r = r+1 %>-->
     <% end %>
   </div>
 </div>

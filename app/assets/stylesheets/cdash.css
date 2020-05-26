@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:700);
-@import url(https://fonts.googleapis.com/css?family=Josefin + Sans:400, 700)
-  /*.cdash-main {
+@import url(https://fonts.googleapis.com/css?family=Josefin + Sans:400, 700);
+/*.cdash-main {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
@@ -12,8 +12,8 @@
   height: 72px;
   margin: auto;
   background: #ececec;*/
-  /*position: fixed;*/
-  /*top: 0;
+/*position: fixed;*/
+/*top: 0;
   left: 0;
   right: 0;
   bottom: 0;
@@ -25,7 +25,9 @@
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
     0 1px 2px rgba(0, 0, 0, 0.24);*/
-  /*}*/ a.add-to-cart {
+/*}*/
+
+a.add-to-cart {
   width: 216px;
   height: 48px;
   background: #ffab00;
@@ -39,9 +41,9 @@
   border-radius: 24px;
   text-decoration: none;
   text-align: center;
-  /*left: 24px;*/
+  left: 60px;
   position: absolute;
-  /*top: 48px;*/
+  top: 160px;
   /*display: block;
   box-shadow: 0 3px 6px rgba(255, 171, 0, 0.16),
     0 3px 6px rgba(255, 171, 0, 0.23);
@@ -94,7 +96,7 @@ a.cart {
   color: #616161;
   text-decoration: none;
   /*position: absolute;*/
-  right: 24px;
+  right: 30px;
   top: 36px;
   display: block;
   background: #535558
@@ -175,55 +177,79 @@ a.cart > span.counter {
   margin-left: 30px;
 }
 
+.Menu-items-section {
+  /*height: 95vh;*/
+  margin-top: 7%;
+  margin-left: 20%;
+  padding: 5% 2%;
+  text-align: center;
+  /*align-items: center;
+  overflow: scroll;
+  overflow-x: hidden;*/
+}
+
 .card {
   margin: 0;
-  padding: 0;
-  position: relative;
+  padding: 0 0 72px;
+  z-index: 1;
+  text-decoration: none;
   font-family: "Josefin Sans", sans-serif;
-  height: 400px
-  width: 300px;
+  /*background: #333333;*/
+  cursor: pointer;
+  width: 340px;
+  height: 480px;
+}
+
+.middle {
+  position: relative;
   transform: translate(-50%, -50%);
-  transform-style: preserve-3d;
-    perspective: 600px;
-    transition: .5s;
 }
 
-.card .hover .card-front {
-  transform: rotateX(-180deg);
-}
-
-.card .hover .card-back {
-  transform: rotateX(0deg);
-}
-
-.Item-image {
-  height: 100%;
+.front,
+.back {
   width: 100%;
-  top: 0;
-  left: 0;
+  height: 100%;
+  overflow: hidden;
   backface-visibility: hidden;
-  transform: rotateX(0deg);
-  transition: .5s;
+  position: absolute;
+  transition: transform 0.6s linear;
 }
 
-.card-back {
+.front img {
   height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: #000000;
-  backface-visibility: hidden;
-  transform: rotateX(180deg);
-  transition: .5s;
-  color: #ffffff;
+}
+
+.front {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.back {
+  background: #f1f1f1;
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.back-content {
+  top: 50%;
+  left: 50%;
+  color: #2c3e50;
   text-align: center;
+  width: 100%;
 }
 
-.Item-name {
-  margin: 60% auto 35% auto;
-  font-size: 26px;
+.card:hover > .front {
+  transform: perspective(600px) rotateY(-180deg);
 }
 
-.Item-name span {
-  font-size: 20px;
+.card:hover > .back {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.Category-title {
+  font-size: 30px;
+  display: inline-block;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 2px solid maroon;
+  text-align: center;
 }
