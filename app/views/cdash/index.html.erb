@@ -54,6 +54,9 @@
 
       <div class="Menu-items-section">
         <% MenuItem.select(:category).distinct.each do |item| %>
+          <div class="Category-section">
+            <p class="Category-title" id="<%= item.category %>"><%= item.category %></p>
+          </div>
           <%= render partial: "menu-grid-section", locals: {
             menu_items: MenuItem.where(category: item.category),
             category: item.category }

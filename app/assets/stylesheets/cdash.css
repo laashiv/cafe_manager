@@ -27,7 +27,7 @@
     0 1px 2px rgba(0, 0, 0, 0.24);*/
 /*}*/
 
-a.add-to-cart {
+.add-to-cart {
   width: 216px;
   height: 48px;
   background: #ffab00;
@@ -41,7 +41,7 @@ a.add-to-cart {
   border-radius: 24px;
   text-decoration: none;
   text-align: center;
-  left: 60px;
+  left: 40px;
   position: absolute;
   top: 160px;
   /*display: block;
@@ -53,7 +53,7 @@ a.add-to-cart {
     0 3px 6px rgba(255, 171, 0, 0.23);*/
 }
 
-a.add-to-cart.size {
+.add-to-cart.size {
   width: 48px;
   left: 108px;
   font-size: 0;
@@ -66,7 +66,7 @@ a.add-to-cart.size {
   transition: 0.2s linear;
 }
 
-/*a.add-to-cart.hover {
+.add-to-cart.hover {
   -webkit-transition: 0.2s linear;
   -moz-transition: 0.2s linear;
   -ms-transition: 0.2s linear;
@@ -82,9 +82,9 @@ a.add-to-cart.size {
   -o-transform-origin: 108px 24px;
   -ms-transform-origin: 108px 24px;
   transform-origin: 108px 24px;
-}*/
+}
 
-a.cart {
+.cart {
   width: 72px;
   height: 72px;
   /*font-size: 1.1em !important;*/
@@ -95,9 +95,9 @@ a.cart {
   text-align: center;
   color: #616161;
   text-decoration: none;
-  /*position: absolute;*/
-  right: 30px;
-  top: 36px;
+  position: relative;
+  right: 20px;
+  top: 0px;
   display: block;
   background: #535558
     url(http://images.vfl.ru/ii/1484930184/14435803/15757225.png) center
@@ -110,13 +110,13 @@ a.cart {
     0 3px 6px rgba(97, 97, 97 0.23);*/
 }
 
-a.cart > span {
+.cart > span {
   width: 24px;
   height: 24px;
   font-size: 16px;
   color: #fff;
   line-height: 24px;
-  /*position: absolute;*/
+  position: absolute;
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px;
   border-radius: 12px;
@@ -126,10 +126,10 @@ a.cart > span {
   -ms-transform: scale(0);
   -moz-transform: scale(0);
   -webkit-transform: scale(0);
-  top: 0;
+  /*top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  left: 0;*/
   margin: auto;
   background: #ffab00;
   /*box-shadow: 0 3px 6px rgba(255, 171, 0, 0.16),
@@ -140,7 +140,7 @@ a.cart > span {
     0 3px 6px rgba(255, 171, 0, 0.23);*/
 }
 
-a.cart > span.counter {
+.cart > span.counter {
   left: 48px;
   bottom: 48px;
   -webkit-transition: 0.2s linear;
@@ -179,25 +179,34 @@ a.cart > span.counter {
 
 .Menu-items-section {
   /*height: 95vh;*/
-  margin-top: 7%;
-  margin-left: 20%;
+  margin-top: 30%;
+  /*background: #333333;*/
+  /*margin-left: 20%;*/
   padding: 5% 2%;
   text-align: center;
-  /*align-items: center;
-  overflow: scroll;
-  overflow-x: hidden;*/
+  align-items: center;
+
+  /*overflow: scroll;*/
+  /*overflow-x: hidden;*/
+}
+
+.menu-items {
+  margin-top: 15%;
+  margin-left: 20%;
 }
 
 .card {
   margin: 0;
   padding: 0 0 72px;
   z-index: 1;
+  margin-bottom: 40px;
   text-decoration: none;
   font-family: "Josefin Sans", sans-serif;
   /*background: #333333;*/
   cursor: pointer;
-  width: 340px;
-  height: 480px;
+  width: 300px;
+  height: 440px;
+  border: 0;
 }
 
 .middle {
@@ -251,5 +260,9 @@ a.cart > span.counter {
   margin-top: 10px;
   margin-bottom: 20px;
   border: 2px solid maroon;
-  text-align: center;
+  /*align-items: center;*/
 }
+
+/*.Category-section {
+  margin-bottom: 40px;
+}*/

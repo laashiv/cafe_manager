@@ -29,5 +29,6 @@
   padding: 20px;
   background-color: #0ea86d20;
   border: 0;
+  cursor: pointer;
   border-radius: 8px;
 }
