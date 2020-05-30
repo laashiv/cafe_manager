@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   delete "/signout" => "sessions#destroy", as: :destroy_session
 
   get "/cdash" => "cdash#index"
-  
+  post "/cdash" => "cdash#create"
 end
