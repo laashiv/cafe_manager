@@ -14,9 +14,10 @@ class CdashController < ApplicationController
       menu_item_id: item_id,
       menu_item_name: menu_item.name,
       menu_item_price: menu_item.price,
-      quantity: 0,
+      quantity: 1,
       cart_id: cart.id,
     )
+    cart.update_no_of_items(current_user)
     #redirect_to cdash_path
     #head :no_content
   end
