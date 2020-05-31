@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   def ensure_user_logged_in
     unless current_user
-      # halt that request cycle 
+      # halt that request cycle
       redirect_to "/"
     end
   end
@@ -18,5 +18,9 @@ class ApplicationController < ActionController::Base
     else
       nil
     end
+  end
+
+  def cart
+    return current_user.cart
   end
 end

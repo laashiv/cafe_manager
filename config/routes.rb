@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get "/" => "home#index"
 
   resources :users
+  resources :cart_items
 
   get "/signin" => "sessions#new", as: :new_sessions
   post "/signin" => "sessions#create", as: :sessions

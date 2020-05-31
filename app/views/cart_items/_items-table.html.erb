@@ -1,0 +1,28 @@
+<% cart_items.each do |citem| %>
+  <tr class="bordered">
+    <th scope="row" class="border-0">
+      <div class="p-2">
+        <img src="test.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
+        <div class="ml-3 d-inline-block align-middle">
+          <h5 class="mb-0">
+            <a href="#" class="text-dark d-inline-block align-middle">
+              <%= citem.menu_item_name %>
+            </a>
+          </h5>
+          <span class="text-muted font-weight-normal font-italic d-block">
+            Category: <%= citem.menu_item_category %>
+          </span>
+        </div>
+      </div>
+    </th>
+    <td class="border-0 align-middle">
+      <strong><%= citem.menu_item_price %></strong>
+    </td>
+    <td class="border-0 align-middle">
+      <strong><%= citem.quantity %></strong>
+    </td>
+    <td class="border-0 align-middle">
+      <a href="#" class="text-dark"><i class="fa fa-trash"></i></a>
+    </td>
+  </tr>
+<% end %>
