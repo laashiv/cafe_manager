@@ -19,16 +19,25 @@
       <strong><%= citem.menu_item_price %></strong>
     </td>
     <td class="border-0 align-middle">
-      <strong><%= citem.quantity %></strong>
+      <!--<strong><%= citem.quantity %></strong>-->
+      <div class="number-spinner">
+        <span class="ns-btn">
+		      <a data-dir="dwn"><span class="icon-minus"></span></a>
+        </span>
+        <input type="text" class="pl-ns-value" value="1" maxlength=2>
+        <span class="ns-btn">
+		      <a data-dir="up"><span class="icon-plus"></span></a>
+        </span>
+      </div>
     </td>
     <td class="border-0 align-middle">
-      <!--<%= form_with(url: "/cart_items/#{citem.id}", method: "delete") do %>-->
-      <a href="/cart_items/<%= citem.id %>" data-method="delete">
+      <%= form_with(url: "/cart_items/#{citem.id}", method: :delete, class: "dete-item") do %>
+      <!--<a href="/cart_items/<%= citem.id %>" data-method="delete">-->
         <button type="submit" class="text-dark">
           <i class="fa fa-trash"></i>
         </button>
-      </a>
-      <!--<% end %>-->
+      <!--</a>-->
+      <% end %>
     </td>
   </tr>
 <% end %>
