@@ -22,7 +22,13 @@
       <strong><%= citem.quantity %></strong>
     </td>
     <td class="border-0 align-middle">
-      <a href="#" class="text-dark"><i class="fa fa-trash"></i></a>
+      <!--<%= form_with(url: "/cart_items/#{citem.id}", method: "delete") do %>-->
+      <a href="/cart_items/<%= citem.id %>" data-method="delete">
+        <button type="submit" class="text-dark">
+          <i class="fa fa-trash"></i>
+        </button>
+      </a>
+      <!--<% end %>-->
     </td>
   </tr>
 <% end %>

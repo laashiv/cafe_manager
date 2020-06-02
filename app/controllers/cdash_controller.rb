@@ -18,8 +18,8 @@ class CdashController < ApplicationController
       quantity: 1,
       cart_id: cart.id,
     )
-    cart.update_total(menu_item.price, current_user)
-    cart.update_no_of_items(current_user)
+    cart.increment_total(menu_item.price, current_user)
+    cart.increment_no_of_items(current_user)
     #redirect_to cdash_path
     #head :no_content
   end

@@ -16,3 +16,10 @@ tr.bordered {
 .cart-main .btn {
   border-radius: 2rem !important;
 }
+
+button.text-dark {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
