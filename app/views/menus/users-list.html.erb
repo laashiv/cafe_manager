@@ -1,0 +1,55 @@
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <section id="sideMenu">
+        <div class="toggle-btn" onclick="toggleSidebar()">
+            <span></span>
+            <span></span>
+        </div>
+            <nav id="dashboard-menu"> 
+                <a id="items" href="/" >
+                <i class="fa fa-home" aria-hidden="true"></i>
+                MENU</a>
+                <a id="items" href="/active-menu">
+                <i class="fa fa-meetup" aria-hidden="true"></i>
+                ACTIVE-MENU</a>
+                <a id="items" href="/menu_items">
+                <i class="fa fa-cutlery" aria-hidden="true"></i>
+                MENU_ITEMS</a>
+                <a id="items" href="/orders">
+                <i class="fa fa-history" aria-hidden="true"></i>
+                ORDERS</a>
+                <a id="items" href="#" class="active-dashboard">
+                <i class="fa fa-users" aria-hidden="true"></i>
+                USERS</a>
+                <a id="items" href="/clerks-list">
+                <i class="fa fa-address-card" aria-hidden="true"></i>
+                CLERKS</a>
+                <a id="items" href="/sales">
+                <i class="fa fa-money" aria-hidden="true"></i>
+                SALES</a>
+            </nav>  
+    </section>
+
+    <header class="navigationbar">
+        <diV class="dashboard-text">DASHBORAD</div>
+        <div class="logo">
+        <a href="#" class="navbar-brand"><img src="<%= asset_path('logo.png') %>" /></a>
+        </div>
+        <p class="restaurantname">CHEFOODU</p>
+        <i id="loggedin-icon" class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
+        <a id="logout" href="#">
+        <i class="fa fa-sign-out fa-1.5 x" aria-hidden="true"></i><br>
+        logout</a>
+    </header>
+
+    <section>
+
+        <%= render partial: "users-details", locals: { users: User.all } %>
+
+    </section>
+
+    <script>
+function toggleSidebar(){
+document.getElementById("sideMenu").classList.toggle('active');
+}
+</script>
+

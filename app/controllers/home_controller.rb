@@ -3,7 +3,11 @@ class HomeController < ApplicationController
 
   def index
     if current_user
-      redirect_to cdash_path
+      if current_user.role == "admin"
+        redirect_to "/menus"
+      else
+        redirect_to "/cdash"
+      end
     else
       render "index"
     end

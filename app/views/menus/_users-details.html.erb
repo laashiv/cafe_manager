@@ -1,0 +1,45 @@
+<section style="padding-top: 50px">
+
+ <% users.each do |user| %>
+
+    <% if user.role == "customer" %>
+
+    <div class="user-list-container">
+
+    <div style="width: 300px">
+
+    <p class="user-id"><%= user.id %></p>
+
+    <div style="display: flex">
+
+    <p style="padding-left: 10px">username:</p>
+    <p class="user-name"><%= user.name %></p>
+
+    </div>
+
+    <div style="display: flex">
+
+    <p style="padding-left: 10px">mail_id:</p>
+    <p class="user-mail"><%= user.email %></p>
+
+    </div>
+
+    </div>
+
+    <div style="padding-left: 50px">
+
+    <%= form_with(url: "/users/#{user.id}", method: "put") do %>
+
+    <%= submit_tag("make as clerk" , class: "change-role") %>
+
+    <% end %>
+
+    </div>
+
+    </div>
+
+    <% end %>
+
+<% end %>
+
+</section>

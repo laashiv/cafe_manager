@@ -25,4 +25,20 @@ class UsersController < ApplicationController
     )
     redirect_to "/"
   end
+
+  def update
+    id = params(:id)
+    user = User.find(id)
+    if user.role == "customer"
+      User.role = "clerk"
+    elsif user.role == "clerk"
+      User.role = "customer"
+    end
+    user.save!
+    if user.role == "clerk"
+      redirect_to users_list_path
+    else
+      redirect_to clerks_list_path
+    end
+  end
 end

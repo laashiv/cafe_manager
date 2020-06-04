@@ -23,3 +23,69 @@ button.text-dark {
   padding: 0;
   cursor: pointer;
 }
+
+#clicker {
+  height: 37px;
+  width: 130px;
+  border: 1px solid #6a6464;
+  border-radius: 40px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 10px;
+  box-shadow: 0px 2px 1px gray;
+}
+#leftarrow {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 1px solid #6a6464;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 5px 5px;
+  text-align: center;
+  line-height: 25px;
+  color: #6a6464;
+  box-shadow: 0px 2px 1px gray;
+}
+#leftarrow:hover {
+  cursor: pointer;
+}
+#leftarrow::selection {
+  background-color: transparent;
+}
+#rightarrow {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 1px solid #6a6464;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px 5px;
+  text-align: center;
+  line-height: 25px;
+  color: #6a6464;
+  box-shadow: 0px 2px 1px gray;
+}
+#rightarrow:hover {
+  cursor: pointer;
+}
+#rightarrow::selection {
+  background-color: transparent;
+}
+#counter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: arial;
+  color: #6a6464;
+  font-size: 15px;
+}
+#counter::selection {
+  background-color: transparent;
+}

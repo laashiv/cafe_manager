@@ -15,4 +15,22 @@ Rails.application.routes.draw do
 
   #get "/cart_items" => "cart_items#index"
   #delete "/cart_items" => "cart_items#destroy"
+
+  resources :menus
+  resources :orders
+
+  delete "/menu_items/:id" => "menu_items#destroy"
+  get "/menu_items" => "menu_items#index"
+  get "/active-menu" => "menus#active_menu"
+  post "/menu_items" => "menu_items#create"
+  put "/menu_items/:id" => "menu_items#update"
+  get "/orders" => "orders#index"
+  post "/link_menu_items/:id1/:id2" => "link_menu_items#create"
+  delete "/link_menu_items/:id1/:id2" => "link_menu_items#destroy"
+  put "/orders/:id" => "orders#update"
+  get "/users-list" => "menus#userslist"
+  get "clerks-list" => "menus#clerkslist"
+  put "/users/:id" => "users#update"
+  get "sales" => "menus#sales", as: :report
+  post "datewise_search" => "menus#datewise_search"
 end

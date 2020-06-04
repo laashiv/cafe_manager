@@ -1,0 +1,28 @@
+<section class="Menus-Available" >
+
+<% menus.each do |menu| %>
+
+    <div class = <%= menu.is_active? ? "menus-List":"menus-list" %> >
+    
+    <p class="menu-name"><%= menu.name %></p>
+
+    <% if menu.is_not_active? %> 
+
+    <div class="menu-actions">
+    
+    <%= form_with(url: "/menus/#{menu.id}", method: "put") do %>
+
+    <%= submit_tag("make as active menu" , class: "make-active-menu") %>
+    
+    <% end %>
+
+    </div>
+
+    <% end %>
+
+    </div>
+
+<% end %>
+
+</section>
+
