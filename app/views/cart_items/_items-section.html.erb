@@ -1,11 +1,12 @@
 <% cart_items.each do |citem| %>
+  <body data-id = <%= citem.id %>>
   <tr class="bordered">
     <th scope="row" class="border-0">
       <div class="p-2">
         <img src="test.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
         <div class="ml-3 d-inline-block align-middle">
           <h5 class="mb-0">
-            <a href="#" class="text-dark d-inline-block align-middle">
+            <a id="item-name" href="#" class="text-dark d-inline-block align-middle">
               <%= citem.menu_item_name %>
             </a>
           </h5>
@@ -16,14 +17,18 @@
       </div>
     </th>
     <td class="border-0 align-middle">
-      <strong><%= citem.menu_item_price %></strong>
+      <strong id="price<%= citem.id %>" class="citem-price"><%= citem.menu_item_price %></strong>
     </td>
     <td class="border-0 align-middle">
       <!--<strong><%= citem.quantity %></strong>-->
       <div id="clicker">
-        <div id="leftarrow">&#9668;</div>
-        <div id="counter">0</div>
-        <div id="rightarrow">&#9658;</div>
+        <%= form_with(url: "/cart_items/#{citem.id}?sign=0", method: "put", id: "leftform#{citem.id}") do %>
+          <div id="<%= citem.id %>" class="leftarrow">&#9668;</div>
+        <% end %>
+        <div id="quantity-counter<%= citem.id %>" class="quantity-counter"><%= citem.quantity %></div>
+        <%= form_with(url: "/cart_items/#{citem.id}?sign=1", method: "put", id: "rightform#{citem.id}") do %>
+          <div id="<%= citem.id %>" class="rightarrow">&#9658;</div>
+        <% end %>
       </div>
     </td>
     <td class="border-0 align-middle">

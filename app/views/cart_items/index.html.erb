@@ -60,7 +60,7 @@
                 <ul class="list-unstyled mb-4">
                   <li class="d-flex justify-content-between py-3 border-bottom">
                     <strong class="text-muted">Order Subtotal </strong>
-                    <strong><i class="fas fa-rupee-sign"></i><%= @cart.total %></strong>
+                    <strong class="sub"><i class="fas fa-rupee-sign"></i><div id="subtotal"><%= @cart.total %></div></strong>
                   </li>
                   <li class="d-flex justify-content-between py-3 border-bottom">
                     <strong class="text-muted">Shipping </strong>
@@ -72,7 +72,7 @@
                   </li>
                   <li class="d-flex justify-content-between py-3 border-bottom">
                     <strong class="text-muted">Total</strong>
-                    <h5 class="font-weight-bold"><i class="fas fa-rupee-sign"></i><%= @cart.total + 10 %></h5>
+                    <h5 class="font-weight-bold"><i class="fas fa-rupee-sign"></i><div id="total"><%= @cart.total + 10 %></div></h5>
                   </li>
                 </ul>
                 <a href="#" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a>
