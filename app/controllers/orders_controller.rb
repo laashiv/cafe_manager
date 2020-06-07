@@ -10,4 +10,27 @@ class OrdersController < ApplicationController
     order.save!
     redirect_to orders_path
   end
+
+  def create
+    order = Order.create!(
+      user_id: current_user.id,
+      date: Date.today,
+      total: cart.total,
+    )
+    cart_items = current_user.cart.cart_items
+    cart_items.each do |citem|
+      OrderItem.create!(
+        order_id: order.id,
+        menu_item_id: citem.menu_item_id,
+        menu_item_name: citem.menu_item_name,
+        menu_item_price: citem.menu_item_price,
+        quantity: citem.quantity,
+      )
+      citem.destroy
+    end
+    cart.no_of_items = 0
+    cart.total = 0
+    cart.save!
+    redirect_to "/cdash"
+  end
 end

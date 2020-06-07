@@ -18,14 +18,13 @@
               <h2 class="Name"><%= mitem.name %></h2>
               <span class="Description"><%= mitem.description %></span>
               <h3><i class="fas fa-rupee-sign"></i><%= mitem.price %></h3>
-              <div class="add-cart">
-                <%= form_with(url: "/cdash?mitem_id=#{mitem.id}", method: "post", class: "Add-cart-item", id: "#{mitem.name}") do %>
-                  <%= submit_tag("add to cart", class: "add-to-cart") %>
-                <% end %>
-              </div>
-              <!--<%= form_with(url: "/cdash/#{mitem.id}", method: "post", class: "Add-cart-item") do %>
-                <%= submit_tag("add to cart", class: "add-to-cart") %>
-              <% end %>-->
+              <% if (@cart.cart_items.include?(mitem)) %>
+                <div class="add-cart">
+                  <%= form_with(url: "/cdash?mitem_id=#{mitem.id}", method: "post", class: "Add-cart-item", id: "#{mitem.name}") do %>
+                    <%= submit_tag("add to cart", class: "add-to-cart", id: "#{mitem.id}") %>
+                  <% end %>
+                </div>
+              <% end %>
             </div>
           </div>
         </div>

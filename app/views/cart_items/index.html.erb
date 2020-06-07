@@ -75,7 +75,9 @@
                     <h5 class="font-weight-bold"><i class="fas fa-rupee-sign"></i><div id="total"><%= @cart.total + 10 %></div></h5>
                   </li>
                 </ul>
-                <a href="#" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a>
+                <%= form_with(url: "/orders", method: "post") do %>
+                  <%= submit_tag("Procceed to checkout", class: "btn btn-dark rounded-pill py-2 btn-block") %>
+                <% end %>
             </div>
           </div>
         </div>
