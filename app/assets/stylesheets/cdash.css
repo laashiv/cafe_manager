@@ -267,3 +267,18 @@
 /*.Category-section {
   margin-bottom: 40px;
 }*/
+
+.to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background: #000000;
+  padding: 9px 12px;
+  border-radius: 50%;
+}
+
+.to-top:hover {
+  color: #000000;
+  background: #d7d7d7;
+}

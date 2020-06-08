@@ -1,5 +1,6 @@
 $(document).ready(function () {
   var count = $("body").data("count");
+  var duration = 500;
   /*var id = $(".Name").html();*/
   $(".cart > span").addClass("counter");
   $(".cart > span.counter").text(count);
@@ -17,9 +18,17 @@ $(document).ready(function () {
     setTimeout(function () {
       $(".add-to-cart").removeClass("hover");
       $(".add-to-cart").removeClass("size");
+      $("#" + id).hide();
     }, 600);
-    $("#" + id).hide();
     $(".Name").html().submit();
     event.preventDefault();
+  });
+
+  jQuery(window).scroll(function () {
+    if (jQuery(this).scrollTop() > 250) {
+      jQuery(".to-top").fadeIn(duration);
+    } else {
+      jQuery(".to-top").fadeOut(duration);
+    }
   });
 });
