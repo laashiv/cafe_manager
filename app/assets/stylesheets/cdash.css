@@ -1,13 +1,25 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:700);
 @import url(https://fonts.googleapis.com/css?family=Josefin + Sans:400, 700);
-/*.cdash-main {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-  padding: 0;
-  outline: none;
+.cdash-main {
+  position: relative;
+}
+.cdash-main::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-image: url("back.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
 }
 
-.cdash-main div {
+/*.cdash-main div {
   width: 360px;
   height: 72px;
   margin: auto;
@@ -204,6 +216,9 @@
   text-decoration: none;
   font-family: "Josefin Sans", sans-serif;
   /*background: #333333;*/
+  /*background-image: url("back2.jpg");
+  background-size: cover;*/
+  background: inherit;
   cursor: pointer;
   width: 300px;
   height: 440px;
