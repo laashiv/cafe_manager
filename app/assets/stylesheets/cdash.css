@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:700);
-@import url(https://fonts.googleapis.com/css?family=Josefin + Sans:400, 700);
+@import url(https://fonts.googleapis.com/css?family=Josefin:700);
 .cdash-main {
   position: relative;
 }
@@ -282,6 +282,7 @@
 
 .to-top {
   position: fixed;
+  z-index: 5;
   bottom: 20px;
   right: 20px;
   color: #fff;
@@ -306,8 +307,8 @@
 
 .swiper-container {
   width: 100%;
-  padding-top: 200px;
-  padding-bottom: 50px;
+  padding-top: 130px;
+  padding-bottom: 130px;
   background-color: lightgrey;
 }
 
