@@ -3,6 +3,7 @@
 .cdash-main {
   position: relative;
 }
+
 .cdash-main::before {
   content: "";
   position: absolute;
@@ -192,7 +193,7 @@
 
 .Menu-items-section {
   /*height: 95vh;*/
-  margin-top: 30%;
+  margin-top: 4%;
   /*background: #333333;*/
   /*margin-left: 20%;*/
   padding: 5% 2%;
@@ -279,10 +280,6 @@
   /*align-items: center;*/
 }
 
-/*.Category-section {
-  margin-bottom: 40px;
-}*/
-
 .to-top {
   position: fixed;
   bottom: 20px;
@@ -296,4 +293,51 @@
 .to-top:hover {
   color: #000000;
   background: #d7d7d7;
+}
+
+.category-section {
+  background: #fff;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-container {
+  width: 100%;
+  padding-top: 200px;
+  padding-bottom: 50px;
+  background-color: lightgrey;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 480px;
+}
+
+.swiper-slide .category-image {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.swiper-slide .category-link {
+  box-sizing: border-box;
+  font-size: 20px;
+  padding: 20px;
+  height: 80px;
+  width: 300px;
+  background-color: white;
+}
+
+.swiper-slide .category-link h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  text-align: center;
+  line-height: 20px;
+  color: #f44336;
 }

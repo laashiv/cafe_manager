@@ -44,13 +44,16 @@
 
     <section  class="Menu-display">
       <div class="Menu-category-section">
-        <% MenuItem.select(:category).distinct.each do |item| %>
+        <!--<% MenuItem.select(:category).distinct.each do |item| %>
           <div class="category-link">
             <a href="#<%= item.category %>">
               <%= item.category %>
             </a>
-        <% end %>
+          </div>
+        <% end %>-->
+        <%= render partial: "category-section", locals: {} %>
       </div>
+
 
       <div class="Menu-items-section">
         <% MenuItem.select(:category).distinct.each do |item| %>
