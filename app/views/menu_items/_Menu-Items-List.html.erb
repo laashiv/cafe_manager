@@ -7,27 +7,22 @@
     <p class="menu-item-name"><%= menu_item.name %></p>
     <p class="menu-item-amount"><%= menu_item.price %></p>
 
-    <% if menu_item.image.attached? %>
-    <%= image_tag(menu_item.image) %>
-    <% end %>
-    
-
     <div class="dropdown">
     <button class="dropbtn"><i id="edittext" class="fa fa-pencil fa-2x" aria-hidden="true"></i></button>
         <div class="dropdown-content">
 
         <%= form_with(url: "/menu_items/#{menu_item.id}", method: "put", class: "change-price") do %>
-            
+
             <%= text_field_tag("price", nil, class: "edit-price", placeholder: "increase amount?") %>
             <%= submit_tag("change", class: "edit-price-button") %>
 
         <% end %>
-        
+
         </div>
-    
+
     </div>
 
-                
+
     <%= form_with(url: "/menu_items/#{menu_item.id}", method: "delete") do %>
 
         <button style="background-color:Transparent;border:none" type=submit>
@@ -41,7 +36,3 @@
 <% end %>
 
 </section>
-           
-    
-
-

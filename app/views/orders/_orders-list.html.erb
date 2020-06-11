@@ -8,20 +8,35 @@
 
         <% if !(order.delivered_at)  %>
 
+        <% if @current_user.role != "customer" %>
+
         <div class="deliver-order">
-    
+
             <%= form_with(url: "/orders/#{order.id}", method: "PUT") do %>
 
             <%= submit_tag("deliver?" , class: "deliver") %>
-    
+
             <% end %>
 
         </div>
 
+        <% else %>
+
+        <div class="deliver-order">
+
+        <p>yet to be delivered</p>
+
+        </div>
+
         <% end %>
-        <p class="order-id">#chefoodu$00<%= order.id %></p>
+
+        <% end %>
+
+        <p class="order-id">#chefoodu$<%= order.id %></p>
         <p class="order-date"><%= order.date.to_s(:short) %></p>
         <p class="order-name">name</p>
+
+        <% order_items = order.order_items %>
 
             <% order_items.each do |order_item| %>
 
@@ -38,7 +53,7 @@
                         <p><%= order_item.quantity %></p>
 
                     </div>
-                    
+
                     </div>
 
                 <% end %>
@@ -91,9 +106,11 @@
     </div>
 
     <% end %>
-    <p class="order-id">#chefoodu$00<%= order.id %></p>
+    <p class="order-id">#chefoodu$<%= order.id %></p>
     <p class="order-date"><%= order.date.to_s(:short) %></p>
     <p class="order-name">name</p>
+
+      <% order_items = order.order_items %>
 
         <% order_items.each do |order_item| %>
 
@@ -110,7 +127,7 @@
                     <p><%= order_item.quantity %></p>
 
                 </div>
-                
+
                 </div>
 
             <% end %>
@@ -141,7 +158,7 @@
 
 <% end %>
 
-    
+
 
 
 

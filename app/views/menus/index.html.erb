@@ -38,7 +38,7 @@
         <i id="loggedin-icon" class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
         <a id="logout" href="#">
         <i class="fa fa-sign-out fa-1.5 x" aria-hidden="true"></i><br>
-        logout</a>
+        <%= link_to "Sign-out", destroy_session_path, method: "delete" %></a>
     </header>
 
     <section class="New-Menu">

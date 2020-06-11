@@ -1,3 +1,4 @@
+<% if !(@count == 0) %>
 <main class="cart-main">
 <a href="/cdash" class="close"></a>
 <div class="px-4 px-lg-0">
@@ -87,3 +88,11 @@
   </div>
 </div>
 </main>
+<% else %>
+<main class="cart-empty-section">
+  <a href="/cdash" class="close"></a>
+  <video autoplay muted loop id="myVideo">
+    <source src="<%= asset_path('ufo.mp4') %>">
+  </video>
+</main>
+<% end %>

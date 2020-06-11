@@ -1,7 +1,8 @@
 class Menu < ApplicationRecord
-  #def self.active_menu
-  #  all.where(active: true).first
-  #end
+  has_many :link_menu_items
+  def self.active_menu
+    all.where(active: true).first
+  end
 
   def is_active?
     if self.active

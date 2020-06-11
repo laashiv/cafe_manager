@@ -1,10 +1,16 @@
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">-->
+<% if @current_user.role == "customer" %>
+    <a href="/cdash" class="close"></a>
+<% else %>
     <section id="sideMenu">
         <div class="toggle-btn" onclick="toggleSidebar()">
             <span></span>
             <span></span>
         </div>
-            <nav id="dashboard-menu"> 
+            <nav id="dashboard-menu">
+
+                <% if @current_user.role == "admin" %>
+
                 <a id="items" href="/" >
                 <i class="fa fa-home" aria-hidden="true"></i>
                 MENU</a>
@@ -14,23 +20,37 @@
                 <a id="items" href="/menu_items">
                 <i class="fa fa-cutlery" aria-hidden="true"></i>
                 MENU_ITEMS</a>
+
+                <% end %>
+
                 <a id="items" href="#" class="active-dashboard">
                 <i class="fa fa-history" aria-hidden="true"></i>
                 ORDERS</a>
+
+                <% if @current_user.role == "admin" %>
+
                 <a id="items" href="/users-list">
                 <i class="fa fa-users" aria-hidden="true"></i>
                 USERS</a>
                 <a id="items" href="/clerks-list">
                 <i class="fa fa-address-card" aria-hidden="true"></i>
                 CLERKS</a>
-                <a id="items" href="/sales">
+
+                <% end %>
+
+                <% if @current_user.role == "clerk" %>
+
+                <a id="items" href="/cdash">
                 <i class="fa fa-money" aria-hidden="true"></i>
-                SALES</a>
-            </nav>  
+                OFFLINE ORDER</a>
+
+                <% end %>
+            </nav>
     </section>
 
+
     <header class="navigationbar">
-        <diV class="dashboard-text">DASHBORAD</div>
+        <diV class="dashboard-text">DASHBOARD</div>
         <div class="logo">
         <a href="#" class="navbar-brand"><img src="<%= asset_path('logo.png') %>" /></a>
         </div>
@@ -41,9 +61,17 @@
         logout</a>
     </header>
 
+<% end %>
+
     <section>
 
-    <%= render partial: "orders-list", locals: { orders: Order.all, order_items: OrderItem.all} %>
+    <% if @current_user.role == "customer" %>
+        <% orders = Order.where(user_id: @current_user.id) %>
+    <% else %>
+        <% orders = Order.all %>
+    <% end %>
+
+    <%= render partial: "orders-list", locals: { orders: orders} %>
 
     </section>
 

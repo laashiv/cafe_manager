@@ -1,9 +1,10 @@
 class CdashController < ApplicationController
   def index
     #cart = Cart.find_by(user_id: current_user.id)
+    @current_user = current_user
     @cart = cart
     @count = cart.no_of_items
-    #@active_menu = Menu.active_menu
+    @active_menu = Menu.active_menu
     render "index"
   end
 

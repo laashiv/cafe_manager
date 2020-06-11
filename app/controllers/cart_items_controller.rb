@@ -1,6 +1,7 @@
 class CartItemsController < ApplicationController
   def index
     @cart = cart
+    @count = cart.no_of_items
     render "index"
   end
 

@@ -1,5 +1,5 @@
 class Order < ActiveRecord::Base
-  has_many :orderitems
+  has_many :order_items
 
   def is_pending?
     if self.delivered_at

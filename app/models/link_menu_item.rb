@@ -1,4 +1,5 @@
 class LinkMenuItem < ActiveRecord::Base
+  belongs_to :menus, optional: true
   def self.check_menu_item(menu_id, menu_item_id)
     LinkMenuItem.all.each do |link|
       if link.menu_id == menu_id && link.menu_item_id == menu_item_id

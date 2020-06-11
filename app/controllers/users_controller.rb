@@ -27,12 +27,12 @@ class UsersController < ApplicationController
   end
 
   def update
-    id = params(:id)
+    id = params[:id]
     user = User.find(id)
     if user.role == "customer"
-      User.role = "clerk"
+      user.role = "clerk"
     elsif user.role == "clerk"
-      User.role = "customer"
+      user.role = "customer"
     end
     user.save!
     if user.role == "clerk"
