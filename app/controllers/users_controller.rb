@@ -6,24 +6,41 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.new(
-      name: params[:name],
-      email: params[:email],
-      role: "customer",
-      password: params[:password],
-    )
-    if user.save
-      session[:current_user_id] = user.id
-    else
-      flash[:error] = user.errors.full_messages.join(", ")
+    if params[:email] != "" && (User.find_by(email: params[:email]))
+      flash[:duplicate_account_error] = "You already have an account with the Email Id. Please login to continue."
       redirect_to new_user_path
+    elsif (params[:name] == "" || params[:email] == "" || params[:password] == "" || params[:re_password] == "")
+      if params[:name] == ""
+        flash[:name_error] = "Name is required"
+      end
+      if params[:email] == ""
+        flash[:email_error] = "Email is required: ex@abc.xyz"
+      end
+      if params[:password] == ""
+        flash[:password_error] = "Password is required"
+      end
+      if params[:re_password] == ""
+        flash[:re_password_error] = "Re-enter password is required"
+      end
+      redirect_to new_user_path
+    elsif (params[:password] != params[:re_password])
+      flash[:mismatch_error] = "Password mismatch"
+      redirect_to new_user_path
+    else
+      user = User.create!(
+        name: params[:name],
+        email: params[:email],
+        role: "customer",
+        password: params[:password],
+      )
+      session[:current_user_id] = user.id
+      Cart.create!(
+        user_id: user.id,
+        no_of_items: 0,
+        total: 0,
+      )
+      redirect_to "/"
     end
-    Cart.create!(
-      user_id: user.id,
-      no_of_items: 0,
-      total: 0,
-    )
-    redirect_to "/"
   end
 
   def update

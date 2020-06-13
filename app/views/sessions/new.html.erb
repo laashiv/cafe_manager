@@ -1,4 +1,28 @@
-<main class="user-main">
+<a href="/" class="close"></a>
+<% if flash[:login_error] %>
+	<script type="text/javascript">
+    $(document).ready(function () {
+        $('#modalPush').modal('show');
+    });
+	</script>
+	<div class="modal fade" id="modalPush" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  	<div class="modal-dialog modal-notify modal-info" role="document">
+    	<div class="modal-content text-center">
+      	<div class="modal-header d-flex justify-content-center" style="background-color: #cc0000">
+        	<p class="heading" style="color: white; font-size: 22px; font-weight: 500">Alert</p>
+      	</div>
+      	<div class="modal-body">
+        	<i class="fas fa-exclamation-circle fa-4x" style="color: #cc0000"></i>
+        	<p style="margin-top: 20px"><%= flash[:login_error] %></p>
+      	</div>
+      	<div class="modal-footer justify-content-center">
+					<a type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal" style="font-weight: 540">RETRY</a>
+      	</div>
+    	</div>
+  	</div>
+	</div>
+<% end %>
+<!--<main class="user-main">
   <p class="NewUsers-title">Sign-in!</p>
 
   <section class="UsersNew">
@@ -16,4 +40,69 @@
       </div>
     <% end %>
   </section>
+</main>-->
+
+<main class="login-main">
+  <div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+
+				<%= form_with(url: sessions_path, class: "login100-form validate-form") do|form| %>
+					<span class="login100-form-title">
+						Member Login
+					</span>
+
+					<div class="wrap-input100 validate-input">
+						<!--<input class="input100" type="text" name="email" placeholder="Email">-->
+						<%= form.email_field :email, class: "input100", placeholder: "Email" %>
+						<% if flash[:email_error] %>
+							<span class="alert-validate" data-validate = "<%= flash[:email_error] %>"></span>
+						<% end %>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input">
+						<!--<input class="input100" type="password" name="pass" placeholder="Password">-->
+						<%= form.password_field :password, id: "password-field", type: "password", class: "input100", placeholder: "Password" %>
+						<% if flash[:password_error] %>
+							<span class="alert-validate" data-validate = "<%= flash[:password_error] %>"></span>
+						<% end %>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+						<% if !flash[:password_error] %>
+							<span toggle="#password-field" class="fa fa-fw fa-eye-slash field-icon toggle-password" id="hide"></span>
+						<% end %>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<!--<button class="login100-form-btn">
+							Login
+						</button>-->
+						<%= form.submit "Login", class: "login100-form-btn" %>
+					</div>
+
+					<!--<div class="text-center p-t-12">
+						<span class="txt1">
+							Forgot
+						</span>
+						<a class="txt2" href="#">
+							Username / Password?
+						</a>
+					</div>-->
+
+					<div class="text-center p-t-136">
+						<a class="txt2" href="/users/new">
+							New to Chefoodu? Create an account
+							<i class="fas fa-long-arrow-alt-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
 </main>

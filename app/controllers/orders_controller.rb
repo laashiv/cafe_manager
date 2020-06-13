@@ -32,6 +32,7 @@ class OrdersController < ApplicationController
     cart.no_of_items = 0
     cart.total = 0
     cart.save!
+    flash[:order_success] = "Your order with Order Id: #chefoodu$#{order.id} had been placed successfully"
     redirect_to "/cdash"
   end
 end

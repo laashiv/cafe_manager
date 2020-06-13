@@ -180,7 +180,8 @@
 
 .logout-link {
   font-size: 17px;
-  margin-left: 22px;
+  margin-left: 23px;
+  padding-top: 10px;
   color: black;
 }
 

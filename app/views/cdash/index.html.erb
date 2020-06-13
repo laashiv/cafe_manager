@@ -1,3 +1,27 @@
+<% if flash[:order_success] %>
+	<script type="text/javascript">
+    $(document).ready(function () {
+        $('#modalPush').modal('show');
+    });
+	</script>
+	<div class="modal fade" id="modalPush" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  	<div class="modal-dialog modal-notify modal-info" role="document">
+    	<div class="modal-content text-center">
+      	<div class="modal-header d-flex justify-content-center" style="background-color: #0099ff">
+        	<p class="heading" style="color: white; font-size: 22px; font-weight: 500">Order Placed</p>
+      	</div>
+      	<div class="modal-body">
+        	<i class="fas fa-bell fa-4x" style="color: #0099ff"></i>
+        	<p style="margin-top: 20px"><%= flash[:order_success] %></p>
+      	</div>
+      	<div class="modal-footer justify-content-center">
+					<a type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal" style="font-weight: 540">OK</a>
+      	</div>
+    	</div>
+  	</div>
+	</div>
+<% end %>
+
 <body data-count = <%= @count %>>
 <main class="cdash-main">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
