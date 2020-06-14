@@ -16,7 +16,7 @@ class OrdersController < ApplicationController
     order = Order.create!(
       user_id: current_user.id,
       date: Date.today,
-      total: cart.total,
+      total: cart.total + 10,
     )
     cart_items = current_user.cart.cart_items
     cart_items.each do |citem|

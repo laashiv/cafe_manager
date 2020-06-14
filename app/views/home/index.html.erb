@@ -1,6 +1,6 @@
 <main class="home-main">
 <!-- Navigation -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <nav id="home-nav" class="navbar navbar-expand-md navbar-light bg-light sticky-top">
       <div class="container-fluid">
         <a href="#" class="navbar-brand"><img src="<%= asset_path('logo.png') %>" /></a>
         <button
@@ -52,9 +52,9 @@
             <!--<button type="button" class="btn btn-outline-light btn-lg">
               VIEW MENU
             </button>-->
-            <button type="button" class="btn btn-primary btn-lg">
+            <a href="/cdash" type="button" class="btn btn-primary btn-lg">
               VIEW MENU
-            </button>
+            </a>
           </div>
         </div>
         <div class="carousel-item">
@@ -63,9 +63,9 @@
             <!--<button type="button" class="btn btn-outline-light btn-lg">
               VIEW MENU
             </button>-->
-            <button type="button" class="btn btn-primary btn-lg">
+            <a href="/cdash" type="button" class="btn btn-primary btn-lg">
               VIEW MENU
-            </button>
+            </a>
           </div>
         </div>
         <div class="carousel-item">
@@ -74,9 +74,9 @@
             <!--<button type="button" class="btn btn-outline-light btn-lg">
               VIEW MENU
             </button>-->
-            <button type="button" class="btn btn-primary btn-lg">
+            <a href="/cdash" type="button" class="btn btn-primary btn-lg">
               VIEW MENU
-            </button>
+            </a>
           </div>
         </div>
         <div class="carousel-item">
@@ -85,9 +85,9 @@
             <!--<button type="button" class="btn btn-outline-light btn-lg">
               VIEW MENU
             </button>-->
-            <button type="button" class="btn btn-primary btn-lg">
+            <a href="/cdash" type="button" class="btn btn-primary btn-lg">
               VIEW MENU
-            </button>
+            </a>
           </div>
         </div>
         <div class="carousel-item">
@@ -96,9 +96,9 @@
             <!--<button type="button" class="btn btn-outline-light btn-lg">
               VIEW MENU
             </button>-->
-            <button type="button" class="btn btn-primary btn-lg">
+            <a href="/cdash" type="button" class="btn btn-primary btn-lg">
               VIEW MENU
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -154,7 +154,7 @@
         <div class="col-12">
           <h1 class="display-4">Best Food Guaranteed</h1>
         </div>
-        <hr / >
+        <hr />
         <div class="col-12">
           <p class="lead">
             Welcome to Chefoodu!! We use only the best ingrediants to cook the
@@ -207,10 +207,10 @@
     <!--- Cards -->
     <div class="container-fluid padding">
       <div class="row padding">
-        <div class="col-md-4">
+        <div class="col-md-3">
           <div class="card">
             <img class="card-img-top" src="<%= asset_path('coupan1.png') %>" />
-            <div class="card-body">
+            <div class="cards-body">
               <h4 class="card-title text-center">WELCOME60</h4>
               <p class="card-text text-center">
                 Use this coupan to save 60% on minimum order of Rs.499
@@ -218,7 +218,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <div class="card">
             <img class="card-img-top" src="<%= asset_path('coupan2.png') %>" />
             <div class="card-body">
@@ -230,7 +230,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <div class="card">
             <img class="card-img-top" src="<%= asset_path('coupan3.png') %>" />
             <div class="card-body">
@@ -238,6 +238,17 @@
               <p class="card-text text-center">
                 Use this coupan to get Rs.150 cashback on PayPal order of Rs.499
                 and above
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top" src="<%= asset_path('coupan1.png') %>" />
+            <div class="cards-body">
+              <h4 class="card-title text-center">WELCOME60</h4>
+              <p class="card-text text-center">
+                Use this coupan to save 60% on minimum order of Rs.499
               </p>
             </div>
           </div>
@@ -283,10 +294,10 @@
             <hr class="light" />
             <h5>We deliver to</h5>
             <hr class="light" />
-            <p>New York</p>
-            <p>Durban</p>
-            <p>Amsterdam</p>
-            <p>Wuhan</p>
+            <p>Chennai</p>
+            <p>Mumbai</p>
+            <p>Delhi</p>
+            <p>Kolkata</p>
           </div>
           <div class="col-12">
             <hr class="light-100" />
@@ -295,4 +306,5 @@
         </div>
       </div>
     </footer>
+    <a href="#" class="to-top"><i class="fa fa-chevron-up"></i></a>
 </main>

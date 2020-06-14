@@ -30,6 +30,7 @@
 
     <%= yield %>
 
+    <%= javascript_pack_tag 'home', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'users', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'cdash', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'cart_items', 'data-turbolinks-track': 'reload' %>

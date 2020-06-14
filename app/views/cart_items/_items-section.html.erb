@@ -3,6 +3,11 @@
   <tr class="bordered">
     <th scope="row" class="border-0">
       <div class="p-2">
+        <!--<% if citem.image.attached? %>
+          <%= image_tag(citem.image) %>
+        <% else %>
+          <img class="no-image" src="<%= asset_path('no-image.jpg') %>">
+        <% end %>-->
         <img src="test.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
         <div class="ml-3 d-inline-block align-middle">
           <h5 class="mb-0">
@@ -32,13 +37,13 @@
       </div>
     </td>
     <td class="border-0 align-middle">
-      <!--<%= form_with(url: "/cart_items/#{citem.id}", method: :delete, class: "dete-item") do %>-->
-      <a href="/cart_items/<%= citem.id %>" data-method="delete">
+      <%= form_with(url: "/cart_items/#{citem.id}", method: :delete) do %>
+      <!--<a href="/cart_items/<%= citem.id %>" data-method="delete">-->
         <button type="submit" class="text-dark">
-          <i class="fa fa-trash"></i>
+          <i class="fas fa-trash"></i>
         </button>
-      </a>
-      <!--<% end %>-->
+      <!--</a>-->
+      <% end %>
     </td>
   </tr>
 <% end %>

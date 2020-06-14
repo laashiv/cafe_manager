@@ -1,3 +1,8 @@
+<% if !@current_user %>
+  <h1 class="menu-head">MENU<h1>
+  <a href="/" class="close"></a>
+<% end %>
+<% if @current_user %>
 <% if flash[:order_success] %>
 	<script type="text/javascript">
     $(document).ready(function () {
@@ -21,9 +26,13 @@
   	</div>
 	</div>
 <% end %>
+<% end %>
 
-<body data-count = <%= @count %>>
+<% if @current_user %>
+  <body data-count = <%= @count %>>
+<% end %>
 <main class="cdash-main">
+  <% if @current_user %>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
       <div class="container-fluid">
         <a href="#" class="navbar-brand"><img src="<%= asset_path('logo.png') %>" /></a>
@@ -66,6 +75,7 @@
         </div>
       </div>
     </nav>
+  <% end %>
 
     <!--<section id="sideMenu">
       <div class="toggle-btn" onclick="toggleSidebar()">

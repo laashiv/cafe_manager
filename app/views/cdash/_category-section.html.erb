@@ -4,6 +4,13 @@
               <%= item.category %>
             </a>
         <% end %>-->
+<% if !@current_user %>
+  <style>
+    .swiper-container {
+      margin-top: 15px;
+    }
+  </style>
+<% end %>
 <section class="category-section">
   <div class="swiper-container">
     <div class="swiper-wrapper">
