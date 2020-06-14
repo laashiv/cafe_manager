@@ -100,14 +100,14 @@
 
 
       <div class="Menu-items-section">
-        <% MenuItem.select(:category).distinct.each do |item| %>
+        <%
+          mitem_ids = @active_menu.link_menu_items.map { |item| item.menu_item_id }
+          mitems = MenuItem.where(id: mitem_ids)
+        %>
+        <% mitems.select(:category).distinct.each do |item| %>
           <div class="Category-section">
-            <p class="Category-title" id="<%= item.category %>"><%= item.category %></p>
+            <p class="Category-title" id="<%= item.category.split().join('_') %>"><%= item.category %></p>
           </div>
-          <%
-            mitem_ids = @active_menu.link_menu_items.map { |item| item.menu_item_id }
-            mitems = MenuItem.where(id: mitem_ids)
-          %>
           <%= render partial: "menu-grid-section", locals: {
             #menu_items: MenuItem.where(category: item.category),
             menu_items: mitems.where(category: item.category),

@@ -1,6 +1,7 @@
 class CdashController < ApplicationController
   def index
     #cart = Cart.find_by(user_id: current_user.id)
+    cart.update_cart(current_user)
     @current_user = current_user
     @cart = cart
     @count = cart.no_of_items

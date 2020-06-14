@@ -21,4 +21,21 @@ class Cart < ApplicationRecord
     cart = current_user.cart
     cart.update_column(:total, cart.total - (item_price * quantity))
   end
+
+  def update_cart(current_user)
+    cart = current_user.cart
+    cart_items = cart.cart_items
+    mitem_ids = Menu.active_menu.link_menu_items.map { |item| item.menu_item_id }
+    mitems = MenuItem.where(id: mitem_ids)
+    cart_items.each do |citem|
+      menu_item = mitems.find_by(id: citem.menu_item_id)
+      if (menu_item)
+        citem.update_column(:menu_item_price, menu_item.price)
+      else
+        citem.destroy
+        cart.decrement_total(citem.menu_item_price, citem.quantity, current_user)
+        cart.decrement_no_of_items(current_user)
+      end
+    end
+  end
 end

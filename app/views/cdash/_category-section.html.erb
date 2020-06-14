@@ -7,90 +7,37 @@
 <section class="category-section">
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="category-image">
-          <img src="test.jpg" width="300" height="400"/>
+      <%
+        mitem_ids = @active_menu.link_menu_items.map { |item| item.menu_item_id }
+        mitems = MenuItem.where(id: mitem_ids)
+      %>
+      <% mitems.select(:category).distinct.each do |item| %>
+        <div class="swiper-slide">
+          <div class="category-image">
+            <% menu_items = mitems.where(category: item.category) %>
+            <% image_set = 0 %>
+            <% menu_items.each do |mitem| %>
+              <% if image_set == 0 %>
+                <% if mitem.image.attached? %>
+                  <%= image_tag(mitem.image, width: "300", height: "400") %>
+                  <% image_set = 1 %>
+                <% end %>
+              <% end %>
+            <% end %>
+            <% if image_set == 0 %>
+              <img class="no-image" src="<%= asset_path('no-image.jpg') %>" width="300" height="400" />
+            <% end %>
+            <!--<img src="test.jpg" width="300" height="400"/>-->
+          </div>
+          <div class="category-link">
+            <h3>
+              <a href="#<%= item.category.split().join('_') %>">
+                <%= item.category %>
+              </a>
+            </h3>
+          </div>
         </div>
-        <div class="category-link">
-          <h3><a href="#Dinner">
-              Dinner
-            </a></h3>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="category-image">
-          <img src="test.jpg" width="300" height="400"/>
-        </div>
-        <div class="category-link">
-          <h3>Beverages</h3>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="category-image">
-          <img src="test.jpg" width="300" height="400"/>
-        </div>
-        <div class="category-link">
-          <h3>Beverages</h3>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="category-image">
-          <img src="test.jpg" width="300" height="400"/>
-        </div>
-        <div class="category-link">
-          <h3>Beverages</h3>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="category-image">
-          <img src="test.jpg" width="300" height="400"/>
-        </div>
-        <div class="category-link">
-          <h3>Beverages</h3>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="category-image">
-          <img src="test.jpg" width="300" height="400"/>
-        </div>
-        <div class="category-link">
-          <h3>Beverages</h3>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="category-image">
-          <img src="test.jpg" width="300" height="400"/>
-        </div>
-        <div class="category-link">
-          <h3>Beverages</h3>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="category-image">
-          <img src="test.jpg" width="300" height="400"/>
-        </div>
-        <div class="category-link">
-          <h3>Beverages</h3>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="category-image">
-          <img src="test.jpg" width="300" height="400"/>
-        </div>
-        <div class="category-link">
-          <h3>Beverages</h3>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="category-image">
-          <img src="test.jpg" width="300" height="400"/>
-        </div>
-        <div class="category-link">
-          <h3>Beverages</h3>
-        </div>
-      </div>
-    </div>
-    <!-- Add Pagination -->
+      <% end %>
     <div class="swiper-pagination"></div>
   </div>
   <script>
