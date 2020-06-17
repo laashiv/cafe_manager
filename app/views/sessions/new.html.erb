@@ -47,6 +47,10 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 
+				<div class="login100-pic">
+					<img src="<%= asset_path('login.png') %>">
+				</div>
+
 				<%= form_with(url: sessions_path, class: "login100-form validate-form") do|form| %>
 					<span class="login100-form-title">
 						Member Login
@@ -56,11 +60,11 @@
 						<!--<input class="input100" type="text" name="email" placeholder="Email">-->
 						<%= form.email_field :email, class: "input100", placeholder: "Email" %>
 						<% if flash[:email_error] %>
-							<span class="alert-validate" data-validate = "<%= flash[:email_error] %>"></span>
+							<span class="alert-validate" data-validate = "<%= flash[:email_error] %>"><i class="fas fa-info-circle"></i></span>
 						<% end %>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
+							<i class="fas fa-envelope" aria-hidden="true"></i>
 						</span>
 					</div>
 
@@ -68,7 +72,7 @@
 						<!--<input class="input100" type="password" name="pass" placeholder="Password">-->
 						<%= form.password_field :password, id: "password-field", type: "password", class: "input100", placeholder: "Password" %>
 						<% if flash[:password_error] %>
-							<span class="alert-validate" data-validate = "<%= flash[:password_error] %>"></span>
+							<span class="alert-validate" data-validate = "<%= flash[:password_error] %>"><i class="fas fa-info-circle"></i></span>
 						<% end %>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">

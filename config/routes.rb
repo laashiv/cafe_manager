@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   get "/cdash" => "cdash#index"
   post "/cdash" => "cdash#create"
 
+  get "/contact" => "contact#index"
+  post "/contact" => "contact#popup"
+
   #get "/cart_items" => "cart_items#index"
   #delete "/cart_items" => "cart_items#destroy"
 
@@ -24,7 +27,7 @@ Rails.application.routes.draw do
   get "/active-menu" => "menus#active_menu"
   post "/menu_items" => "menu_items#create"
   put "/menu_items/:id" => "menu_items#update"
-  get "/orders" => "orders#index"
+  get "/orders" => "orders#index", as: :orders_report
   post "/link_menu_items/:id1/:id2" => "link_menu_items#create"
   delete "/link_menu_items/:id1/:id2" => "link_menu_items#destroy"
   put "/orders/:id" => "orders#update"
@@ -33,4 +36,5 @@ Rails.application.routes.draw do
   put "/users/:id" => "users#update"
   get "sales" => "menus#sales", as: :report
   post "datewise_search" => "menus#datewise_search"
+  post "datewise_search_orders" => "orders#datewise_search"
 end

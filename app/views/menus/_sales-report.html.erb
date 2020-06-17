@@ -1,110 +1,70 @@
-<section class="sales-report" >
+<section class = "sales-report" >
 
-<% total_count=0 %>
-<% total_amount=0 %>
+    <% total_count = 0 %>
+    <% total_amount = 0 %>
 
-<% for date in (orders.last.date).downto(orders.first.date) %>
+    <% for date in (orders.last.date).downto(orders.first.date) %>
+        <div class = "datewise-report">
+            <p class = "sales-date">
+                <% if date == Date.today %>
+                    <p class = "today">Today</p>
+                <% elsif date == Date.today-1 %>
+                    <p class = "yesterday">Yesterday</p>
+                <% else %>
+                    <%= date.to_s(:short) %>
+                <% end %>
+            </p>
+            <% sum = 0 %>
+            <% count = 0 %>
 
-<div class="datewise-report">
+            <% orders.each do |order| %>
+                <div class = "report">
+                    <% if order.date == date %>
+                        <div class = "report-list">
+                            <p>#chefoodu$00</p>
+                            <p class="sales-report-id"><%= order.id %></p>
+                            <p>TOTAL:</p>
+                            <i class="fas fa-rupee-sign"></i>
+                            <p class="sales-report-total"><%= order.total %>
+                            <% sum = sum+order.total %>
+                            <% count = count+1 %>
+                            <% total_count = total_count+1 %>
+                            <% total_amount = total_amount+order.total %>
+                        </div>
+                    <% end %>
+                </div>
+            <% end %>
 
-<p class="sales-date">
-
-<% if date == Date.today %>
-
-<p class="today">Today</p>
-
-<% elsif date == Date.today-1 %>
-
-<p class="yesterday">Yesterday</p>
-
-<% else %>
-
-<%= date.to_s(:short) %>
-
-<% end %>
-
-</p>
-
-<% sum=0 %>
-<% count=0 %>
-
-<% orders.each do |order| %>
-
-    <div class="report">
-
-    <% if order.date == date %>
-
-    <div class="report-list">
-
-    <p>#chefoodu$00</p>
-    <p class="sales-report-id"><%= order.id %></p>
-    <p>BILL:</p>
-    <p class="sales-report-total"><%= order.total %>
-    <% sum=sum+order.total %>
-    <% count=count+1 %>
-    <% total_count=total_count+1 %>
-    <% total_amount=total_amount+order.total %>
-
-    </div>
-
-    <% end %>   
-
-    </div>
-
-<% end %>
-
-<div class="report-list-datewise">
-
-<% if count>0 %>
-
-<div style="display: flex">
-
-<p style="padding-left: 10px">orders taken: </p>
-<p class="date-wise-count"><%= count %></p>
-
-</div>
-
-<div style="display: flex">
-
-<p style="padding-left: 10px">sales: </p>
-<p class="date-wise-total"><%= sum %></p>
-
-
-</div>
-
-<% else %>
-
-<p style="padding-left: 400px">no orders taken</p>
-
-<% end %>
-
-</div>
-
-</div>
-
-<% end %>
+            <div class = "report-list-datewise">
+                <% if count > 0 %>
+                    <div style="display: flex">
+                        <p style = "padding-left: 10px">Orders Taken: </p>
+                        <p class = "date-wise-count"><%= count %></p>
+                    </div>
+                    <div class="daywise-total">
+                        <p style="padding-left: 10px">Sales: </p>
+                        <i class="fas fa-rupee-sign"></i>
+                        <p class="date-wise-total"><%= sum %></p>
+                    </div>
+                <% else %>
+                    <p style="padding-left: 400px">No Orders Taken</p>
+                <% end %>
+            </div>
+        </div>
+    <% end %>
 
 </section>
 
 <section class="datewise-stats">
 
-<div class="orderslist">
-
-<p class="total-orders">TOTAL ORDERS TAKEN:</p>
-<p style="padding-left: 10px"><%= total_count %></p>
-
-</div>
-
-<div class="orderslist">
-
-<p class="total-amount">SALES:</p>
-<p style="padding-left: 10px"><%= total_amount %></p>
-
-</div> 
+    <div class="orderslist">
+        <p class="total-orders">TOTAL ORDERS TAKEN:</p>
+        <p style="padding-left: 10px"><%= total_count %></p>
+    </div>
+    <div class="orderslist">
+        <p class="total-amount">SALES:</p>
+        <i class="fas fa-rupee-sign"></i>
+        <p style="padding-left: 10px"><%= total_amount %></p>
+    </div>
 
 </section>
-
-<p class="empty"></p>
-
-
-

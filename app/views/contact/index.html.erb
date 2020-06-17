@@ -1,0 +1,136 @@
+<% if flash[:contact_success] %>
+	<script type="text/javascript">
+    $(document).ready(function () {
+        $('#modalPush').modal('show');
+    });
+	</script>
+	<div class="modal fade" id="modalPush" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  	<div class="modal-dialog modal-notify modal-info" role="document">
+    	<div class="modal-content text-center">
+      	<div class="modal-header d-flex justify-content-center" style="background-color: #00ff00">
+        	<p class="heading" style="color: white; font-size: 22px; font-weight: 500">Message sent</p>
+      	</div>
+      	<div class="modal-body">
+        	<i class="fas fa-paper-plane fa-4x" style="color: #00ff00"></i>
+        	<p style="margin-top: 20px"><%= flash[:contact_success] %></p>
+      	</div>
+      	<div class="modal-footer justify-content-center">
+					<a type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal" style="font-weight: 540">OK</a>
+      	</div>
+    	</div>
+  	</div>
+	</div>
+<% end %>
+<a href="/" class="close"></a>
+<!-- Navigation -->
+    <!--<nav id="home-nav" class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand"><img src="<%= asset_path('logo.png') %>" /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/users/new" class="nav-link">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a href="/signin" class="nav-link">Log In</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link active">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>-->
+
+<main class="contact-main">
+  <div class="contact">
+		<div class="container-contact">
+			<div class="contact-pic">
+				<img src="<%= asset_path('contact.png') %>">
+			</div>
+
+      <%= form_with(url: "/contact", class: "contact-form") do|form| %>
+				<span class="contact-form-title">
+					Get in touch
+				</span>
+
+				<div class="wrap-input">
+					<input class="input" type="text" placeholder="Name">
+					<span class="shadow-input"></span>
+				</div>
+
+				<div class="wrap-input">
+					<input class="input" type="text" placeholder="Email">
+					<span class="shadow-input"></span>
+				</div>
+
+				<div class="wrap-input">
+					<input class="input" type="text" placeholder="Subject">
+					<span class="shadow-input"></span>
+				</div>
+
+				<div class="wrap-input">
+					<textarea class="input" placeholder="Message"></textarea>
+					<span class="shadow-input"></span>
+				</div>
+
+				<div class="container-contact-form-btn">
+					<!--<a class="contact-form-btn">
+						<span>
+							Send Email
+						</span>
+					</a>-->
+          <%= form.submit "Send Email", class: "contact-form-btn" %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</main>
+
+    <!--- Footer -->
+    <!--<footer>
+      <div class="container-fluid padding">
+        <div class="row text-center">
+          <div class="col-md-4">
+            <img src="<%= asset_path('logo.png') %>" />
+            <hr class="light" />
+            <p>8888 8888</p>
+            <p>chefoodu@gmail.com</p>
+          </div>
+          <div class="col-md-4">
+            <hr class="light" />
+            <h5>Our working hours</h5>
+            <hr class="light" />
+            <p>Weekdays: 6am - 12pm</p>
+            <p>Weekends: 9am - 11pm</p>
+          </div>
+          <div class="col-md-4">
+            <hr class="light" />
+            <h5>We deliver to</h5>
+            <hr class="light" />
+            <p>Chennai</p>
+            <p>Mumbai</p>
+            <p>Delhi</p>
+            <p>Kolkata</p>
+          </div>
+          <div class="col-12">
+            <hr class="light-100" />
+            <h5>&copy; chefoodu.herokuapp.com</h5>
+          </div>
+        </div>
+      </div>
+    </footer>-->

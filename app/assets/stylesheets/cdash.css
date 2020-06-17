@@ -16,7 +16,7 @@
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  opacity: 0.4;
+  opacity: 0.5;
   z-index: -1;
 }
 
@@ -174,8 +174,9 @@
 }
 
 .fa-user {
-  font-size: 3.5em;
-  padding: 1rem;
+  font-size: 35px;
+  /*padding: 1rem;*/
+  margin-top: 15px;
 }
 
 .logout-link {
@@ -251,14 +252,14 @@
 }
 
 .back {
-  background: #f1f1f1;
+  background: rgb(85, 70, 94);
   transform: perspective(600px) rotateY(180deg);
 }
 
 .back-content {
   top: 50%;
   left: 50%;
-  color: #2c3e50;
+  color: #dfd7d1;
   text-align: center;
   width: 100%;
 }
@@ -282,14 +283,14 @@
 }
 
 .to-top {
-  font-size: 20px !important;
+  font-size: 20px;
   position: fixed;
   z-index: 5;
   bottom: 20px;
   right: 20px;
   color: #fff;
   background: #000000;
-  padding: 9px 12px;
+  padding: 9px 16px;
   border-radius: 50%;
 }
 
@@ -345,7 +346,7 @@
   color: #f44336;
 }
 
-.no-image {
+.cdash-main .no-image {
   width: 100%;
   height: 100%;
 }
@@ -354,8 +355,75 @@
   padding-top: 10px;
   font-size: 65px;
   font-weight: 900;
-  color: rgb(240, 58, 58);
-  -webkit-text-stroke: 3px rgb(71, 26, 26);
+  color: rgb(233, 24, 24);
+  -webkit-text-stroke: 1px rgb(31, 21, 21);
   font-family: monospace;
   text-align: center;
+}
+
+.cdash-main .search {
+  margin: 0;
+  padding: 0;
+  background: #e84118;
+}
+
+.search-box {
+  margin-top: -1400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #2f3640;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+.search-btn {
+  color: #e84118;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  /*color: white;*/
+  cursor: pointer;
+}
+
+.search-txt {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-box:hover > .search-txt {
+  width: 240px;
+  padding: 0 6px;
+}
+
+.search-box:hover > .search-btn {
+  background: white;
+  /*color: black;*/
+}
+
+.search-btn > i {
+  font-size: 30px;
+}
+
+.no-image {
+  transform: scale(1.8) !important;
 }

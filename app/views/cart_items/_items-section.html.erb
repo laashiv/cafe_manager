@@ -3,12 +3,13 @@
   <tr class="bordered">
     <th scope="row" class="border-0">
       <div class="p-2">
-        <!--<% if citem.image.attached? %>
-          <%= image_tag(citem.image) %>
+        <% mitem = MenuItem.find_by(id: citem.menu_item_id) %>
+        <% if mitem.image.attached? %>
+          <%= image_tag(mitem.image, width: "70", height: "110") %>
         <% else %>
-          <img class="no-image" src="<%= asset_path('no-image.jpg') %>">
-        <% end %>-->
-        <img src="test.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
+          <img src="<%= asset_path('no-image.jpg') %>" width="70" height="110"/>
+        <% end %>
+        <!--<img src="test.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">-->
         <div class="ml-3 d-inline-block align-middle">
           <h5 class="mb-0">
             <a id="item-name" href="#" class="text-dark d-inline-block align-middle">

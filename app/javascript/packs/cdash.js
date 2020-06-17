@@ -31,4 +31,10 @@ $(document).ready(function () {
       jQuery(".to-top").fadeOut(duration);
     }
   });
+
+  /*$("#search-btn").click(function (event) {
+    var box = $($("#this").attr("toggle"));
+    var value = box.attr("value");
+    $(this).attr("href", value);
+  });*/
 });

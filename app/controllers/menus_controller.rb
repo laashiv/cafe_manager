@@ -16,22 +16,35 @@ class MenusController < ApplicationController
   end
 
   def sales
-    if params[:start_date] && params[:end_date] != ""
-      start_date = params[:start_date]
-    else
+    start_date = Order.first.date
+    end_date = Order.last.date
+
+    if params[:start_date] == "" && params[:end_date] == ""
       start_date = Order.first.date
-    end
-    if params[:start_date] && params[:end_date] != ""
+      end_date = Order.last.date
+    elsif params[:start_date] != "" && params[:end_date] == ""
+      start_date = params[:start_date]
+      end_date = Order.last.date
+    elsif params[:start_date] == "" && params[:end_date] != ""
       end_date = params[:end_date]
-    else
-      end_date = Date.today
+      start_date = Order.first.date
+    elsif params[:start_date] && params[:end_date]
+      start_date = params[:start_date]
+      end_date = params[:end_date]
     end
+
     if @orders
       @orders = @orders.where("date >= ? ", start_date)
     else
       @orders = Order.where("date >= ? ", start_date)
     end
-    @orders = @orders.where("date <= ? ", end_date)
+
+    if @orders
+      @orders = @orders.where("date <= ? ", end_date)
+    else
+      @orders = Order.where("date <= ? ", end_date)
+    end
+
     render "sales"
   end
 
@@ -41,16 +54,22 @@ class MenusController < ApplicationController
 
   def create
     name = params[:name]
-    new_menu = Menu.create!(
-      name: name,
-      active: false,
-    )
+    if Menu.count != 0
+      new_menu = Menu.create!(
+        name: name,
+        active: false,
+      )
+    else
+      new_menu = Menu.create!(
+        name: name,
+        active: true,
+      )
+    end
     redirect_to menus_path
   end
 
   def update
     id = params[:id]
-    active = params[:active]
     menu = Menu.find_by(active: true)
     menu.active = false
     menu.save!
@@ -63,7 +82,9 @@ class MenusController < ApplicationController
   def destroy
     id = params[:id]
     menu = Menu.find(id)
-    menu.destroy
+    if !(menu.active)
+      menu.destroy
+    end
     redirect_to menus_path
   end
 end

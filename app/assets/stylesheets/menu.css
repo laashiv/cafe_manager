@@ -1,8 +1,38 @@
+/*.admin-main {
+  position: relative;
+  margin-left: auto;
+  margin-top: auto;
+}
+
+.admin-main::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-image: url("main.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 1;
+  z-index: -1;
+}*/
+
+/*.admin-main {
+  background-color: grey;
+}*/
+
+.toggle-btn {
+  cursor: pointer;
+}
+
 #sideMenu {
   background: rgb(26, 18, 102);
   width: 280px;
   height: 100%;
-  margin-top: 60px;
+  margin-top: 80px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -10,18 +40,21 @@
   transition: all 0.2s ease-in-out;
   z-index: 15;
 }
+
 #sideMenu.active {
   left: 0px;
 }
+
 #dashboard-menu {
   padding-top: 100px;
 }
 #sideMenu .toggle-btn {
   position: absolute;
   margin-left: 300px;
-  margin-top: 10px;
+  margin-top: 30px;
   background: black;
 }
+
 #sideMenu .toggle-btn span {
   display: block;
   width: 30px;
@@ -30,6 +63,7 @@
   background: white;
   transition: all 0.3s ease-in-out;
 }
+
 #items {
   display: block;
   padding: 15px 30px;
@@ -40,6 +74,7 @@
   font-family: sans-serif;
   font-size: 20px;
 }
+
 #items:hover {
   background: rgb(11, 110, 110);
   border-left: 8px solid rgb(167, 118, 28);
@@ -48,62 +83,75 @@
   color: rgb(13, 185, 65);
   transition: all 0.2s ease-in-out;
 }
+
 #dashboard-menu.fa {
   color: white;
   font-size: 3.5;
   padding-right: 10px;
 }
+
 .active-dashboard {
   background-color: rgb(15, 15, 14);
 }
+
 .navigationbar {
   display: flex;
   top: 0px;
-  height: 60px;
+  height: 80px;
   position: absolute;
-  background: rgb(31, 30, 30);
+  background: rgb(56, 56, 56);
   width: 100%;
 }
+
 .dashboard-text {
   margin-left: 0px;
-  color: rgb(111, 121, 145);
-  font-weight: 600;
-  font-size: 24px;
+  color: rgb(221, 226, 236);
+  font-weight: 400;
+  font-size: 28px;
   font-family: sans-serif;
+  padding-top: 15px;
 }
+
 .logo {
   padding-left: 200px;
+  padding-top: 10px;
   color: rgb(199, 169, 114);
 }
+
 .restaurantname {
   margin-left: 30px;
   font-size: 36px;
+  padding-top: 10px;
   font-family: sans-serif;
-  color: rgb(105, 112, 128);
-  font-weight: 600;
+  color: rgb(211, 217, 233);
+  font-weight: 500;
   font-style: bold;
 }
+
 #loggedin-icon {
   margin-left: 890px;
   color: white;
   margin-top: 3px;
 }
+
 #logout {
   margin-left: 35px;
   font-size: 16px;
   color: white;
-  display: inline-block;
-  .fa {
-    color: white;
-    font-size: 3.5;
-  }
+  display: block;
 }
+
+#signout {
+  padding-top: 10px;
+}
+
 .Add-Menu {
   display: flex;
-  padding-left: 600px;
-  margin-top: 100px;
+  padding-left: 750px;
+  margin-top: 150px;
   height: 50px;
 }
+
 .Menu-Name {
   width: 400px;
   margin-right: 10px;
@@ -112,6 +160,7 @@
   border: 1px solid rgb(54, 52, 52);
   color: rgb(46, 42, 42);
 }
+
 .Addmenu-Button {
   width: 100px;
   background: rgb(50, 180, 50);
@@ -120,15 +169,27 @@
   border: 1px solid rgb(74, 80, 74);
   font-weight: 500;
 }
+
 .Menus-Available {
   margin-left: 600px;
-  margin-top: 50px;
+  margin-top: 100px;
   font-size: 16px;
   color: rgb(19, 19, 63);
   height: 24px;
   align-items: center;
   display: block;
 }
+
+.Menus-Available-active {
+  margin-left: 600px;
+  margin-top: 150px;
+  font-size: 16px;
+  color: rgb(19, 19, 63);
+  height: 24px;
+  align-items: center;
+  display: block;
+}
+
 .menus-List {
   display: flex;
   padding-top: 10px;
@@ -140,20 +201,25 @@
   margin-right: 400px;
   align-items: center;
 }
+
 .menus-List:hover {
   background: rgb(153, 62, 153);
   transition: 0.2s ease-in-out;
 }
+
 .menus-List:hover .active-menu {
   background: rgb(29, 29, 116);
 }
+
 .menus-List:hover #edittext {
   visibility: visible;
   background-color: transparent;
 }
+
 .menus-List:hover #Deletemenu-icon {
   visibility: visible;
 }
+
 .menus-list {
   display: flex;
   padding-top: 10px;
@@ -165,20 +231,25 @@
   margin-right: 400px;
   align-items: center;
 }
+
 .menus-list:hover {
   background: rgb(127, 134, 143);
   transition: 0.2s ease-in-out;
 }
+
 .menus-list:hover .active-menu {
   background: rgb(29, 29, 116);
 }
+
 .menus-list:hover #edittext {
   visibility: visible;
   background-color: transparent;
 }
+
 .menus-list:hover #Deletemenu-icon {
   visibility: visible;
 }
+
 .menu-name {
   font-size: 24px;
   color: rgb(18, 18, 94);
@@ -186,37 +257,44 @@
   width: 150px;
   margin-right: 10px;
 }
+
 .menu-actions {
   padding-left: 100px;
   display: flex;
 }
+
 .delete-button {
   width: 30px;
 }
+
 #Deletemenu-icon {
   visibility: hidden;
   color: rgb(141, 24, 24);
   margin-left: 50px;
 }
+
 #edittext {
   padding-left: 150px;
   visibility: hidden;
   color: rgb(28, 28, 158);
 }
+
 .Add-Menu-item {
   display: flex;
   padding-left: 350px;
-  margin-top: 100px;
+  margin-top: 150px;
   height: 50px;
 }
+
 .Menu-item-Name {
-  width: 350px;
+  width: 250px;
   margin-right: 10px;
   background: rgb(187, 220, 233);
   border-radius: 10px;
   border: 1px solid rgb(54, 52, 52);
   color: rgb(46, 42, 42);
 }
+
 .Addmenu-item-Button {
   width: 100px;
   background: rgb(50, 180, 50);
@@ -225,6 +303,7 @@
   border: 1px solid rgb(74, 80, 74);
   font-weight: 500;
 }
+
 .Menu-item-price {
   width: 180px;
   margin-right: 10px;
@@ -233,6 +312,7 @@
   border: 1px solid rgb(54, 52, 52);
   color: rgb(46, 42, 42);
 }
+
 .Menu-item-description {
   width: 350px;
   margin-right: 10px;
@@ -241,6 +321,7 @@
   border: 1px solid rgb(54, 52, 52);
   color: rgb(46, 42, 42);
 }
+
 .Menu-item-category {
   width: 100px;
   margin-right: 10px;
@@ -249,6 +330,17 @@
   border: 1px solid rgb(54, 52, 52);
   color: rgb(46, 42, 42);
 }
+
+.Menu-item-image {
+  display: flex;
+  color: red;
+  padding-top: 5px;
+}
+
+.image-text {
+  padding-right: 5px;
+}
+
 .dropbtn {
   background-color: transparent;
   color: white;
@@ -257,6 +349,7 @@
   border: none;
   cursor: pointer;
 }
+
 .dropbdown:hover {
   transition: 2s all ease-in-out;
 }
@@ -299,18 +392,21 @@
 .dropdown:hover .dropbtn {
   background-color: transparent;
 }
+
 .menuitems {
   display: flex;
 }
+
 .MenuItem-checkbox {
   padding-left: 200px;
   margin-left: 10px;
   color: black;
 }
+
 .menuitems-container {
   display: flex;
   margin-top: 12px;
-  margin-left: 350px;
+  margin-left: 400px;
   margin-right: 500px;
   border-radius: 20px;
   border: 2px solid rgb(54, 52, 52);
@@ -318,44 +414,54 @@
   color: rgb(19, 19, 63);
   background: rgb(165, 173, 190);
 }
+
 .menuitems-container:hover {
   font-size: 24px;
   color: rgb(19, 19, 63);
   background: rgb(97, 110, 141);
   transition: 0.2s all ease-in-out;
 }
+
 .menuitems-container:hover #menuitem-delete {
   visibility: visible;
 }
+
 .menu-item-name {
   padding-left: 20px;
   width: 250px;
 }
+
 .menu-item-amount {
   padding-right: 50px;
 }
+
 #menuitem-delete {
   visibility: hidden;
   color: rgb(141, 24, 24);
   padding-left: 100px;
 }
+
 .image {
   display: block;
 }
+
 .make-active-menu {
   color: black;
-  background: rgba(228, 99, 99, 0.918);
+  background: rgba(233, 187, 187, 0.918);
   font-size: 16px;
   font-weight: 400;
 }
+
 .make-active-menu:hover {
   background: rgba(219, 45, 45, 0.918);
 }
+
 .change-price {
   display: flex;
   width: 200px;
   font-size: 20px;
 }
+
 .edit-price {
   padding-left: 10px;
   width: 200px;
@@ -364,6 +470,7 @@
   border-radius: 2px;
   border: 2px solid rgb(54, 52, 52);
 }
+
 .edit-price-button {
   padding-left: 10px;
   color: black;
@@ -371,9 +478,11 @@
   border-radius: 2px;
   border: 2px solid rgb(54, 52, 52);
 }
+
 .edit-price-button:hover {
   background: rgb(27, 158, 27);
 }
+
 .orders-List {
   display: block;
   margin-left: 500px;
@@ -387,10 +496,12 @@
   align-items: center;
   font-size: 24px;
 }
+
 .orders-List:hover {
   background: rgb(13, 134, 63);
   transition: 0.2s ease-in-out;
 }
+
 .deliver {
   color: black;
   margin-left: 800px;
@@ -415,10 +526,50 @@
   align-items: center;
   font-size: 24px;
 }
+
+.pending-orders {
+  padding-left: 800px;
+  font-size: 36px;
+  font-weight: 400;
+  font-family: sans-serif;
+  color: black;
+}
+
+.pending-text {
+  padding-left: 500px;
+  font-size: 24px;
+  padding-top: 30px;
+}
+
+.deliver-text {
+  padding-left: 500px;
+  font-size: 24px;
+  padding-top: -50px;
+}
+
+.delivered-orders {
+  padding-top: 50px;
+  padding-left: 800px;
+  font-size: 36px;
+  font-weight: 400;
+  font-family: sans-serif;
+  color: black;
+  padding-bottom: 10px;
+}
+
+.not-delivered {
+  padding-left: 700px;
+}
+
+.order-items-name {
+  width: 50px;
+}
+
 .orders-list:hover {
   background: rgb(165, 26, 26);
   transition: 0.2s ease-in-out;
 }
+
 .orders-content {
   display: none;
   position: top;
@@ -428,6 +579,7 @@
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
+
 .order-items {
   display: flex;
   padding-left: 10px;
@@ -440,28 +592,66 @@
   font-size: 24px;
   width: 100%;
 }
+
 .order-items:hover {
   background: rgb(50, 128, 173);
 }
+
 .order-id {
   padding-left: 350px;
 }
+
 .order-date {
   padding-left: 400px;
 }
+
 .order-name {
   padding-left: 50px;
   margin-bottom: 50px;
 }
+
 .order-total {
   padding-left: 100px;
   display: flex;
 }
+
 .order-items-quantity {
   display: flex;
-  padding-left: 500px;
-  margin-right: 100px;
+  margin-left: 500px;
+  width: 205px;
 }
+
+.order_item.quantity {
+  margin-left: 50px;
+}
+
+.bill-amount {
+  padding-left: 700px;
+  display: flex;
+}
+
+.order-items-totalprice .fa-rupee-sign {
+  font-size: 24px;
+  font-weight: 501;
+  padding-left: 5px;
+}
+
+.bill-amount .fa-rupee-sign {
+  margin-left: 10px;
+}
+
+.bill-amount-delivered {
+  padding-left: 70px;
+  display: flex;
+}
+.bill-amount-delivered .fa-rupee-sign {
+  margin-left: 10px;
+}
+
+.order-items-total {
+  padding-left: 10px;
+}
+
 .user-list-container {
   display: flex;
   margin-top: 12px;
@@ -473,128 +663,188 @@
   color: rgb(19, 19, 63);
   background: rgb(165, 173, 190);
 }
+
 .user-list-container:hover {
   font-size: 24px;
   color: rgb(19, 19, 63);
   background: rgb(97, 110, 141);
   transition: 0.2s all ease-in-out;
 }
+
 .user-list-container:hover .change-role {
   visibility: visible;
 }
+
 .user-id {
   padding-left: 20px;
 }
+
 .user-name {
   padding-left: 20px;
   width: 400px;
 }
+
 .user-mail {
   padding-left: 50px;
 }
+
 .change-role {
   visibility: hidden;
   color: rgb(141, 24, 24);
   margin-left: 200px;
   margin-right: 100px;
+  margin-top: 10px;
 }
+
+.change-role:hover {
+  background-color: rgb(70, 61, 61);
+  color: rgb(206, 48, 48);
+}
+
 .dates {
+  padding-left: 650px;
+  padding-top: 150px;
+  font-size: 24px;
+  align-items: stretch;
+  display: flex;
+}
+
+.dates-sales {
   padding-left: 700px;
   padding-top: 150px;
   font-size: 24px;
   align-items: stretch;
   display: flex;
 }
+
 .start-date {
   margin-left: 10px;
-  height: 50px;
+  height: 40px;
   border-radius: 10px;
   border: 2px solid rgb(54, 52, 52);
 }
+
 .end-date {
+  margin-left: 10px;
   padding-left: 10px;
-  height: 50px;
+  height: 40px;
   border-radius: 10px;
   border: 2px solid rgb(54, 52, 52);
 }
+
 .finddate-report {
   margin-left: 20px;
-  height: 50px;
+  height: 40px;
   color: black;
   background: rgb(121, 196, 165);
   border-radius: 10px;
   border: 2px solid rgb(54, 52, 52);
 }
+
 .finddate-report:hover {
   background: rgb(16, 168, 36);
 }
+
 .datewise-report {
   background: rgb(141, 228, 206);
-  margin-top: 10px;
+  margin-top: 20px;
   width: 1000px;
   border-radius: 20px;
   border: 2px solid rgb(54, 52, 52);
 }
+
 .datewise-report:hover {
   background: rgb(65, 175, 148);
 }
+
 .sales-report {
   margin-top: 100px;
   padding-left: 500px;
 }
+
 .report {
   display: block;
 }
+
 .sales-report-id {
   font-size: 24px;
   padding-right: 80px;
 }
+
 .sales-report-total {
-  padding-left: 20px;
+  padding-left: 5px;
   font-size: 24px;
 }
+
 .report-list {
   display: flex;
   padding-left: 300px;
   font-size: 24px;
 }
+
+.report-list .fa-rupee-sign {
+  padding-left: 10px;
+}
+
 .sales-date {
   font-size: 36px;
   font-weight: 500;
   color: black;
   padding-left: 10px;
 }
+
 .today {
   font-size: 36px;
   font-weight: 500;
   padding-left: 10px;
 }
+
 .yesterday {
   font-size: 36px;
   font-weight: 500;
   padding-left: 10px;
 }
+
 .report-list-datewise {
   font-size: 24px;
   font-weight: 200;
 }
+
+.daywise-total {
+  display: flex;
+  padding-left: 10px;
+}
+
+.daywise-total .fa-rupee-sign {
+  padding-left: 10px;
+}
+
+.orderslist .fa-rupee-sign {
+  padding-left: 10px;
+  padding-top: 3px;
+}
+
 .date-wise-count {
   padding-left: 10px;
   font-weight: 400;
 }
+
 .date-wise-total {
-  padding-left: 10px;
+  padding-left: 8px;
   font-weight: 400;
 }
+
 .datewise-stats {
   margin-top: 100px;
   margin-left: 500px;
   width: 1000px;
   background: rgb(104, 36, 144);
 }
+
 .datewise-stats:hover {
   background: rgb(66, 74, 197);
 }
+
 .orderslist {
   display: flex;
   font-size: 36px;
@@ -602,19 +852,30 @@
   color: black;
   align-self: center;
 }
+
 .total-orders {
   font-size: 36px;
   font-weight: 500;
   color: black;
   padding-left: 10px;
 }
+
 .total-amount {
   font-size: 36px;
   font-weight: 500;
   color: black;
   padding-left: 10px;
 }
+
 .empty {
   padding-top: 200px;
   background: none;
+}
+
+.user_name {
+  margin-left: 10px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid rgb(54, 52, 52);
+  width: 180;
 }

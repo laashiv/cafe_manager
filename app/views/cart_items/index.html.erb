@@ -70,11 +70,11 @@
                   </li>
                   <li class="d-flex justify-content-between py-3 border-bottom">
                     <strong class="text-muted">Tax</strong>
-                    <strong><i class="fas fa-rupee-sign"></i>0.00</strong>
+                    <strong>18 %</strong>
                   </li>
                   <li class="d-flex justify-content-between py-3 border-bottom">
                     <strong class="text-muted">Total</strong>
-                    <h5 class="font-weight-bold"><i class="fas fa-rupee-sign"></i><div id="total"><%= @cart.total + 10 %></div></h5>
+                    <h5 class="font-weight-bold"><i class="fas fa-rupee-sign"></i><div id="total"><%= @cart.total + (@cart.total * 0.18) + 10 %></div></h5>
                   </li>
                 </ul>
                 <%= form_with(url: "/orders", method: "post") do %>

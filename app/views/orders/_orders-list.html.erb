@@ -1,165 +1,132 @@
-<section style="padding-top: 100px">
+<section style = "padding-top: 50px">
+
+    <p class = "pending-orders">PENDING-ORDERS</p>
+    <% flag = 0 %>
 
     <% orders.each do |order| %>
-
         <% if !(order.delivered_at) %>
+            <div style = "padding-top: 40px">
+                <div class = <%= order.delivered_at ? "orders-List": "orders-list" %> >
+                    <% if !(order.delivered_at)  %>
+                        <% if @current_user.role != "customer" %>
+                            <div class = "deliver-order">
+                                <%= form_with(url: "/orders/#{order.id}", method: "PUT") do %>
+                                    <%= submit_tag("Deliver" , class: "deliver") %>
+                                <% end %>
+                            </div>
+                        <% else %>
+                            <div class = "not-delivered">
+                                <p>Yet To Be Delivered</p>
+                            </div>
+                        <% end %>
+                    <% end %>
+                    <p class = "order-id">#chefoodu$<%= order.id %></p>
+                    <p class = "order-date"><%= order.date.to_s(:short) %></p>
+                    <p class = "order-name">
+                    <% if User.find_by(id: order.user_id).role == "customer" %>
+                        <%= User.find_by(id: order.user_id).name %></p>
+                    <% else %>
+                        Walk-In-Customer</p>
+                    <% end %>
+                    <% order_items = order.order_items %>
 
-        <div class=<%= order.delivered_at ? "orders-List": "orders-list" %> >
+                    <% order_items.each do |order_item| %>
+                        <% if order.id == order_item.order_id %>
+                            <div class = "order-items">
+                                <p class="order-items-name"><%= order_item.menu_item_name %></p>
+                                <div class = "order-items-quantity" >
+                                    <p><%= order_item.menu_item_price %></p>
+                                    <p>x</p>
+                                    <p><%= order_item.quantity %></p>
+                                </div>
+                                <p class="order-items-totalprice">
+                                    <i class="fas fa-rupee-sign"></i>
+                                    <%= order_item.menu_item_price * order_item.quantity %>
+                                </p>
+                            </div>
+                        <% end %>
+                    <% end %>
 
-        <% if !(order.delivered_at)  %>
-
-        <% if @current_user.role != "customer" %>
-
-        <div class="deliver-order">
-
-            <%= form_with(url: "/orders/#{order.id}", method: "PUT") do %>
-
-            <%= submit_tag("deliver?" , class: "deliver") %>
-
-            <% end %>
-
-        </div>
-
-        <% else %>
-
-        <div class="deliver-order">
-
-        <p>yet to be delivered</p>
-
-        </div>
-
-        <% end %>
-
-        <% end %>
-
-        <p class="order-id">#chefoodu$<%= order.id %></p>
-        <p class="order-date"><%= order.date.to_s(:short) %></p>
-        <p class="order-name">name</p>
-
-        <% order_items = order.order_items %>
-
-            <% order_items.each do |order_item| %>
-
-                <% if order.id == order_item.order_id %>
-
-                    <div class="order-items">
-
-                    <p style="margin-left: 50px, width: 150px"><%= order_item.menu_item_name %></p>
-
-                    <div class="order-items-quantity" >
-
-                        <p><%= order_item.menu_item_price %></p>
-                        <p>x</p>
-                        <p><%= order_item.quantity %></p>
-
+                    <div style = "display: flex">
+                        <% if (order.delivered_at)  %>
+                            <p style = "padding-left: 350px">delivered at:</p>
+                            <p style = "padding-left: 10px"><%= order.delivered_at.to_s(:short) %></p>
+                            <p class = "order-total">BILL :<%= order.total %></p>
+                        <% else %>
+                            <div class="bill-amount">
+                                <p>BILL :</p>
+                                <i class="fas fa-rupee-sign"></i>
+                                <p class="order-items-total"><%= order.total %></p>
+                            </div>
+                        <% end %>
                     </div>
-
-                    </div>
-
-                <% end %>
-
-            <% end %>
-
-            <div style="display: flex">
-
-            <% if (order.delivered_at)  %>
-
-            <p style="padding-left: 350px">delivered at:</p>
-
-            <p style="padding-left: 10px"><%= order.delivered_at.to_s(:short) %></p>
-
-            <p class="order-total"> BILL : <%= order.total %></p>
-
-            <% else %>
-
-            <p style="padding-left: 700px"> BILL : <%= order.total %></p>
-
-            <% end %>
-
+                </div>
+                <% flag = 1 %>
             </div>
-
-        </div>
-
         <% end %>
-
-   <% end %>
-
-
-
-
-   <% orders.each do |order| %>
-
-        <% if order.delivered_at%>
-
-    <div class=<%= order.delivered_at ? "orders-List": "orders-list" %> >
-
-    <% if !(order.delivered_at)  %>
-
-    <div class="deliver-order">
-
-        <%= form_with(url: "/orders/#{order.id}", method: "PUT") do %>
-
-        <%= submit_tag("deliver?" , class: "deliver") %>
-
-        <% end %>
-
-    </div>
-
     <% end %>
-    <p class="order-id">#chefoodu$<%= order.id %></p>
-    <p class="order-date"><%= order.date.to_s(:short) %></p>
-    <p class="order-name">name</p>
 
-      <% order_items = order.order_items %>
+    <% if flag == 0 %>
+        <p class = "pending-text">NO ORDERS PENDING!</p>
+    <% end %>
+    <p class = "delivered-orders">DELIVERED-ORDERS</p>
+    <% flags = 0 %>
 
-        <% order_items.each do |order_item| %>
+    <% orders.each do |order| %>
+        <div style = "padding-top:40px">
+            <% if order.delivered_at %>
+                <div class = <%= order.delivered_at ? "orders-List": "orders-list" %> >
+                    <% if !(order.delivered_at)  %>
+                        <div class = "deliver-order">
+                            <%= form_with(url: "/orders/#{order.id}", method: "PUT") do %>
+                                <%= submit_tag("deliver?" , class: "deliver") %>
+                            <% end %>
+                        </div>
+                    <% end %>
+                    <p class = "order-id">#chefoodu$<%= order.id %></p>
+                    <p class = "order-date"><%= order.date.to_s(:short) %></p>
+                    <p class = "order-name">
+                    <% if User.find_by(id: order.user_id).role == "customer" %>
+                        <%= User.find_by(id: order.user_id).name %></p>
+                    <% else %>
+                        Walk-In-Customer</p>
+                    <% end %>
+                    <% order_items = order.order_items %>
 
-            <% if order.id == order_item.order_id %>
+                    <% order_items.each do |order_item| %>
+                        <% if order.id == order_item.order_id %>
+                            <div class = "order-items">
+                                <p class="order-items-name"><%= order_item.menu_item_name %></p>
+                                <div class = "order-items-quantity" >
+                                    <p><%= order_item.menu_item_price %></p>
+                                    <p>x</p>
+                                    <p><%= order_item.quantity %></p>
+                                </div>
+                                <p class="order-items-totalprice">
+                                    <i class="fas fa-rupee-sign"></i>
+                                    <%= order_item.menu_item_price * order_item.quantity %>
+                                </p>
+                            </div>
+                        <% end %>
+                    <% end %>
 
-                <div class="order-items">
-
-                <p style="margin-left: 50px, width: 150px"><%= order_item.menu_item_name %></p>
-
-                <div class="order-items-quantity" >
-
-                    <p><%= order_item.menu_item_price %></p>
-                    <p>x</p>
-                    <p><%= order_item.quantity %></p>
-
+                    <div style = "display: flex">
+                        <% if (order.delivered_at)  %>
+                            <p style = "padding-left: 350px">delivered at:</p>
+                            <p style = "padding-left: 10px"><%= order.delivered_at.to_s(:short) %></p>
+                            <div class="bill-amount-delivered">
+                                <p>BILL :</p>
+                                <i class="fas fa-rupee-sign"></i>
+                                <p class="order-items-total"><%= order.total %></p>
+                            </div>
+                        <% end %>
+                    </div>
                 </div>
-
-                </div>
-
+                <% flags = 1 %>
             <% end %>
-
-        <% end %>
-
-        <div style="display: flex">
-
-        <% if (order.delivered_at)  %>
-
-        <p style="padding-left: 350px">delivered at:</p>
-
-        <p style="padding-left: 10px"><%= order.delivered_at.to_s(:short) %></p>
-
-        <p class="order-total"> BILL : <%= order.total %></p>
-
-        <% else %>
-
-        <p style="padding-left: 700px"> BILL : <%= order.total %></p>
-
-        <% end %>
-
         </div>
-
-    </div>
-
     <% end %>
 
-<% end %>
-
-
-
-
-
-</section>
+    <% if flags == 0 %>
+        <p class = "deliver-text">NO ORDERS DELIVERED!</p>
+    <% end %>

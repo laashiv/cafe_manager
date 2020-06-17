@@ -68,6 +68,12 @@
                 <% if @current_user.role == "customer" %>
                   <a class="dropdown-item" href="/orders">My Orders</a>
                 <% end %>
+                <% if @current_user.role == "clerk" %>
+                  <a class="dropdown-item" href="/orders">Dashboard</a>
+                <% end %>
+                <% if @current_user.role == "admin" %>
+                  <a class="dropdown-item" href="/menus">Dashboard</a>
+                <% end %>
                 <p class="logout-link"><%= link_to "Sign-out", destroy_session_path, method: "delete" %></p>
               </div>
             </li>
@@ -107,6 +113,15 @@
         <% end %>-->
         <%= render partial: "category-section", locals: {} %>
       </div>
+
+      <!--<div class="search">
+        <div class="search-box">
+          <input type="text" id="searchbox" name="" value="" class="search-txt" placeholder="Type to search"/>
+          <a class="search-btn" id="search-btn" href="#" toggle="#search-box">
+            <i class="fas fa-search"></i>
+          </a>
+        </div>
+      </div>-->
 
 
       <div class="Menu-items-section">

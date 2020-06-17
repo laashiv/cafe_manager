@@ -7,7 +7,8 @@ $(document).ready(function () {
     $price = $("#price" + id).html();
     if ($count > 1) {
       $subtotal = parseFloat($subtotal) - parseFloat($price);
-      $total = parseFloat($total) - parseFloat($price);
+      $total =
+        parseFloat($total) - parseFloat($price) - parseFloat($price) * 0.18;
       $count--;
       $("#quantity-counter" + id).text($count);
       $("#subtotal").text($subtotal);
@@ -29,7 +30,8 @@ $(document).ready(function () {
     $price = $("#price" + id).html();
     if ($count < 10) {
       $subtotal = parseFloat($subtotal) + parseFloat($price);
-      $total = parseFloat($total) + parseFloat($price);
+      $total =
+        parseFloat($total) + parseFloat($price) + parseFloat($price) * 0.18;
       $count++;
       $("#quantity-counter" + id).text($count);
       $("#subtotal").text($subtotal);
