@@ -11,8 +11,8 @@ $(document).ready(function () {
         parseFloat($total) - parseFloat($price) - parseFloat($price) * 0.18;
       $count--;
       $("#quantity-counter" + id).text($count);
-      $("#subtotal").text($subtotal);
-      $("#total").text($total);
+      $("#subtotal").text($subtotal.toFixed(1));
+      $("#total").text($total.toFixed(1));
       $("#leftform" + id).submit();
     }
   });
@@ -34,8 +34,8 @@ $(document).ready(function () {
         parseFloat($total) + parseFloat($price) + parseFloat($price) * 0.18;
       $count++;
       $("#quantity-counter" + id).text($count);
-      $("#subtotal").text($subtotal);
-      $("#total").text($total);
+      $("#subtotal").text($subtotal.toFixed(1));
+      $("#total").text($total.toFixed(1));
       $("#rightform" + id).submit();
     }
   });

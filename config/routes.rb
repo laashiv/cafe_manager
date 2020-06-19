@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   get "/contact" => "contact#index"
   post "/contact" => "contact#popup"
 
+  get "/about" => "about#index"
+
   #get "/cart_items" => "cart_items#index"
   #delete "/cart_items" => "cart_items#destroy"
 

@@ -10,11 +10,11 @@
             <div class = "menu-actions">
                 <%= form_with(url: "/menus/#{menu.id}", method: "delete") do %>
                     <button style = "background-color:Transparent;border:none">
-                        <i id = "Deletemenu-icon" class = "fa fa-trash-o fa-2x" aria-hidden = "true" type = submit></i>
+                        <i id = "Deletemenu-icon" class = "fas fa-trash fa-2x" aria-hidden = "true" type = submit></i>
                     </button>
                 <% end %>
                 <div class = "dropdown">
-                    <button class = "dropbtn"><i id="edittext" class = "fa fa-pencil fa-2x" aria-hidden = "true"></i></button>
+                    <button class = "dropbtn"><i id="edittext" class = "fas fa-pencil-alt fa-2x" aria-hidden = "true"></i></button>
                     <div class = "dropdown-content">
 
                         <% menu_items.each do |menu_item| %>

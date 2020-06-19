@@ -7,7 +7,7 @@
         <% if mitem.image.attached? %>
           <%= image_tag(mitem.image, width: "70", height: "110") %>
         <% else %>
-          <img src="<%= asset_path('no-image.jpg') %>" width="70" height="110"/>
+          <img src="<%= asset_path('no-image.jpg') %>" class="cart-no-image" width="70" height="110"/>
         <% end %>
         <!--<img src="test.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">-->
         <div class="ml-3 d-inline-block align-middle">

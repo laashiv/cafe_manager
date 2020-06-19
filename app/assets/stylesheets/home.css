@@ -77,6 +77,11 @@ body {
   margin-bottom: 1rem;
 }
 
+#column-icon {
+  padding: 0% 3%;
+  margin-right: 2em;
+}
+
 .fa-list-alt {
   color: #e54d26;
 }
@@ -94,6 +99,10 @@ body {
 .fa-bicycle {
   font-size: 4em;
   margin: 1rem;
+}
+
+#coupan-card {
+  padding: 0% 3%;
 }
 
 .social a {
@@ -263,5 +272,5 @@ Extra (xl) large devices (large desktops, 1200px and up)
 */
 
 .home-main .card {
-  height: 450px;
+  height: 470px;
 }

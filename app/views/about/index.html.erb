@@ -1,0 +1,219 @@
+<!-- Navigation -->
+    <nav id="home-nav" class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand"><img src="<%= asset_path('logo.png') %>" /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/users/new" class="nav-link">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a href="/signin" class="nav-link">Log In</a>
+            </li>
+            <li class="nav-item active">
+              <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="/contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <main class="about-main">
+    <!--<div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-12">
+                <h1 class="mbr-section-title align-center mbr-bold pb-3 mbr-fonts-style display-5">Responsive Bootstrap About Us Page Template</h1>
+                <h3 class="display-4">MEET OUR TEAM</h3>
+                <p class="mbr-text align-center pb-3 mbr-fonts-style display-5">
+                    Etiam in libero gravida, viverra ex eu, vehicula leo. Vestibulum eget elementum velit. Fusce viverra erat quis felis auctor, id consequat augue sollicitudin. Vivamus accumsan mi metus, vitae lacinia metus aliquet ornare. Curabitur interdum scelerisque varius. Nullam consequat imperdiet massa eget eleifend.
+                </p>
+            </div>
+        </div>
+    </div>-->
+    <div id="mission" class="jumbotron">
+      <h1 class="display-4 justify-content-center">OUR MISSION</h1>
+      <p class="lead">"Ate, eating, going to eat" that's what you must care about.</p>
+      <p>Quality, Affordability and Accessability. That's our mission.</p>
+      <hr class="my-4">
+      <p>
+        We are committed at maintaining high standards of hygiene at workplace.
+        For us hygiene is a coveted mark of quality.
+      </p>
+      <p>
+        We have provided the benifit of choice. We are leaving no stone unturned
+        when it comes to making food affordable without compromising on our profitability.
+      </p>
+      <p>
+        Our service is expanding to more and more cities. We are actively growing
+        our services.
+      </p>
+      <!--<p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </p>-->
+    </div>
+
+    <figure class="figure">
+      <!--<div class="fixed-wrap">-->
+        <div id="fixed">
+        </div>
+      <!--</div>-->
+    </figure>
+
+    <div id="slogan" class="jumbotron jumbotron-fluid">
+        <p class="lead">
+          Bringing the best food to you. That is what we are working at.
+          For us food is not just business, its a connection and we are
+          ready to go the extra mile to make your experience memorable.
+          We sit down with our chefs, jotting down menus that will arrive
+          fresh and full of flavour. Try us!
+        </p>
+    </div>
+
+    <h2 class="about-icon-head">HOW IT WORKS</h2>
+
+    <div id="column-icon" class="container-fluid padding">
+      <div class="row text-center padding">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <img class="about-icon" src="<%= asset_path('order.png') %>" />
+          <h3>ORDER</h3>
+          <p>
+            Discover our wide variety of menus and choose the tasty meal
+            of your desire.
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <img class="about-icon" src="<%= asset_path('relax.png') %>" />
+          <h3>RELAX</h3>
+          <p>
+            Sit back and relax as we prepare your order.
+          </p>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <img class="about-icon" src="<%= asset_path('enjoy.png') %>" />
+          <h3>ENJOY</h3>
+          <p>
+            Our riders will pick your order and bring it to you. Enjoy!
+          </p>
+        </div>
+      </div>
+      <hr class="my-4" />
+    </div>
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carousel-caption">
+            <div class="col-md-12">
+              <div class="founder-img">
+                <img src="<%= asset_path('vishaal.jpeg') %>" />
+              </div>
+              <div class="founder-text">
+                <p>
+                  His 'soul food' list is as interesting as his wicked sense of humour. He
+                  finds immense joy in annoying people around him, expressing the mysteries of the
+                  world in the form of abstract math. He likes to travel around and explore
+                  new people and food. Likewise, he is always thinking about burning the
+                  calories gained while munching@work, a fitness freak.
+                </p>
+              </div>
+              <div class="founder-name">
+                <p>Vishaal</p>
+              </div>
+              <div class="founder-designation">
+                <p>CO-FOUNDER AND CEO</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption">
+            <div class="col-md-12">
+              <div class="founder-img">
+                <img src="<%= asset_path('arun.jpeg') %>" />
+              </div>
+              <div class="founder-text">
+                <p>
+                  Butter chicken with naan is his weakness. His love for cricket is next
+                  only to food. When not working, you can see him either at the TV when a India
+                  match is on, or watching Virat Kohli's knock in the Johannesburg Test in 2013
+                  for the 133rd time. We would be proud to say that he has led many successful
+                  initiatives at Chefoodu.
+                </p>
+              </div>
+              <div class="founder-name">
+                <p>Arun</p>
+              </div>
+              <div class="founder-designation">
+                <p>CO-FOUNDER AND COO</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <div id="about-thank" class="jumbotron jumbotron-fluid">
+        <p class="lead">
+          Thankyou for choosing us!
+        </p>
+        <p>Though divided by distances we will always be united by food.</p>
+    </div>
+
+  </main>
+
+    <footer>
+      <div class="container-fluid padding">
+        <div class="row text-center">
+          <div class="col-md-4">
+            <img src="<%= asset_path('logo.png') %>" />
+            <hr class="light" />
+            <p>8888 8888</p>
+            <p>chefoodu@gmail.com</p>
+          </div>
+          <div class="col-md-4">
+            <hr class="light" />
+            <h5>Our working hours</h5>
+            <hr class="light" />
+            <p>Weekdays: 6am - 12pm</p>
+            <p>Weekends: 9am - 11pm</p>
+          </div>
+          <div class="col-md-4">
+            <hr class="light" />
+            <h5>We deliver to</h5>
+            <hr class="light" />
+            <p>Chennai</p>
+            <p>Mumbai</p>
+            <p>Delhi</p>
+            <p>Kolkata</p>
+          </div>
+          <div class="col-12">
+            <hr class="light-100" />
+            <h5>&copy; chefoodu.herokuapp.com</h5>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#" class="to-top"><i class="fa fa-chevron-up"></i></a>

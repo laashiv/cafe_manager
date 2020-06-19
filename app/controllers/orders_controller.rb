@@ -75,7 +75,7 @@ class OrdersController < ApplicationController
     order = Order.create!(
       user_id: current_user.id,
       date: Date.today,
-      total: cart.total + 10,
+      total: cart.total + (cart.total * 0.18) + 10,
     )
 
     if current_user.role != "customer"

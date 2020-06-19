@@ -7,7 +7,7 @@
 
             <div class = "dropdown">
                 <button class = "dropbtn">
-                    <i id = "edittext" class = "fa fa-pencil fa-2x" aria-hidden = "true"></i>
+                    <i id = "edittext" class = "fas fa-pencil-alt fa-2x" aria-hidden = "true"></i>
                 </button>
                 <div class = "dropdown-content">
                     <%= form_with(url: "/menu_items/#{menu_item.id}", method: "put", class: "change-price") do %>
@@ -19,7 +19,7 @@
 
             <%= form_with(url: "/menu_items/#{menu_item.id}", method: "delete") do %>
                 <button style="background-color:Transparent;border:none" type = submit>
-                    <i  id = "menuitem-delete" class = "fa fa-trash-o fa-2x" aria-hidden = "true" ></i>
+                    <i  id = "menuitem-delete" class = "fas fa-trash" aria-hidden = "true" ></i>
                 </button>
             <% end %>
 

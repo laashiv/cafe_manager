@@ -195,7 +195,7 @@
 
 .Menu-items-section {
   /*height: 95vh;*/
-  margin-top: 4%;
+  margin-top: 10%;
   /*background: #333333;*/
   /*margin-left: 20%;*/
   padding: 5% 2%;
@@ -207,7 +207,7 @@
 }
 
 .menu-items {
-  margin-top: 15%;
+  margin-top: 20%;
   margin-left: 20%;
 }
 
@@ -215,7 +215,7 @@
   margin: 0;
   padding: 0 0 72px;
   z-index: 1;
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
   text-decoration: none;
   font-family: "Josefin Sans", sans-serif;
   /*background: #333333;*/

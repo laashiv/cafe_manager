@@ -44,7 +44,7 @@
                     <div class="daywise-total">
                         <p style="padding-left: 10px">Sales: </p>
                         <i class="fas fa-rupee-sign"></i>
-                        <p class="date-wise-total"><%= sum %></p>
+                        <p class="date-wise-total"><%= (sum).round(1) %></p>
                     </div>
                 <% else %>
                     <p style="padding-left: 400px">No Orders Taken</p>
@@ -64,7 +64,7 @@
     <div class="orderslist">
         <p class="total-amount">SALES:</p>
         <i class="fas fa-rupee-sign"></i>
-        <p style="padding-left: 10px"><%= total_amount %></p>
+        <p style="padding-left: 10px"><%= (total_amount).round(1) %></p>
     </div>
 
 </section>

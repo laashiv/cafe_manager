@@ -1,0 +1,234 @@
+/*.about-main {
+  background-color: #eeeeee;
+  color: #232323;
+}
+
+.container {
+  position: relative;
+  word-wrap: break-word;
+}
+
+h1,
+h2,
+.display-2 {
+  line-height: 1;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+.mbr-white {
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .mbr-section-title {
+    text-align: center;
+  }
+}
+
+.mbr-light {
+  font-weight: 300;
+}
+
+.mbr-bold {
+  font-weight: 700;
+}
+
+.mbr-bold {
+  font-weight: 700;
+}*/
+
+#mission {
+  background-color: rgb(211, 35, 73);
+  padding: 3% 6%;
+  color: azure;
+}
+
+.about-main h1 {
+  font-size: 32px;
+  margin-bottom: 1.2em;
+}
+
+figure {
+  /*position: relative;
+  width: 100%;
+  height: 60%;*/
+  margin: 0 !important;
+}
+
+/*.figure .fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}*/
+
+#fixed {
+  background-image: url("about-img.jpg");
+  height: 37em;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  /*position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;*/
+}
+
+#slogan {
+  margin-top: 0.8em;
+  padding: 1%;
+  padding-bottom: 0.2em;
+  padding-left: 7em;
+  padding-right: 7em;
+  text-align: center;
+}
+
+#slogan p {
+  font-size: 18px;
+}
+
+.about-icon {
+  width: 10em;
+  height: 10em;
+  margin: 5%;
+  margin-bottom: 4em;
+}
+
+.about-main h3 {
+  font-weight: 550;
+  color: rgb(211, 35, 73);
+  margin-bottom: 1em;
+}
+
+.about-icon-head {
+  color: rgb(211, 35, 73);
+  font-size: 38px;
+  text-align: center;
+  margin-top: 2.4em;
+  margin-bottom: 0.8em;
+  font-weight: 700;
+}
+
+#mission .lead {
+  font-size: 24px;
+}
+
+#mission p {
+  font-size: 17px;
+}
+
+#mission h1 {
+  font-size: 32px;
+}
+
+/*body {
+  background-color: #000;
+}*/
+
+.about-main .carousel {
+  margin-top: 50px;
+  background-color: rgb(237, 249, 252);
+}
+
+.about-main .carousel-inner {
+  height: 590px;
+}
+
+.about-main .carousel-caption {
+  color: #232323;
+  margin-top: 5em;
+}
+
+.founder-img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 1.6rem;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto 2rem auto;
+}
+
+.founder-img img {
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.founder-text {
+  padding-bottom: 1rem !important;
+  padding-top: 1rem;
+}
+
+.founder-text p {
+  font-family: "Rubix", sans-serif;
+  font-size: 1.2rem;
+}
+
+.founder-name {
+  margin-top: 1rem;
+}
+
+.founder-name p {
+  font-family: "Rubix", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.founder-designation p {
+  font-family: "Rubix", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  filter: invert(100%);
+}
+
+@media (max-width: 992px) {
+  .about-main .carousel-inner {
+    height: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-main .carousel-inner {
+    height: 740px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-main .carousel-inner {
+    height: 820px;
+  }
+}
+
+#about-thank {
+  background-color: rgb(211, 35, 73);
+  text-align: center;
+  margin-top: 0.8em;
+  padding: 1%;
+  padding-bottom: 0.2em;
+  padding-left: 7em;
+  padding-right: 7em;
+}
+
+#about-thank .lead {
+  font-size: 22px !important;
+}
+
+#about-thank p {
+  color: white;
+  font-size: 18px;
+}
