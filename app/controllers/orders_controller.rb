@@ -79,7 +79,7 @@ class OrdersController < ApplicationController
     )
 
     if current_user.role != "customer"
-      order.user_id = 27
+      order.user_id = 1
       order.save!
     end
 
