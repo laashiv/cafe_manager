@@ -28,6 +28,12 @@
       </section>
     <% end %>-->
 
+      <% if flash[:error] %>
+        <p class="Flash-Error">
+          <%= flash[:error] %>
+        </p>
+      <% end %>
+
     <%= yield %>
 
     <%= javascript_pack_tag 'home', 'data-turbolinks-track': 'reload' %>

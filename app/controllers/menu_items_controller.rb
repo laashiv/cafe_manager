@@ -5,8 +5,12 @@ class MenuItemsController < ApplicationController
 
   def create
     new_menu_item = MenuItem.new(menu_item_params)
-    new_menu_item.save!
-    redirect_to menu_items_path
+    if new_menu_item.save
+      redirect_to menu_items_path
+    else
+      flash[:error] = new_menu_item.errors.full_messages.join(" , ")
+      redirect_to menu_items_path
+    end
   end
 
   def update
