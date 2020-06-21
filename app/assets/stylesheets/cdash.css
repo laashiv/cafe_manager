@@ -262,15 +262,19 @@
 }
 
 .back h2 {
-  font-size: 3.9vh;
+  font-size: 2.7vh;
+  margin-bottom: 1.5px !important;
+  padding: 0px;
 }
 
 .back span {
-  font-size: 2.2vh;
+  font-size: 1.7vh;
+  margin-bottom: 1.5px !important;
+  padding: 0px;
 }
 
 .back h3 {
-  font-size: 3.9vh;
+  font-size: 2.7vh;
 }
 
 .back-content {
