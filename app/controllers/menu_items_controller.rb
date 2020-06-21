@@ -29,9 +29,7 @@ class MenuItemsController < ApplicationController
     redirect_to menu_items_path
   end
 
-  private
-
-  def menu_item_params
+  private def menu_item_params
     params.permit(:name, :price, :description, :category, :image)
   end
 end
