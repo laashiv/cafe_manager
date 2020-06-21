@@ -54,9 +54,9 @@
   border-radius: 2.93vh;
   text-decoration: none;
   text-align: center;
-  left: 2.88vh;
-  position: absolute;
-  top: 28vh;
+  /*left: 2.88vh;*/
+  position: relative;
+  /*top: 28vh;*/
   cursor: pointer;
   /*display: block;
   box-shadow: 0 3px 6px rgba(255, 171, 0, 0.16),
@@ -275,6 +275,7 @@
 
 .back h3 {
   font-size: 2.7vh;
+  margin-bottom: 40px;
 }
 
 .back-content {
