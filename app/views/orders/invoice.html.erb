@@ -35,7 +35,7 @@
                     <span class="paypal__index"><%= sno %></span>
                     <span class="paypal__item-name"><%= item.menu_item_name %></span>
                     <span class="paypal__item-name"> X <%= item.quantity %></span>
-                    <span class="paypal__item-price">Rs <%= item.menu_item_price %></span>
+                    <span class="paypal__item-price">Rs <%= item.menu_item_price * item.quantity %></span>
                 </li>
                 <% sno = sno + 1 %>
             <% end %>
