@@ -41,22 +41,22 @@
 /*}*/
 
 .add-to-cart {
-  width: 216px;
-  height: 48px;
+  width: 26.37vh;
+  height: 5.86vh;
   background: #ffab00;
-  font-size: 18px;
-  line-height: 48px;
-  letter-spacing: 2px;
+  font-size: 2.2vh;
+  line-height: 5.86vh;
+  letter-spacing: 0.24vh;
   color: rgb(255, 255, 255);
   text-transform: uppercase;
-  -moz-border-radius: 24px;
-  -webkit-border-radius: 24px;
-  border-radius: 24px;
+  -moz-border-radius: 2.93vh;
+  -webkit-border-radius: 2.93vh;
+  border-radius: 2.93vh;
   text-decoration: none;
   text-align: center;
-  left: 40px;
+  left: 2.88vh;
   position: absolute;
-  top: 160px;
+  top: 19.54vh;
   cursor: pointer;
   /*display: block;
   box-shadow: 0 3px 6px rgba(255, 171, 0, 0.16),
@@ -68,8 +68,8 @@
 }
 
 .add-to-cart.size {
-  width: 48px;
-  left: 108px;
+  width: 5.86vh;
+  left: 13.19vh;
   font-size: 0;
   color: #e7bb45;
   letter-spacing: 0;
@@ -91,11 +91,11 @@
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
-  -webkit-transform-origin: 108px 24px;
-  -moz-transform-origin: 108px 24px;
-  -o-transform-origin: 108px 24px;
-  -ms-transform-origin: 108px 24px;
-  transform-origin: 108px 24px;
+  -webkit-transform-origin: 13.19vh 2.93vh;
+  -moz-transform-origin: 13.19vh 2.93vh;
+  -o-transform-origin: 13.19vh 2.93vh;
+  -ms-transform-origin: 13.19vh 2.93vh;
+  transform-origin: 13.19vh 2.93vh;
 }
 
 .cart {
