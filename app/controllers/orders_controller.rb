@@ -63,6 +63,12 @@ class OrdersController < ApplicationController
     redirect_to orders_report_path(start_date: params[:start_date], end_date: params[:end_date], user: params[:user])
   end
 
+  def invoice
+    id = params[:id]
+    @invoice = Order.find_by(id: id)
+    render "invoice"
+  end
+
   def update
     id = params[:id]
     order = Order.find(id)

@@ -20,6 +20,9 @@
                             </div>
                         <% end %>
                     <% end %>
+                    <div class="invoice">
+                        <p><%= link_to "INVOICE" , "/invoice?id=#{order.id}" %></p>
+                    </div>
                     <p class = "order-id">#chefoodu$<%= order.id %></p>
                     <p class = "order-date"><%= order.date.to_s(:short) %></p>
                     <p class = "order-name">
@@ -83,6 +86,9 @@
                             <% end %>
                         </div>
                     <% end %>
+                    <div class="invoice">
+                        <p><%= link_to "INVOICE" , "/invoice?id=#{order.id}" %></p>
+                    </div>
                     <p class = "order-id">#chefoodu$<%= order.id %></p>
                     <p class = "order-date"><%= order.date.to_s(:short) %></p>
                     <p class = "order-name">

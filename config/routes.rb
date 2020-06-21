@@ -39,4 +39,5 @@ Rails.application.routes.draw do
   get "sales" => "menus#sales", as: :report
   post "datewise_search" => "menus#datewise_search"
   post "datewise_search_orders" => "orders#datewise_search"
+  get "invoice" => "orders#invoice"
 end

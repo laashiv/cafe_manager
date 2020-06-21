@@ -19,7 +19,7 @@ google:
   service: GCS
   project: chefoodu
   credentials: <%= Rails.application.credentials.gcs_menu_item_pics.to_json %>
-  bucket: menu-item-img
+  bucket: menu_item_pics
 # Use rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)
 # microsoft:
 #   service: AzureStorage
