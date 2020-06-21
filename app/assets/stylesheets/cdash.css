@@ -247,6 +247,11 @@
   height: 100%;
 }
 
+.mitem-img {
+  width: 36.63vh;
+  height: 53.72vh;
+}
+
 .front {
   transform: perspective(63.22vh) rotateY(0deg);
 }

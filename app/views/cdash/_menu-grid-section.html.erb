@@ -12,7 +12,7 @@
         <div class="card middle">
           <div class="front">
             <% if mitem.image.attached? %>
-              <%= image_tag(mitem.image, width: "300", height: "440") %>
+              <%= image_tag(mitem.image, class: "mitem-img") %>
             <% else %>
               <img class="no-image" src="<%= asset_path('no-image.jpg') %>">
             <% end %>
