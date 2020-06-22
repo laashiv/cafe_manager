@@ -1,11 +1,11 @@
-<section style = "padding-top: 50px">
+<section style = "padding-top: 6.1vh">
 
     <p class = "pending-orders">PENDING-ORDERS</p>
     <% flag = 0 %>
 
     <% orders.each do |order| %>
         <% if !(order.delivered_at) %>
-            <div style = "padding-top: 40px">
+            <div style = "padding-top: 4.88vh">
                 <div class = <%= order.delivered_at ? "orders-List": "orders-list" %> >
                     <% if !(order.delivered_at)  %>
                         <% if @current_user.role != "customer" %>
@@ -52,8 +52,8 @@
 
                     <div style = "display: flex">
                         <% if (order.delivered_at)  %>
-                            <p style = "padding-left: 350px">delivered at:</p>
-                            <p style = "padding-left: 10px"><%= order.delivered_at.to_s(:short) %></p>
+                            <p style = "padding-left: 42.73vh">delivered at:</p>
+                            <p style = "padding-left: 1.22vh"><%= order.delivered_at.to_s(:short) %></p>
                             <p class = "order-total">BILL :<%= order.total %></p>
                         <% else %>
                             <div class="bill-amount">
@@ -76,7 +76,7 @@
     <% flags = 0 %>
 
     <% orders.each do |order| %>
-        <div style = "padding-top:40px">
+        <div style = "padding-top: 4.88vh">
             <% if order.delivered_at %>
                 <div class = <%= order.delivered_at ? "orders-List": "orders-list" %> >
                     <% if !(order.delivered_at)  %>
@@ -118,8 +118,8 @@
 
                     <div style = "display: flex">
                         <% if (order.delivered_at)  %>
-                            <p style = "padding-left: 350px">delivered at:</p>
-                            <p style = "padding-left: 10px"><%= order.delivered_at.to_s(:short) %></p>
+                            <p style = "padding-left: 42.73vh">delivered at:</p>
+                            <p style = "padding-left: 1.22vh"><%= order.delivered_at.to_s(:short) %></p>
                             <div class="bill-amount-delivered">
                                 <p>BILL :</p>
                                 <i class="fas fa-rupee-sign"></i>

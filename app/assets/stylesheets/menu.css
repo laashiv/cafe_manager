@@ -308,7 +308,7 @@
 
 .Add-Menu-item {
   display: flex;
-  padding-left: 42.73vh;
+  padding-left: 38.73vh;
   margin-top: 18.31vh;
   height: 6.1vh;
 }
@@ -329,6 +329,7 @@
   border-radius: 1.22vh;
   border: 1px solid rgb(74, 80, 74);
   font-weight: 500;
+  margin-left: -12vh;
 }
 
 .Menu-item-price {
