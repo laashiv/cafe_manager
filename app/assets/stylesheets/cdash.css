@@ -264,19 +264,21 @@
 
 .back h2 {
   font-size: 2.7vh;
-  margin-bottom: 1.5px !important;
+  margin-bottom: 2vh !important;
   padding: 0px;
 }
 
-.back span {
+.Description {
   font-size: 1.7vh;
   margin-bottom: 1.5px !important;
   padding: 0px;
+  line-height: 1.8;
 }
 
 .back h3 {
   font-size: 2.7vh;
   margin-bottom: 40px;
+  margin-top: 2vh;
 }
 
 .back-content {
