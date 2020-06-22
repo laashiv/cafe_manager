@@ -513,14 +513,14 @@
 
 .orders-List {
   display: block;
-  margin-left: 61.05vh;
+  margin-left: 50.05vh;
   padding-top: 1.22vh;
   background: rgb(73, 187, 70);
   border-radius: 2.44vh;
   border: 2px solid rgb(54, 52, 52);
   color: black;
   margin-top: 1.22vh;
-  margin-right: 40.84vh;
+  margin-right: 35.84vh;
   align-items: center;
   font-size: 2.93vh;
 }
@@ -543,14 +543,14 @@
 
 .orders-list {
   display: block;
-  margin-left: 61.05vh;
+  margin-left: 50.05vh;
   padding-top: 1.22vh;
   background: rgb(199, 70, 70);
   border-radius: 2.44vh;
   border: 2px solid rgb(54, 52, 52);
   color: black;
   margin-top: 1.22vh;
-  margin-right: 40.84vh;
+  margin-right: 35.84vh;
   align-items: center;
   font-size: 2.93vh;
 }
