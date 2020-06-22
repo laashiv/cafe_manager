@@ -520,7 +520,7 @@
   border: 2px solid rgb(54, 52, 52);
   color: black;
   margin-top: 1.22vh;
-  margin-right: 48.84vh;
+  margin-right: 40.84vh;
   align-items: center;
   font-size: 2.93vh;
 }
@@ -550,7 +550,7 @@
   border: 2px solid rgb(54, 52, 52);
   color: black;
   margin-top: 1.22vh;
-  margin-right: 48.84vh;
+  margin-right: 40.84vh;
   align-items: center;
   font-size: 2.93vh;
 }
@@ -730,7 +730,7 @@
 }
 
 .dates {
-  padding-left: 79.36vh;
+  padding-left: 55.36vh;
   padding-top: 18.31vh;
   font-size: 2.93vh;
   align-items: stretch;
