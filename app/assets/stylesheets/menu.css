@@ -29,30 +29,30 @@
 }
 
 .Flash-Error {
-  margin-top: 80px;
+  margin-top: 9.77vh;
   text-align: center;
   margin-left: 30em;
   margin-right: 30em;
-  margin-bottom: -100px;
-  font-size: 18px;
+  margin-bottom: -12.21vh;
+  font-size: 2.2vh;
   color: white;
   background-color: red;
   border-radius: 0px 0px 20px 20px;
   border-bottom: 2px solid black;
   border-left: 2px solid black;
   border-right: 2px solid black;
-  min-width: 500px;
+  min-width: 61.05vh;
 }
 
 #sideMenu {
   background: rgb(26, 18, 102);
-  width: 280px;
+  width: 34.19vh;
   height: 100%;
-  margin-top: 80px;
+  margin-top: 9.77vh;
   position: absolute;
   top: 0;
   bottom: 0;
-  left: -280px;
+  left: -34.19vh;
   transition: all 0.2s ease-in-out;
   z-index: 15;
 }
@@ -150,7 +150,7 @@
 }
 
 #loggedin-icon {
-  margin-left: 93.67vh;
+  margin-left: 90.67vh;
   color: white;
   margin-top: 0.37vh;
   font-size: 6.5vh;
