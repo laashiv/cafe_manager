@@ -169,58 +169,58 @@
 
 .Add-Menu {
   display: flex;
-  padding-left: 750px;
-  margin-top: 150px;
-  height: 50px;
+  padding-left: 91.57vh;
+  margin-top: 18.31vh;
+  height: 6.1vh;
 }
 
 .Menu-Name {
-  width: 400px;
-  margin-right: 10px;
+  width: 48.84vh;
+  margin-right: 1.22h;
   background: rgb(187, 220, 233);
-  border-radius: 10px;
+  border-radius: 1.22vh;
   border: 1px solid rgb(54, 52, 52);
   color: rgb(46, 42, 42);
 }
 
 .Addmenu-Button {
-  width: 100px;
+  width: 12.21vh;
   background: rgb(50, 180, 50);
   color: black;
-  border-radius: 10px;
+  border-radius: 1.22vh;
   border: 1px solid rgb(74, 80, 74);
   font-weight: 500;
 }
 
 .Menus-Available {
-  margin-left: 600px;
-  margin-top: 100px;
-  font-size: 16px;
+  margin-left: 73.26vh;
+  margin-top: 12.21vh;
+  font-size: 1.95vh;
   color: rgb(19, 19, 63);
-  height: 24px;
+  height: 2.93vh;
   align-items: center;
   display: block;
 }
 
 .Menus-Available-active {
-  margin-left: 600px;
-  margin-top: 150px;
-  font-size: 16px;
+  margin-left: 73.26vh;
+  margin-top: 18.31vh;
+  font-size: 1.95vh;
   color: rgb(19, 19, 63);
-  height: 24px;
+  height: 2.93vh;
   align-items: center;
   display: block;
 }
 
 .menus-List {
   display: flex;
-  padding-top: 10px;
+  padding-top: 1.22vh;
   background: rgb(192, 130, 192);
   border: 2px solid rgb(54, 52, 52);
-  border-radius: 20px;
+  border-radius: 2.44vh;
   color: black;
-  margin-top: 10px;
-  margin-right: 400px;
+  margin-top: 1.22vh;
+  margin-right: 48.84vh;
   align-items: center;
 }
 
@@ -249,13 +249,13 @@
 
 .menus-list {
   display: flex;
-  padding-top: 10px;
+  padding-top: 1.22vh;
   background: rgb(212, 215, 219);
   border: 2px solid rgb(54, 52, 52);
-  border-radius: 20px;
+  border-radius: 2.44vh;
   color: black;
-  margin-top: 10px;
-  margin-right: 400px;
+  margin-top: 1.22vh;
+  margin-right: 48.84vh;
   align-items: center;
 }
 
@@ -278,82 +278,82 @@
 }
 
 .menu-name {
-  font-size: 24px;
+  font-size: 2.93vh;
   color: rgb(18, 18, 94);
-  margin-left: 10px;
-  width: 150px;
-  margin-right: 10px;
+  margin-left: 1.22vh;
+  width: 18.31vh;
+  margin-right: 1.22vh;
 }
 
 .menu-actions {
-  padding-left: 100px;
+  padding-left: 12.21vh;
   display: flex;
 }
 
 .delete-button {
-  width: 30px;
+  width: 3.66vh;
 }
 
 #Deletemenu-icon {
   visibility: hidden;
   color: rgb(141, 24, 24);
-  margin-left: 50px;
+  margin-left: 6.1vh;
 }
 
 #edittext {
-  padding-left: 150px;
+  padding-left: 18.31vh;
   visibility: hidden;
   color: rgb(28, 28, 158);
 }
 
 .Add-Menu-item {
   display: flex;
-  padding-left: 350px;
-  margin-top: 150px;
-  height: 50px;
+  padding-left: 42.73vh;
+  margin-top: 18.31vh;
+  height: 6.1vh;
 }
 
 .Menu-item-Name {
-  width: 250px;
-  margin-right: 10px;
+  width: 30.52vh;
+  margin-right: 1.22vh;
   background: rgb(187, 220, 233);
-  border-radius: 10px;
+  border-radius: 1.22vh;
   border: 1px solid rgb(54, 52, 52);
   color: rgb(46, 42, 42);
 }
 
 .Addmenu-item-Button {
-  width: 100px;
+  width: 12.21vh;
   background: rgb(50, 180, 50);
   color: black;
-  border-radius: 10px;
+  border-radius: 1.22vh;
   border: 1px solid rgb(74, 80, 74);
   font-weight: 500;
 }
 
 .Menu-item-price {
-  width: 180px;
-  margin-right: 10px;
+  width: 21.98vh;
+  margin-right: 1.22vh;
   background: rgb(187, 220, 233);
-  border-radius: 10px;
+  border-radius: 1.22vh;
   border: 1px solid rgb(54, 52, 52);
   color: rgb(46, 42, 42);
 }
 
 .Menu-item-description {
-  width: 350px;
-  margin-right: 10px;
+  width: 42.73vh;
+  margin-right: 1.22vh;
   background: rgb(187, 220, 233);
-  border-radius: 10px;
+  border-radius: 1.22vh;
   border: 1px solid rgb(54, 52, 52);
   color: rgb(46, 42, 42);
 }
 
 .Menu-item-category {
-  width: 100px;
-  margin-right: 10px;
+  width: 12.21vh;
+  margin-right: 1.22vh;
   background: rgb(187, 220, 233);
-  border-radius: 10px;
+  border-radius: 1.22vh;
   border: 1px solid rgb(54, 52, 52);
   color: rgb(46, 42, 42);
 }
@@ -361,18 +361,18 @@
 .Menu-item-image {
   display: flex;
   color: red;
-  padding-top: 5px;
+  padding-top: 0.61vh;
 }
 
 .image-text {
-  padding-right: 5px;
+  padding-right: 0.61vh;
 }
 
 .dropbtn {
   background-color: transparent;
   color: white;
-  padding-left: 150px;
-  font-size: 16px;
+  padding-left: 18.31vh;
+  font-size: 1.95vh;
   border: none;
   cursor: pointer;
 }
@@ -390,20 +390,20 @@
   display: none;
   position: top;
   background-color: #f9f9f9;
-  margin-left: 50px;
-  min-width: 20px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  margin-left: 6.1vh;
+  min-width: 2.44vh;
+  box-shadow: 0vh 0.98vh 1.95vh 0vh rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 .dropdown-content .menuitems-name {
   color: black;
-  padding: 12px 100px;
-  margin-bottom: 0px;
+  padding: 1.46vh 12.21vh;
+  margin-bottom: 0vh;
   text-decoration: none;
-  border-radius: 2px;
+  border-radius: 0.24vh;
   border: 2px solid rgb(54, 52, 52);
-  width: 300px;
+  width: 36.63vh;
 }
 
 .dropdown-content .menuitems-name:hover {
@@ -425,25 +425,25 @@
 }
 
 .MenuItem-checkbox {
-  padding-left: 200px;
-  margin-left: 10px;
+  padding-left: 24.42vh;
+  margin-left: 1.22vh;
   color: black;
 }
 
 .menuitems-container {
   display: flex;
-  margin-top: 12px;
-  margin-left: 400px;
-  margin-right: 500px;
-  border-radius: 20px;
+  margin-top: 1.46vh;
+  margin-left: 48.84vh;
+  margin-right: 61.05vh;
+  border-radius: 2.44vh;
   border: 2px solid rgb(54, 52, 52);
-  font-size: 24px;
+  font-size: 2.93vh;
   color: rgb(19, 19, 63);
   background: rgb(165, 173, 190);
 }
 
 .menuitems-container:hover {
-  font-size: 24px;
+  font-size: 2.93vh;
   color: rgb(19, 19, 63);
   background: rgb(97, 110, 141);
   transition: 0.2s all ease-in-out;
@@ -454,18 +454,18 @@
 }
 
 .menu-item-name {
-  padding-left: 20px;
-  width: 250px;
+  padding-left: 2.44vh;
+  width: 30.52vh;
 }
 
 .menu-item-amount {
-  padding-right: 50px;
+  padding-right: 6.1vh;
 }
 
 #menuitem-delete {
   visibility: hidden;
   color: rgb(141, 24, 24);
-  padding-left: 100px;
+  padding-left: 12.21vh;
 }
 
 .image {
@@ -475,7 +475,7 @@
 .make-active-menu {
   color: black;
   background: rgba(233, 187, 187, 0.918);
-  font-size: 16px;
+  font-size: 1.95vh;
   font-weight: 400;
 }
 
@@ -485,24 +485,24 @@
 
 .change-price {
   display: flex;
-  width: 200px;
-  font-size: 20px;
+  width: 24.42vh;
+  font-size: 2.44vh;
 }
 
 .edit-price {
-  padding-left: 10px;
-  width: 200px;
+  padding-left: 1.22vh;
+  width: 24.42vh;
   color: black;
   background: rgb(155, 148, 148);
-  border-radius: 2px;
+  border-radius: 0.24vh;
   border: 2px solid rgb(54, 52, 52);
 }
 
 .edit-price-button {
-  padding-left: 10px;
+  padding-left: 1.22vh;
   color: black;
   background: rgb(93, 209, 93);
-  border-radius: 2px;
+  border-radius: 0.24vh;
   border: 2px solid rgb(54, 52, 52);
 }
 
@@ -512,16 +512,16 @@
 
 .orders-List {
   display: block;
-  margin-left: 500px;
-  padding-top: 10px;
+  margin-left: 61.05vh;
+  padding-top: 1.22vh;
   background: rgb(73, 187, 70);
-  border-radius: 20px;
+  border-radius: 2.44vh;
   border: 2px solid rgb(54, 52, 52);
   color: black;
-  margin-top: 10px;
-  margin-right: 400px;
+  margin-top: 1.22vh;
+  margin-right: 48.84vh;
   align-items: center;
-  font-size: 24px;
+  font-size: 2.93vh;
 }
 
 .orders-List:hover {
@@ -531,7 +531,7 @@
 
 .deliver {
   color: black;
-  margin-left: 800px;
+  margin-left: 97.68vh;
   background: rgb(117, 109, 109);
   align-items: center;
 }
@@ -542,21 +542,21 @@
 
 .orders-list {
   display: block;
-  margin-left: 500px;
-  padding-top: 10px;
+  margin-left: 61.05vh;
+  padding-top: 1.22vh;
   background: rgb(199, 70, 70);
-  border-radius: 20px;
+  border-radius: 2.44vh;
   border: 2px solid rgb(54, 52, 52);
   color: black;
-  margin-top: 10px;
-  margin-right: 400px;
+  margin-top: 1.22vh;
+  margin-right: 48.84vh;
   align-items: center;
-  font-size: 24px;
+  font-size: 2.93vh;
 }
 
 .pending-orders {
-  padding-left: 800px;
-  font-size: 36px;
+  padding-left: 97.68vh;
+  font-size: 4.4vh;
   font-weight: 400;
   font-family: sans-serif;
   color: black;
@@ -569,27 +569,27 @@
 }
 
 .deliver-text {
-  padding-left: 500px;
-  font-size: 24px;
-  padding-top: -50px;
+  padding-left: 61.05vh;
+  font-size: 2.93vh;
+  padding-top: -6.1vh;
 }
 
 .delivered-orders {
-  padding-top: 50px;
-  padding-left: 800px;
-  font-size: 36px;
+  padding-top: 6.1vh;
+  padding-left: 97.68vh;
+  font-size: 4.4vh;
   font-weight: 400;
   font-family: sans-serif;
   color: black;
-  padding-bottom: 10px;
+  padding-bottom: 1.22vh;
 }
 
 .not-delivered {
-  padding-left: 700px;
+  padding-left: 85.47vh;
 }
 
 .order-items-name {
-  width: 50px;
+  width: 6.1vh;
 }
 
 .orders-list:hover {
@@ -601,22 +601,22 @@
   display: none;
   position: top;
   background-color: #f9f9f9;
-  margin-left: 50px;
-  min-width: 20px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  margin-left: 6.1vh;
+  min-width: 2.44vh;
+  box-shadow: 0vh 0.98vh 1.95vh 0vh rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 .order-items {
   display: flex;
-  padding-left: 10px;
-  padding-top: 2px;
+  padding-left: 1.22vh;
+  padding-top: 0.24vh;
   background: rgb(134, 180, 207);
-  border-radius: 2px;
+  border-radius: 0.24vh;
   border: 2px solid rgb(54, 52, 52);
   color: black;
   align-items: center;
-  font-size: 24px;
+  font-size: 2.93vh;
   width: 100%;
 }
 
@@ -625,74 +625,74 @@
 }
 
 .order-id {
-  padding-left: 350px;
+  padding-left: 42.73vh;
 }
 
 .order-date {
-  padding-left: 400px;
+  padding-left: 48.84vh;
 }
 
 .order-name {
-  padding-left: 50px;
-  margin-bottom: 50px;
+  padding-left: 6.1vh;
+  margin-bottom: 6.1vh;
 }
 
 .order-total {
-  padding-left: 100px;
+  padding-left: 12.21vh;
   display: flex;
 }
 
 .order-items-quantity {
   display: flex;
-  margin-left: 500px;
-  width: 205px;
+  margin-left: 61.05vh;
+  width: 25.03vh;
 }
 
 .order_item.quantity {
-  margin-left: 50px;
+  margin-left: 6.1vh;
 }
 
 .bill-amount {
-  padding-left: 700px;
+  padding-left: 85.47vh;
   display: flex;
 }
 
 .order-items-totalprice .fa-rupee-sign {
-  font-size: 24px;
+  font-size: 2.93vh;
   font-weight: 501;
-  padding-left: 5px;
+  padding-left: 0.61vh;
 }
 
 .bill-amount .fa-rupee-sign {
-  margin-left: 10px;
+  margin-left: 1.22vh;
 }
 
 .bill-amount-delivered {
-  padding-left: 70px;
+  padding-left: 8.55vh;
   display: flex;
 }
 .bill-amount-delivered .fa-rupee-sign {
-  margin-left: 10px;
+  margin-left: 1.22vh;
 }
 
 .order-items-total {
-  padding-left: 10px;
+  padding-left: 1.22vh;
 }
 
 .user-list-container {
   display: flex;
-  margin-top: 12px;
-  margin-left: 350px;
-  margin-right: 500px;
-  border-radius: 20px;
+  margin-top: 1.46vh;
+  margin-left: 42.73vh;
+  margin-right: 61.05vh;
+  border-radius: 2.44vh;
   border: 2px solid rgb(54, 52, 52);
-  font-size: 24px;
+  font-size: 2.93vh;
   color: rgb(19, 19, 63);
   background: rgb(165, 173, 190);
 }
 
 .user-list-container:hover {
-  font-size: 24px;
+  font-size: 2.93vh;
   color: rgb(19, 19, 63);
   background: rgb(97, 110, 141);
   transition: 0.2s all ease-in-out;
@@ -703,24 +703,24 @@
 }
 
 .user-id {
-  padding-left: 20px;
+  padding-left: 2.44vh;
 }
 
 .user-name {
-  padding-left: 20px;
+  padding-left: 2.44vh;
   width: 400px;
 }
 
 .user-mail {
-  padding-left: 50px;
+  padding-left: 6.1vh;
 }
 
 .change-role {
   visibility: hidden;
   color: rgb(141, 24, 24);
-  margin-left: 200px;
-  margin-right: 100px;
-  margin-top: 10px;
+  margin-left: 24.42vh;
+  margin-right: 12.21vh;
+  margin-top: 1.22vh;
 }
 
 .change-role:hover {
@@ -729,42 +729,42 @@
 }
 
 .dates {
-  padding-left: 650px;
-  padding-top: 150px;
-  font-size: 24px;
+  padding-left: 79.36vh;
+  padding-top: 18.31vh;
+  font-size: 2.93vh;
   align-items: stretch;
   display: flex;
 }
 
 .dates-sales {
-  padding-left: 700px;
-  padding-top: 150px;
-  font-size: 24px;
+  padding-left: 85.47vh;
+  padding-top: 18.31vh;
+  font-size: 2.93vh;
   align-items: stretch;
   display: flex;
 }
 
 .start-date {
-  margin-left: 10px;
-  height: 40px;
-  border-radius: 10px;
+  margin-left: 1.22vh;
+  height: 4.88vh;
+  border-radius: 1.22vh;
   border: 2px solid rgb(54, 52, 52);
 }
 
 .end-date {
-  margin-left: 10px;
-  padding-left: 10px;
-  height: 40px;
-  border-radius: 10px;
+  margin-left: 1.22vh;
+  padding-left: 1.22vh;
+  height: 4.88vh;
+  border-radius: 1.22vh;
   border: 2px solid rgb(54, 52, 52);
 }
 
 .finddate-report {
-  margin-left: 20px;
-  height: 40px;
+  margin-left: 2.44vh;
+  height: 4.88vh;
   color: black;
   background: rgb(121, 196, 165);
-  border-radius: 10px;
+  border-radius: 1.22vh;
   border: 2px solid rgb(54, 52, 52);
 }
 
@@ -774,9 +774,9 @@
 
 .datewise-report {
   background: rgb(141, 228, 206);
-  margin-top: 20px;
-  width: 1000px;
-  border-radius: 20px;
+  margin-top: 2.44vh;
+  width: 122.1vh;
+  border-radius: 2.44vh;
   border: 2px solid rgb(54, 52, 52);
 }
 
@@ -785,8 +785,8 @@
 }
 
 .sales-report {
-  margin-top: 100px;
-  padding-left: 500px;
+  margin-top: 12.21vh;
+  padding-left: 61.05vh;
 }
 
 .report {
@@ -794,77 +794,77 @@
 }
 
 .sales-report-id {
-  font-size: 24px;
-  padding-right: 80px;
+  font-size: 2.93vh;
+  padding-right: 9.77vh;
 }
 
 .sales-report-total {
-  padding-left: 5px;
-  font-size: 24px;
+  padding-left: 0.61vh;
+  font-size: 2.93vh;
 }
 
 .report-list {
   display: flex;
-  padding-left: 300px;
-  font-size: 24px;
+  padding-left: 36.63vh;
+  font-size: 2.93vh;
 }
 
 .report-list .fa-rupee-sign {
-  padding-left: 10px;
+  padding-left: 1.22vh;
 }
 
 .sales-date {
-  font-size: 36px;
+  font-size: 4.4vh;
   font-weight: 500;
   color: black;
-  padding-left: 10px;
+  padding-left: 1.22vh;
 }
 
 .today {
-  font-size: 36px;
+  font-size: 4.4vh;
   font-weight: 500;
-  padding-left: 10px;
+  padding-left: 1.22vh;
 }
 
 .yesterday {
-  font-size: 36px;
+  font-size: 4.4vh;
   font-weight: 500;
-  padding-left: 10px;
+  padding-left: 1.22vh;
 }
 
 .report-list-datewise {
-  font-size: 24px;
+  font-size: 2.93vh;
   font-weight: 200;
 }
 
 .daywise-total {
   display: flex;
-  padding-left: 10px;
+  padding-left: 1.22vh;
 }
 
 .daywise-total .fa-rupee-sign {
-  padding-left: 10px;
+  padding-left: 1.22vh;
 }
 
 .orderslist .fa-rupee-sign {
-  padding-left: 10px;
-  padding-top: 3px;
+  padding-left: 1.22vh;
+  padding-top: 0.37vh;
 }
 
 .date-wise-count {
-  padding-left: 10px;
+  padding-left: 1.22vh;
   font-weight: 400;
 }
 
 .date-wise-total {
-  padding-left: 8px;
+  padding-left: 0.98vh;
   font-weight: 400;
 }
 
 .datewise-stats {
-  margin-top: 100px;
-  margin-left: 500px;
-  width: 1000px;
+  margin-top: 12.21vh;
+  margin-left: 61.05vh;
+  width: 122.1vh;
   background: rgb(104, 36, 144);
 }
 
@@ -874,43 +874,43 @@
 
 .orderslist {
   display: flex;
-  font-size: 36px;
+  font-size: 4.4vh;
   font-weight: 500;
   color: black;
   align-self: center;
 }
 
 .total-orders {
-  font-size: 36px;
+  font-size: 4.4vh;
   font-weight: 500;
   color: black;
-  padding-left: 10px;
+  padding-left: 1.22vh;
 }
 
 .total-amount {
-  font-size: 36px;
+  font-size: 4.4vh;
   font-weight: 500;
   color: black;
-  padding-left: 10px;
+  padding-left: 1.22vh;
 }
 
 .empty {
-  padding-top: 200px;
+  padding-top: 24.42vh;
   background: none;
 }
 
 .user_name {
-  margin-left: 10px;
-  height: 40px;
-  border-radius: 10px;
+  margin-left: 1.22vh;
+  height: 4.88vh;
+  border-radius: 1.22vh;
   border: 2px solid rgb(54, 52, 52);
   width: 180;
 }
 
 .invoice {
   display: flex;
-  margin-left: 400px;
-  font-size: 24px;
+  margin-left: 48.84vh;
+  font-size: 2.93vh;
   color: white;
   background-color: transparent;
 }
@@ -925,16 +925,16 @@
 
   background-color: #fda674;
   font-family: "Source Sans Pro", "Helvetica", sans-serif;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.18vh;
 }
 
 .inspired-by {
   display: block;
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 1.83vh;
   text-align: center;
   color: #fff;
-  font-size: 14px;
+  font-size: 1.71vh;
 }
 
 .paypal {
