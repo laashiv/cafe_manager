@@ -112,32 +112,37 @@
 
 .navigationbar {
   display: flex;
-  top: 0px;
-  height: 80px;
+  top: 0vh;
+  height: 9.77vh;
   position: absolute;
   background: rgb(56, 56, 56);
   width: 100%;
 }
 
 .dashboard-text {
-  margin-left: 0px;
+  margin-left: 0vh;
   color: rgb(221, 226, 236);
   font-weight: 400;
-  font-size: 28px;
+  font-size: 3.42vh;
   font-family: sans-serif;
-  padding-top: 15px;
+  padding-top: 1.83vh;
 }
 
 .logo {
-  padding-left: 200px;
-  padding-top: 10px;
+  padding-left: 24.42vh;
+  padding-top: 1.22vh;
   color: rgb(199, 169, 114);
 }
 
+.navbar-brand {
+  width: 21.98vh;
+  height: 7.33vh;
+}
+
 .restaurantname {
-  margin-left: 30px;
-  font-size: 36px;
-  padding-top: 10px;
+  margin-left: 3.66vh;
+  font-size: 4.39vh;
+  padding-top: 1.22vh;
   font-family: sans-serif;
   color: rgb(211, 217, 233);
   font-weight: 500;
@@ -145,20 +150,21 @@
 }
 
 #loggedin-icon {
-  margin-left: 890px;
+  margin-left: 108.67vh;
   color: white;
-  margin-top: 3px;
+  margin-top: 0.37vh;
+  font-size: 6.5vh;
 }
 
 #logout {
-  margin-left: 35px;
-  font-size: 16px;
+  margin-left: 2vh;
+  font-size: 1.95vh;
   color: white;
   display: block;
 }
 
 #signout {
-  padding-top: 10px;
+  padding-top: 1.22vh;
 }
 
 .Add-Menu {
