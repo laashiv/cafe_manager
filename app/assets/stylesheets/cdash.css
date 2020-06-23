@@ -191,8 +191,11 @@
 }
 
 .front img {
-  height: 100%;
+  /*height: 100%;
+  width: 100%;*/
+  height: 53.72vh;
   width: 100%;
+  object-fit: cover;
 }
 
 .mitem-img {
