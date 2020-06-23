@@ -22,25 +22,6 @@
   	</div>
 	</div>
 <% end %>
-<!--<main class="user-main">
-  <p class="NewUsers-title">Sign-in!</p>
-
-  <section class="UsersNew">
-    <%= form_with url: sessions_path do|form| %>
-      <div class="Form-section">
-        <p class="FormInput-label">Email: </p>
-        <%= form.email_field :email, class: "Form-input" %>
-      </div>
-      <div class="Form-section">
-        <p class="FormInput-label">Password: </p>
-        <%= form.password_field :password, class: "Form-input" %>
-      </div>
-      <div class="Form-section">
-        <%= form.submit "Sign-in!", class: "Form-submit" %>
-      </div>
-    <% end %>
-  </section>
-</main>-->
 
 <main class="login-main">
   <div class="limiter">
@@ -57,8 +38,7 @@
 					</span>
 
 					<div class="wrap-input100 validate-input">
-						<!--<input class="input100" type="text" name="email" placeholder="Email">-->
-						<%= form.email_field :email, class: "input100", placeholder: "Email" %>
+						<%= form.email_field :email, class: "input100", placeholder: "Email", autofocus: true %>
 						<% if flash[:email_error] %>
 							<span class="alert-validate" data-validate = "<%= flash[:email_error] %>"><i class="fas fa-info-circle"></i></span>
 						<% end %>
@@ -69,7 +49,6 @@
 					</div>
 
 					<div class="wrap-input100 validate-input">
-						<!--<input class="input100" type="password" name="pass" placeholder="Password">-->
 						<%= form.password_field :password, id: "password-field", type: "password", class: "input100", placeholder: "Password" %>
 						<% if flash[:password_error] %>
 							<span class="alert-validate" data-validate = "<%= flash[:password_error] %>"><i class="fas fa-info-circle"></i></span>
@@ -84,9 +63,6 @@
 					</div>
 
 					<div class="container-login100-form-btn">
-						<!--<button class="login100-form-btn">
-							Login
-						</button>-->
 						<%= form.submit "Login", class: "login100-form-btn" %>
 					</div>
 

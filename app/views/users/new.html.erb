@@ -24,30 +24,6 @@
 	</div>
 <% end %>
 
-<!--<main class="user-main">
-  <p class="NewUsers-title">Welcome new user!</p>
-
-  <section class="UsersNew">
-    <%= form_with url: users_path do|form| %>
-      <div class="Form-section">
-        <p class="FormInput-label">Name: </p>
-        <%= form.text_field :name, class: "Form-input" %>
-      </div>
-      <div class="Form-section">
-        <p class="FormInput-label">Email: </p>
-        <%= form.email_field :email, class: "Form-input" %>
-      </div>
-      <div class="Form-section">
-        <p class="FormInput-label">Password: </p>
-        <%= form.password_field :password, class: "Form-input" %>
-      </div>
-      <div class="Form-section">
-        <%= form.submit "Sign-up!", class: "Form-submit" %>
-      </div>
-    <% end %>
-  </section>
-</main>-->
-
 <main class="login-main">
   <div class="limiter">
 		<div class="container-login100">
@@ -63,8 +39,7 @@
 					</span>
 
 					<div class="wrap-input100 validate-input">
-						<!--<input class="input100" type="text" name="email" placeholder="Email">-->
-						<%= form.text_field :name, class: "input100", placeholder: "Name" %>
+						<%= form.text_field :name, class: "input100", placeholder: "Name", autofocus: true %>
 						<% if flash[:name_error] %>
 							<span class="alert-validate" data-validate = "<%= flash[:name_error] %>"><i class="fas fa-info-circle"></i></span>
 						<% end %>
@@ -75,7 +50,6 @@
 					</div>
 
 					<div class="wrap-input100 validate-input">
-						<!--<input class="input100" type="text" name="email" placeholder="Email">-->
 						<%= form.email_field :email, class: "input100", placeholder: "Email" %>
 						<% if flash[:email_error] %>
 							<span class="alert-validate" data-validate = "<%= flash[:email_error] %>"><i class="fas fa-info-circle"></i></span>
@@ -87,7 +61,6 @@
 					</div>
 
 					<div class="wrap-input100 validate-input">
-						<!--<input class="input100" type="password" name="pass" placeholder="Password">-->
 						<%= form.password_field :password, id: "password-field", type: "password", class: "input100", placeholder: "Password" %>
 						<% if flash[:password_error] %>
 							<span class="alert-validate" data-validate = "<%= flash[:password_error] %>"><i class="fas fa-info-circle"></i></span>
@@ -102,7 +75,6 @@
 					</div>
 
 					<div class="wrap-input100 validate-input">
-						<!--<input class="input100" type="password" name="pass" placeholder="Re-enter Password">-->
 						<%= form.password_field :re_password, id: "re-password-field", type: "password", class: "input100", placeholder: "Re-enter password" %>
 						<% if flash[:re_password_error] %>
 							<span class="alert-validate" data-validate = "<%= flash[:re_password_error] %>"><i class="fas fa-info-circle"></i></span>
@@ -119,20 +91,8 @@
 					</div>
 
 					<div class="container-login100-form-btn">
-						<!--<button class="login100-form-btn">
-							Login
-						</button>-->
 						<%= form.submit "Create Account", class: "login100-form-btn" %>
 					</div>
-
-					<!--<div class="text-center p-t-12">
-						<span class="txt1">
-							Forgot
-						</span>
-						<a class="txt2" href="#">
-							Username / Password?
-						</a>
-					</div>-->
 
 					<div class="text-center p-t-136">
 						<a class="txt2" href="/signin">

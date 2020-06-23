@@ -148,7 +148,6 @@
 }
 
 #loggedin-icon {
-  /*margin-left: 90.67vh;*/
   color: white;
   margin-top: 0.37vh;
   font-size: 6.5vh;
@@ -173,11 +172,9 @@
 
 .Add-Menu {
   display: flex;
-  /*padding-left: 91.57vh;*/
   margin-top: 18.31vh;
   height: 6.1vh;
   justify-content: center;
-  /*background: inherit;*/
 }
 
 .Menu-Name {
@@ -199,7 +196,6 @@
 }
 
 .Menus-Available {
-  /*margin-left: 73.26vh;*/
   margin-top: 12.21vh;
   font-size: 1.95vh;
   color: rgb(19, 19, 63);
@@ -211,7 +207,6 @@
 }
 
 .Menus-Available-active {
-  /*margin-left: 73.26vh;*/
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -231,7 +226,6 @@
   border-radius: 2.44vh;
   color: black;
   margin-top: 1.22vh;
-  /*margin-right: 48.84vh;*/
   align-items: center;
   max-width: 800px;
   margin-left: auto;
@@ -269,7 +263,6 @@
   border-radius: 2.44vh;
   color: black;
   margin-top: 1.22vh;
-  /*margin-right: 48.84vh;*/
   align-items: center;
   max-width: 800px;
   margin-left: auto;
@@ -325,7 +318,6 @@
 
 .Add-Menu-item {
   display: flex;
-  /*padding-left: 38.73vh;*/
   margin-top: 18.31vh;
   height: 6.1vh;
   justify-content: center;
@@ -452,8 +444,6 @@
 .menuitems-container {
   display: flex;
   margin-top: 1.46vh;
-  /*margin-left: 48.84vh;
-  margin-right: 61.05vh;*/
   margin-left: auto;
   margin-right: auto;
   max-width: 800px;
@@ -533,26 +523,21 @@
 }
 
 .order-box {
-  /*display: flex;
-  justify-content: center;*/
   margin: auto;
 }
 
 .orders-List {
   display: block;
-  /*margin-left: 50.05vh;*/
   padding-top: 1.22vh;
   background: rgb(73, 187, 70);
   border-radius: 2.44vh;
   border: 2px solid rgb(54, 52, 52);
   color: black;
   margin-top: 1.22vh;
-  /*margin-right: 38.84vh;*/
   align-items: center;
   font-size: 2.93vh;
   max-width: 820px;
   margin: auto;
-  /*height: 600px;*/
 }
 
 .orders-List:hover {
@@ -573,14 +558,12 @@
 
 .orders-list {
   display: block;
-  /*margin-left: 50.05vh;*/
   padding-top: 1.22vh;
   background: rgb(199, 70, 70);
   border-radius: 2.44vh;
   border: 2px solid rgb(54, 52, 52);
   color: black;
   margin-top: 1.22vh;
-  /*margin-right: 38.84vh;*/
   align-items: center;
   font-size: 2.93vh;
   justify-content: center;
@@ -589,7 +572,6 @@
 }
 
 .pending-orders {
-  /*padding-left: 97.68vh;*/
   text-align: center;
   font-size: 4.4vh;
   font-weight: 400;
@@ -598,14 +580,12 @@
 }
 
 .pending-text {
-  /*padding-left: 500px;*/
   font-size: 24px;
   padding-top: 30px;
   text-align: center;
 }
 
 .deliver-text {
-  /*padding-left: 61.05vh;*/
   font-size: 2.93vh;
   padding-top: -6.1vh;
   text-align: center;
@@ -613,7 +593,6 @@
 
 .delivered-orders {
   padding-top: 6.1vh;
-  /*padding-left: 97.68vh;*/
   text-align: center;
   font-size: 4.4vh;
   font-weight: 400;
@@ -663,12 +642,10 @@
 }
 
 .order-id {
-  /*padding-left: 42.73vh;*/
   text-align: center;
 }
 
 .order-date {
-  /*padding-left: 48.84vh;*/
   text-align: center;
 }
 
@@ -722,8 +699,6 @@
 .user-list-container {
   display: flex;
   margin-top: 1.46vh;
-  /*margin-left: 42.73vh;
-  margin-right: 61.05vh;*/
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -772,7 +747,6 @@
 }
 
 .dates {
-  /*padding-left: 55.36vh;*/
   padding-top: 18.31vh;
   font-size: 2.93vh;
   align-items: stretch;
@@ -781,7 +755,6 @@
 }
 
 .dates-sales {
-  /*padding-left: 75.47vh;*/
   padding-top: 18.31vh;
   font-size: 2.93vh;
   align-items: stretch;
@@ -820,7 +793,6 @@
 .datewise-report {
   background: rgb(141, 228, 206);
   margin-top: 2.44vh;
-  /*width: 122.1vh;*/
   border-radius: 2.44vh;
   border: 2px solid rgb(54, 52, 52);
   max-width: 820px;
@@ -834,7 +806,6 @@
 
 .sales-report {
   margin-top: 12.21vh;
-  /*padding-left: 61.05vh;*/
 }
 
 .report {
@@ -911,8 +882,6 @@
 
 .datewise-stats {
   margin-top: 12.21vh;
-  /*margin-left: 61.05vh;
-  width: 122.1vh;*/
   max-width: 820px;
   margin-left: auto;
   margin-right: auto;
@@ -960,7 +929,6 @@
 
 .invoice {
   display: flex;
-  /*margin-left: 48.84vh;*/
   font-size: 2.93vh;
   color: white;
   background-color: transparent;
@@ -992,7 +960,6 @@
   position: relative;
   left: 50%;
   display: inline-block;
-  /*min-width: 500px;*/
   max-width: 100%;
   width: auto;
   margin: 50px auto 25px;
@@ -1143,7 +1110,6 @@
   position: absolute;
   top: 0;
   border: 4px solid transparent;
-
   -webkit-transform: translateY(calc(-50% - 1px));
   -ms-transform: translateY(calc(-50% - 1px));
   -o-transform: translateY(calc(-50% - 1px));
@@ -1166,10 +1132,6 @@
   max-width: 300px;
   height: auto;
 }
-
-/**
- * Paypal Animations
- */
 
 @keyframes show-paypal {
   0% {
