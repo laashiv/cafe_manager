@@ -113,10 +113,10 @@ button.text-dark {
 
 .close {
   position: fixed;
-  right: 32px;
-  top: 32px;
-  width: 32px;
-  height: 32px;
+  right: 3.91vh;
+  top: 3.91vh;
+  width: 3.91vh;
+  height: 3.91vh;
   opacity: 0.5;
   z-index: 5;
 }
@@ -128,10 +128,10 @@ button.text-dark {
 .close:before,
 .close:after {
   position: absolute;
-  left: 15px;
+  left: 1.83vh;
   content: " ";
-  height: 33px;
-  width: 2px;
+  height: 4.03vh;
+  width: 0.24vh;
   background-color: #333;
 }
 

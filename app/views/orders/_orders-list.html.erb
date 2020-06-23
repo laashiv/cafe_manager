@@ -1,31 +1,31 @@
-<section style = "padding-top: 6.1vh">
+<section style="padding-top: 6.1vh">
 
-    <p class = "pending-orders">PENDING-ORDERS</p>
+    <p class="pending-orders">PENDING-ORDERS</p>
     <% flag = 0 %>
 
     <% orders.each do |order| %>
         <% if !(order.delivered_at) %>
-            <div style = "padding-top: 4.88vh">
-                <div class = <%= order.delivered_at ? "orders-List": "orders-list" %> >
+            <div class="order-box" style="padding-top: 4.88vh">
+                <div class=<%= order.delivered_at ? "orders-List": "orders-list" %> >
                     <% if !(order.delivered_at)  %>
                         <% if @current_user.role != "customer" %>
-                            <div class = "deliver-order">
+                            <div class="deliver-order">
                                 <%= form_with(url: "/orders/#{order.id}", method: "PUT") do %>
                                     <%= submit_tag("Deliver" , class: "deliver") %>
                                 <% end %>
                             </div>
                         <% else %>
-                            <div class = "not-delivered">
+                            <div class="not-delivered">
                                 <p>Yet To Be Delivered</p>
                             </div>
                         <% end %>
                     <% end %>
                     <div class="invoice">
-                        <p><%= link_to "INVOICE" , "/invoice?id=#{order.id}" %></p>
+                        <button><%= link_to "INVOICE" , "/invoice?id=#{order.id}" %></button>
                     </div>
-                    <p class = "order-id">#chefoodu$<%= order.id %></p>
-                    <p class = "order-date"><%= order.date.to_s(:short) %></p>
-                    <p class = "order-name">
+                    <p class="order-id">#chefoodu$<%= order.id %></p>
+                    <p class="order-date"><%= order.date.to_s(:short) %></p>
+                    <p class="order-name">
                     <% if User.find_by(id: order.user_id).role == "customer" %>
                         <%= User.find_by(id: order.user_id).name %></p>
                     <% else %>
@@ -35,9 +35,9 @@
 
                     <% order_items.each do |order_item| %>
                         <% if order.id == order_item.order_id %>
-                            <div class = "order-items">
+                            <div class="order-items">
                                 <p class="order-items-name"><%= order_item.menu_item_name %></p>
-                                <div class = "order-items-quantity" >
+                                <div class="order-items-quantity" >
                                     <p><%= order_item.menu_item_price %></p>
                                     <p>x</p>
                                     <p><%= order_item.quantity %></p>
@@ -50,11 +50,11 @@
                         <% end %>
                     <% end %>
 
-                    <div style = "display: flex">
+                    <div style="display: flex">
                         <% if (order.delivered_at)  %>
-                            <p style = "padding-left: 42.73vh">delivered at:</p>
-                            <p style = "padding-left: 1.22vh"><%= order.delivered_at.to_s(:short) %></p>
-                            <p class = "order-total">BILL :<%= order.total %></p>
+                            <p style="padding-left: 42.73vh">delivered at:</p>
+                            <p style="padding-left: 1.22vh"><%= order.delivered_at.to_s(:short) %></p>
+                            <p class="order-total">BILL :<%= order.total %></p>
                         <% else %>
                             <div class="bill-amount">
                                 <p>BILL :</p>
@@ -70,28 +70,28 @@
     <% end %>
 
     <% if flag == 0 %>
-        <p class = "pending-text">NO ORDERS PENDING!</p>
+        <p class="pending-text">NO ORDERS PENDING!</p>
     <% end %>
-    <p class = "delivered-orders">DELIVERED-ORDERS</p>
+    <p class="delivered-orders">DELIVERED-ORDERS</p>
     <% flags = 0 %>
 
     <% orders.each do |order| %>
-        <div style = "padding-top: 4.88vh">
+        <div style="padding-top: 4.88vh">
             <% if order.delivered_at %>
-                <div class = <%= order.delivered_at ? "orders-List": "orders-list" %> >
+                <div class=<%= order.delivered_at ? "orders-List": "orders-list" %> >
                     <% if !(order.delivered_at)  %>
-                        <div class = "deliver-order">
+                        <div class="deliver-order">
                             <%= form_with(url: "/orders/#{order.id}", method: "PUT") do %>
                                 <%= submit_tag("deliver?" , class: "deliver") %>
                             <% end %>
                         </div>
                     <% end %>
                     <div class="invoice">
-                        <p><%= link_to "INVOICE" , "/invoice?id=#{order.id}" %></p>
+                        <%= link_to "<button>INVOICE</button>".html_safe, "/invoice?id=#{order.id}" %>
                     </div>
-                    <p class = "order-id">#chefoodu$<%= order.id %></p>
-                    <p class = "order-date"><%= order.date.to_s(:short) %></p>
-                    <p class = "order-name">
+                    <p class="order-id">#chefoodu$<%= order.id %></p>
+                    <p class="order-date"><%= order.date.to_s(:short) %></p>
+                    <p class="order-name">
                     <% if User.find_by(id: order.user_id).role == "customer" %>
                         <%= User.find_by(id: order.user_id).name %></p>
                     <% else %>
@@ -101,9 +101,9 @@
 
                     <% order_items.each do |order_item| %>
                         <% if order.id == order_item.order_id %>
-                            <div class = "order-items">
+                            <div class="order-items">
                                 <p class="order-items-name"><%= order_item.menu_item_name %></p>
-                                <div class = "order-items-quantity" >
+                                <div class="order-items-quantity" >
                                     <p><%= order_item.menu_item_price %></p>
                                     <p>x</p>
                                     <p><%= order_item.quantity %></p>
@@ -116,10 +116,10 @@
                         <% end %>
                     <% end %>
 
-                    <div style = "display: flex">
+                    <div style="display: flex">
                         <% if (order.delivered_at)  %>
-                            <p style = "padding-left: 42.73vh">delivered at:</p>
-                            <p style = "padding-left: 1.22vh"><%= order.delivered_at.to_s(:short) %></p>
+                            <p style="padding-left: 42.73vh">delivered at:</p>
+                            <p style="padding-left: 1.22vh"><%= order.delivered_at.to_s(:short) %></p>
                             <div class="bill-amount-delivered">
                                 <p>BILL :</p>
                                 <i class="fas fa-rupee-sign"></i>
@@ -134,5 +134,7 @@
     <% end %>
 
     <% if flags == 0 %>
-        <p class = "deliver-text">NO ORDERS DELIVERED!</p>
+        <p class="deliver-text">NO ORDERS DELIVERED!</p>
     <% end %>
+
+</section>
