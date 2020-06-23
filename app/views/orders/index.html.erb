@@ -1,4 +1,5 @@
 <main class="admin-main">
+<div class="order-wrapper">
     <% if @current_user.role == "customer" %>
         <a href = "/cdash" class="close"></a>
     <% else %>
@@ -98,6 +99,7 @@
 
         <%= render partial: "orders-list", locals: { orders:(@current_user.role == "customer") ? orders:@orders } %>
     </section>
+</div>
 </main>
 
 <script>
