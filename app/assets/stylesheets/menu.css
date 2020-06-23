@@ -148,7 +148,7 @@
 }
 
 #loggedin-icon {
-  margin-left: 90.67vh;
+  /*margin-left: 90.67vh;*/
   color: white;
   margin-top: 0.37vh;
   font-size: 6.5vh;
@@ -159,6 +159,7 @@
   font-size: 1.95vh;
   color: white;
   display: block;
+  margin-left: auto;
 }
 
 #signout {
