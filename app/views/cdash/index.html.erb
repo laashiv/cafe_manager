@@ -3,29 +3,29 @@
   <a href="/" class="close"></a>
 <% end %>
 <% if @current_user %>
-<% if flash[:order_success] %>
-	<script type="text/javascript">
-    $(document).ready(function () {
-        $('#modalPush').modal('show');
-    });
-	</script>
-	<div class="modal fade" id="modalPush" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  	<div class="modal-dialog modal-notify modal-info" role="document">
-    	<div class="modal-content text-center">
-      	<div class="modal-header d-flex justify-content-center" style="background-color: #0099ff">
-        	<p class="heading" style="color: white; font-size: 22px; font-weight: 500">Order Placed</p>
-      	</div>
-      	<div class="modal-body">
-        	<i class="fas fa-bell fa-4x" style="color: #0099ff"></i>
-        	<p style="margin-top: 20px"><%= flash[:order_success] %></p>
-      	</div>
-      	<div class="modal-footer justify-content-center">
-					<a type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal" style="font-weight: 540">OK</a>
-      	</div>
-    	</div>
-  	</div>
-	</div>
-<% end %>
+  <% if flash[:order_success] %>
+    <script type="text/javascript">
+      $(document).ready(function () {
+          $('#modalPush').modal('show');
+      });
+    </script>
+    <div class="modal fade" id="modalPush" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-notify modal-info" role="document">
+        <div class="modal-content text-center">
+          <div class="modal-header d-flex justify-content-center" style="background-color: #0099ff">
+            <p class="heading" style="color: white; font-size: 22px; font-weight: 500">Order Placed</p>
+          </div>
+          <div class="modal-body">
+            <i class="fas fa-bell fa-4x" style="color: #0099ff"></i>
+            <p style="margin-top: 20px"><%= flash[:order_success] %></p>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <a type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal" style="font-weight: 540">OK</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
 <% end %>
 
 <% if @current_user %>
@@ -83,92 +83,28 @@
     </nav>
   <% end %>
 
-    <!--<section id="sideMenu">
-      <div class="toggle-btn" onclick="toggleSidebar()">
-            <span></span>
-            <span></span>
-            </div>
+  <section  class="Menu-display">
+    <div class="Menu-category-section">
+      <%= render partial: "category-section", locals: {} %>
+    </div>
 
-            <nav id="dashboard-menu">
-
-                <a id="items" href="/orders">
-                <i class="fa fa-history" aria-hidden="true"></i>
-                ORDERS</a>
-
-                <a id="items" href="#" class="active-dashboard">
-                <i class="fa fa-money" aria-hidden="true"></i>
-                OFFLINE ORDER</a>
-
-            </nav>
-            </section>-->
-
-    <section  class="Menu-display">
-      <div class="Menu-category-section">
-        <!--<% MenuItem.select(:category).distinct.each do |item| %>
-          <div class="category-link">
-            <a href="#<%= item.category %>">
-              <%= item.category %>
-            </a>
-          </div>
-        <% end %>-->
-        <%= render partial: "category-section", locals: {} %>
-      </div>
-
-      <!--<div class="search">
-        <div class="search-box">
-          <input type="text" id="searchbox" name="" value="" class="search-txt" placeholder="Type to search"/>
-          <a class="search-btn" id="search-btn" href="#" toggle="#search-box">
-            <i class="fas fa-search"></i>
-          </a>
+    <div class="Menu-items-section">
+      <%
+        mitem_ids = @active_menu.link_menu_items.map { |item| item.menu_item_id }
+        mitems = MenuItem.where(id: mitem_ids)
+      %>
+      <% mitems.select(:category).distinct.each do |item| %>
+        <div class="Category-section">
+          <p class="Category-title" id="<%= item.category.split().join('_') %>"><%= item.category %></p>
         </div>
-      </div>-->
-
-
-      <div class="Menu-items-section">
-        <%
-          mitem_ids = @active_menu.link_menu_items.map { |item| item.menu_item_id }
-          mitems = MenuItem.where(id: mitem_ids)
+        <%= render partial: "menu-grid-section", locals: {
+          #menu_items: MenuItem.where(category: item.category),
+          menu_items: mitems.where(category: item.category),
+          category: item.category }
         %>
-        <% mitems.select(:category).distinct.each do |item| %>
-          <div class="Category-section">
-            <p class="Category-title" id="<%= item.category.split().join('_') %>"><%= item.category %></p>
-          </div>
-          <%= render partial: "menu-grid-section", locals: {
-            #menu_items: MenuItem.where(category: item.category),
-            menu_items: mitems.where(category: item.category),
-            category: item.category }
-          %>
-        <% end %>
-      </div>
-    </section>
+      <% end %>
+    </div>
+  </section>
 
     <a href="#" class="to-top"><i class="fa fa-chevron-up"></i></a>
 </main>
-
-<!--
-            <section id="sideMenu">
-           <div class="toggle-btn" onclick="toggleSidebar()">
-            <span></span>
-            <span></span>
-            </div>
-
-            <nav id="dashboard-menu">
-
-                <a id="items" href="/orders">
-                <i class="fa fa-history" aria-hidden="true"></i>
-                ORDERS</a>
-
-                <a id="items" href="#" class="active-dashboard">
-                <i class="fa fa-money" aria-hidden="true"></i>
-                OFFLINE ORDER</a>
-
-            </nav>
-            </section>
-            -->
-
-
-<!--<script>
-function toggleSidebar(){
-    document.getElementById("sideMenu").classList.toggle('active');
-}
-</script>-->
