@@ -16,25 +16,34 @@ class MenusController < ApplicationController
   end
 
   def sales
-    if params[:start_date] && params[:end_date] != ""
-      start_date = params[:start_date]
-      end_date = params[:end_date]
+    start_date = Order.first.date
+    end_date = Order.last.date
+
+    if params[:start_date] == "" && params[:end_date] == ""
+      start_date = Order.first.date
+      end_date = Order.last.date
     elsif params[:start_date] != "" && params[:end_date] == ""
       start_date = params[:start_date]
       end_date = Order.last.date
     elsif params[:start_date] == "" && params[:end_date] != ""
       end_date = params[:end_date]
       start_date = Order.first.date
-    else
-      start_date = Order.first.date
-      end_date = Order.last.date
+    elsif params[:start_date] && params[:end_date]
+      start_date = params[:start_date]
+      end_date = params[:end_date]
     end
+
     if @orders
       @orders = @orders.where("date >= ? ", start_date)
     else
       @orders = Order.where("date >= ? ", start_date)
     end
-    @orders = @orders.where("date <= ? ", end_date)
+
+    if @orders
+      @orders = @orders.where("date <= ? ", end_date)
+    else
+      @orders = Order.where("date <= ? ", end_date)
+    end
     render "sales"
   end
 
