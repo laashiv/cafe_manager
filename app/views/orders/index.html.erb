@@ -1,5 +1,7 @@
-<main class="admin-main">
-<div class="order-wrapper">
+<% if @current_user.role == "customer" %>
+    <main class="admin-main">
+<% end %>
+
     <% if @current_user.role == "customer" %>
         <a href = "/cdash" class="close"></a>
     <% else %>
@@ -99,8 +101,10 @@
 
         <%= render partial: "orders-list", locals: { orders:(@current_user.role == "customer") ? orders:@orders } %>
     </section>
-</div>
+
+<% if @current_user.role == "customer" %>
 </main>
+<% end %>
 
 <script>
     function toggleSidebar(){

@@ -1,25 +1,24 @@
-<main class="admin-main">
-<section class = "Menus-Available" >
+<section class="Menus-Available" >
 
     <% menus.each do |menu| %>
-        <div class = <%= menu.is_active? ? "menus-List":"menus-list" %> >
-            <p class = "menu-name"><%= menu.name %></p>
+        <div class=<%= menu.is_active? ? "menus-List":"menus-list" %> >
+            <p class="menu-name"><%= menu.name %></p>
             <% if menu.is_active? %>
-                <p style = "font-weight: 400, font-size: 24px, padding-left: 20px"> (active) </p>
+                <p style="font-weight: 400, font-size: 24px, padding-left: 20px"> (active) </p>
             <% end %>
-            <div class = "menu-actions">
+            <div class="menu-actions">
                 <%= form_with(url: "/menus/#{menu.id}", method: "delete") do %>
-                    <button style = "background-color:Transparent;border:none">
-                        <i id = "Deletemenu-icon" class = "fas fa-trash fa-2x" aria-hidden = "true" type = submit></i>
+                    <button style="background-color:Transparent;border:none">
+                        <i id="Deletemenu-icon" class="fas fa-trash fa-2x" aria-hidden = "true" type = submit></i>
                     </button>
                 <% end %>
-                <div class = "dropdown">
-                    <button class = "dropbtn"><i id="edittext" class = "fas fa-pencil-alt fa-2x" aria-hidden = "true"></i></button>
-                    <div class = "dropdown-content">
+                <div class="dropdown">
+                    <button class="dropbtn"><i id="edittext" class="fas fa-pencil-alt fa-2x" aria-hidden = "true"></i></button>
+                    <div class="dropdown-content">
 
                         <% menu_items.each do |menu_item| %>
-                            <div class = "menuitems" >
-                                <p class = "menuitems-name"><%= menu_item.name %></p>
+                            <div class="menuitems" >
+                                <p class="menuitems-name"><%= menu_item.name %></p>
                                 <% if links.check_menu_item(menu.id,menu_item.id) %>
                                     <%= form_with(url: "/link_menu_items/#{menu.id}/#{menu_item.id}", method: "delete") do %>
                                         <%= check_box_tag(name="completed", value=nil, checked=true, class: "MenuItem-checkbox", onclick: "this.form.submit()") %>
@@ -39,4 +38,3 @@
     <% end %>
 
 </section>
-</main>

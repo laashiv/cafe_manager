@@ -1,15 +1,15 @@
-<section class = "sales-report" >
+<section class="sales-report" >
 
     <% total_count = 0 %>
     <% total_amount = 0 %>
 
     <% for date in (orders.last.date).downto(orders.first.date) %>
-        <div class = "datewise-report">
-            <p class = "sales-date">
+        <div class="datewise-report">
+            <p class="sales-date">
                 <% if date == Date.today %>
-                    <p class = "today">Today</p>
+                    <p class="today">Today</p>
                 <% elsif date == Date.today-1 %>
-                    <p class = "yesterday">Yesterday</p>
+                    <p class="yesterday">Yesterday</p>
                 <% else %>
                     <%= date.to_s(:short) %>
                 <% end %>
@@ -18,9 +18,9 @@
             <% count = 0 %>
 
             <% orders.each do |order| %>
-                <div class = "report">
+                <div class="report">
                     <% if order.date == date %>
-                        <div class = "report-list">
+                        <div class="report-list">
                             <p>#chefoodu$00</p>
                             <p class="sales-report-id"><%= order.id %></p>
                             <p>TOTAL:</p>
@@ -35,11 +35,11 @@
                 </div>
             <% end %>
 
-            <div class = "report-list-datewise">
+            <div class="report-list-datewise">
                 <% if count > 0 %>
                     <div style="display: flex">
-                        <p style = "padding-left: 10px">Orders Taken: </p>
-                        <p class = "date-wise-count"><%= count %></p>
+                        <p style="padding-left: 10px">Orders Taken: </p>
+                        <p class="date-wise-count"><%= count %></p>
                     </div>
                     <div class="daywise-total">
                         <p style="padding-left: 10px">Sales: </p>

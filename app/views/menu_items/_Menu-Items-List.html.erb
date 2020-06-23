@@ -1,15 +1,15 @@
- <section style = "padding-top: 80px">
+ <section style="padding-top: 9.77vh">
     <% menu_items.each do |menu_item| %>
-        <div class = "menuitems-container">
+        <div class="menuitems-container">
 
-            <p class = "menu-item-name"><%= menu_item.name %></p>
-            <p class = "menu-item-amount"><%= menu_item.price %></p>
+            <p class="menu-item-name"><%= menu_item.name %></p>
+            <p class="menu-item-amount"><%= menu_item.price %></p>
 
-            <div class = "dropdown">
-                <button class = "dropbtn">
-                    <i id = "edittext" class = "fas fa-pencil-alt fa-2x" aria-hidden = "true"></i>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <i id="edittext" class="fas fa-pencil-alt fa-2x" aria-hidden = "true"></i>
                 </button>
-                <div class = "dropdown-content">
+                <div class="dropdown-content">
                     <%= form_with(url: "/menu_items/#{menu_item.id}", method: "put", class: "change-price") do %>
                         <%= text_field_tag("price", nil, class: "edit-price", placeholder: "increase amount?") %>
                         <%= submit_tag("change", class: "edit-price-button") %>
@@ -19,7 +19,7 @@
 
             <%= form_with(url: "/menu_items/#{menu_item.id}", method: "delete") do %>
                 <button style="background-color:Transparent;border:none" type = submit>
-                    <i  id = "menuitem-delete" class = "fas fa-trash" aria-hidden = "true" ></i>
+                    <i  id="menuitem-delete" class="fas fa-trash" aria-hidden = "true" ></i>
                 </button>
             <% end %>
 

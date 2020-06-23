@@ -3,13 +3,8 @@
   margin-left: auto;
   margin-top: auto;
   min-height: 100%;
+  /*overflow-y: scroll;*/
 }
-
-/*.order-wrapper {
-  height: 100%;
-  width: 100%;
-  margin-bottom: -50px;
-}*/
 
 .admin-main::before {
   content: "";
@@ -23,13 +18,9 @@
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  opacity: 0.3;
+  opacity: 0.4;
   z-index: -1;
 }
-
-/*.admin-main {
-  background-color: grey;
-}*/
 
 .toggle-btn {
   cursor: pointer;
@@ -174,11 +165,18 @@
   padding-top: 1.22vh;
 }
 
+.menu-items-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
 .Add-Menu {
   display: flex;
-  padding-left: 91.57vh;
+  /*padding-left: 91.57vh;*/
   margin-top: 18.31vh;
   height: 6.1vh;
+  justify-content: center;
+  /*background: inherit;*/
 }
 
 .Menu-Name {
@@ -200,17 +198,22 @@
 }
 
 .Menus-Available {
-  margin-left: 73.26vh;
+  /*margin-left: 73.26vh;*/
   margin-top: 12.21vh;
   font-size: 1.95vh;
   color: rgb(19, 19, 63);
   height: 2.93vh;
   align-items: center;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Menus-Available-active {
-  margin-left: 73.26vh;
+  /*margin-left: 73.26vh;*/
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 18.31vh;
   font-size: 1.95vh;
   color: rgb(19, 19, 63);
@@ -227,8 +230,11 @@
   border-radius: 2.44vh;
   color: black;
   margin-top: 1.22vh;
-  margin-right: 48.84vh;
+  /*margin-right: 48.84vh;*/
   align-items: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .menus-List:hover {
@@ -262,8 +268,11 @@
   border-radius: 2.44vh;
   color: black;
   margin-top: 1.22vh;
-  margin-right: 48.84vh;
+  /*margin-right: 48.84vh;*/
   align-items: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .menus-list:hover {
@@ -315,9 +324,10 @@
 
 .Add-Menu-item {
   display: flex;
-  padding-left: 38.73vh;
+  /*padding-left: 38.73vh;*/
   margin-top: 18.31vh;
   height: 6.1vh;
+  justify-content: center;
 }
 
 .Menu-item-Name {
@@ -441,8 +451,11 @@
 .menuitems-container {
   display: flex;
   margin-top: 1.46vh;
-  margin-left: 48.84vh;
-  margin-right: 61.05vh;
+  /*margin-left: 48.84vh;
+  margin-right: 61.05vh;*/
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
   border-radius: 2.44vh;
   border: 2px solid rgb(54, 52, 52);
   font-size: 2.93vh;
@@ -575,7 +588,8 @@
 }
 
 .pending-orders {
-  padding-left: 97.68vh;
+  /*padding-left: 97.68vh;*/
+  text-align: center;
   font-size: 4.4vh;
   font-weight: 400;
   font-family: sans-serif;
@@ -583,20 +597,23 @@
 }
 
 .pending-text {
-  padding-left: 500px;
+  /*padding-left: 500px;*/
   font-size: 24px;
   padding-top: 30px;
+  text-align: center;
 }
 
 .deliver-text {
-  padding-left: 61.05vh;
+  /*padding-left: 61.05vh;*/
   font-size: 2.93vh;
   padding-top: -6.1vh;
+  text-align: center;
 }
 
 .delivered-orders {
   padding-top: 6.1vh;
-  padding-left: 97.68vh;
+  /*padding-left: 97.68vh;*/
+  text-align: center;
   font-size: 4.4vh;
   font-weight: 400;
   font-family: sans-serif;
@@ -605,7 +622,7 @@
 }
 
 .not-delivered {
-  padding-left: 85.47vh;
+  padding-left: 75.47vh;
 }
 
 .order-items-name {
@@ -704,8 +721,11 @@
 .user-list-container {
   display: flex;
   margin-top: 1.46vh;
-  margin-left: 42.73vh;
-  margin-right: 61.05vh;
+  /*margin-left: 42.73vh;
+  margin-right: 61.05vh;*/
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 2.44vh;
   border: 2px solid rgb(54, 52, 52);
   font-size: 2.93vh;
@@ -751,19 +771,21 @@
 }
 
 .dates {
-  padding-left: 55.36vh;
+  /*padding-left: 55.36vh;*/
   padding-top: 18.31vh;
   font-size: 2.93vh;
   align-items: stretch;
   display: flex;
+  justify-content: center;
 }
 
 .dates-sales {
-  padding-left: 75.47vh;
+  /*padding-left: 75.47vh;*/
   padding-top: 18.31vh;
   font-size: 2.93vh;
   align-items: stretch;
   display: flex;
+  justify-content: center;
 }
 
 .start-date {
@@ -797,9 +819,12 @@
 .datewise-report {
   background: rgb(141, 228, 206);
   margin-top: 2.44vh;
-  width: 122.1vh;
+  /*width: 122.1vh;*/
   border-radius: 2.44vh;
   border: 2px solid rgb(54, 52, 52);
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .datewise-report:hover {
@@ -808,7 +833,7 @@
 
 .sales-report {
   margin-top: 12.21vh;
-  padding-left: 61.05vh;
+  /*padding-left: 61.05vh;*/
 }
 
 .report {
@@ -885,8 +910,11 @@
 
 .datewise-stats {
   margin-top: 12.21vh;
-  margin-left: 61.05vh;
-  width: 122.1vh;
+  /*margin-left: 61.05vh;
+  width: 122.1vh;*/
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
   background: rgb(104, 36, 144);
 }
 
@@ -938,10 +966,6 @@
   justify-content: center;
 }
 
-.invoice-btn {
-  text-decoration: none;
-}
-
 #print {
   margin-left: 8em;
 }
@@ -949,7 +973,6 @@
 .invoice-main {
   margin: 0;
   padding: 0;
-
   background-color: #fda674;
   font-family: "Source Sans Pro", "Helvetica", sans-serif;
   letter-spacing: 0.18vh;

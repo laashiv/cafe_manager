@@ -21,7 +21,7 @@
                         <% end %>
                     <% end %>
                     <div class="invoice">
-                        <button><%= link_to "INVOICE" , "/invoice?id=#{order.id}" %></button>
+                        <%= link_to "<button>INVOICE</button>".html_safe, "/invoice?id=#{order.id}" %>
                     </div>
                     <p class="order-id">#chefoodu$<%= order.id %></p>
                     <p class="order-date"><%= order.date.to_s(:short) %></p>
