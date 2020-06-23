@@ -1,20 +1,20 @@
-<section style="padding-top: 150px">
+<section style="padding-top: 18.31vh">
 
     <% users.each do |user| %>
         <% if user.role == "clerk" %>
             <div class="user-list-container">
-                <div style="width: 300px">
+                <div style="width: 36.63vh">
                     <p class="user-id"><%= user.id %></p>
                     <div style="display: flex">
-                        <p style="padding-left: 10px">Username:</p>
+                        <p style="padding-left: 1.22vh">Username:</p>
                         <p class="user-name"><%= user.name %></p>
                     </div>
                     <div style="display: flex">
-                        <p style="padding-left: 10px">Mail:</p>
+                        <p style="padding-left: 1.22vh">Mail:</p>
                         <p class="user-mail"><%= user.email %></p>
                     </div>
                 </div>
-                <div style="padding-left: 50px">
+                <div style="padding-left: 6.11vh">
                     <%= form_with(url: "/users/#{user.id}", method: "put") do %>
                         <%= submit_tag("Make As Customer" , class: "change-role") %>
                     <% end %>

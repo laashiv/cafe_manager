@@ -4,7 +4,7 @@
         <div class=<%= menu.is_active? ? "menus-List":"menus-list" %> >
             <p class="menu-name"><%= menu.name %></p>
             <% if menu.is_active? %>
-                <p style="font-weight: 400, font-size: 24px, padding-left: 20px"> (active) </p>
+                <p style="font-weight: 400, font-size: 2.93vh, padding-left: 2.44vh"> (active) </p>
             <% end %>
             <div class="menu-actions">
                 <%= form_with(url: "/menus/#{menu.id}", method: "delete") do %>

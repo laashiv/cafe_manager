@@ -38,16 +38,16 @@
             <div class="report-list-datewise">
                 <% if count > 0 %>
                     <div style="display: flex">
-                        <p style="padding-left: 10px">Orders Taken: </p>
+                        <p style="padding-left: 1.22vh">Orders Taken: </p>
                         <p class="date-wise-count"><%= count %></p>
                     </div>
                     <div class="daywise-total">
-                        <p style="padding-left: 10px">Sales: </p>
+                        <p style="padding-left: 1.22vh">Sales: </p>
                         <i class="fas fa-rupee-sign"></i>
                         <p class="date-wise-total"><%= (sum).round(1) %></p>
                     </div>
                 <% else %>
-                    <p style="padding-left: 400px">No Orders Taken</p>
+                    <p style="padding-left: 48.84vh">No Orders Taken</p>
                 <% end %>
             </div>
         </div>
@@ -59,12 +59,12 @@
 
     <div class="orderslist">
         <p class="total-orders">TOTAL ORDERS TAKEN:</p>
-        <p style="padding-left: 10px"><%= total_count %></p>
+        <p style="padding-left: 1.22vh"><%= total_count %></p>
     </div>
     <div class="orderslist">
         <p class="total-amount">SALES:</p>
         <i class="fas fa-rupee-sign"></i>
-        <p style="padding-left: 10px"><%= (total_amount).round(1) %></p>
+        <p style="padding-left: 1.22vh"><%= (total_amount).round(1) %></p>
     </div>
 
 </section>
