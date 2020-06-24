@@ -50,10 +50,10 @@
                         <% end %>
                     <% end %>
 
-                    <div style="display: flex">
+                    <div class="order-summary" style="display: flex">
                         <% if (order.delivered_at)  %>
-                            <p style="padding-left: 42.73vh">delivered at:</p>
-                            <p style="padding-left: 1.22vh"><%= order.delivered_at.to_s(:short) %></p>
+                            <p style="margin-left: 4vh">delivered at:  <%= order.delivered_at.to_s(:short) %></p>
+                            <!--<p style="padding-left: 1.22vh"><%= order.delivered_at.to_s(:short) %></p>-->
                             <p class="order-total">BILL :<%= order.total %></p>
                         <% else %>
                             <div class="bill-amount">
@@ -116,10 +116,10 @@
                         <% end %>
                     <% end %>
 
-                    <div style="display: flex">
+                    <div class="order-summary-delivered" style="display: flex">
                         <% if (order.delivered_at)  %>
-                            <p style="padding-left: 42.73vh">delivered at:</p>
-                            <p style="padding-left: 1.22vh"><%= order.delivered_at.to_s(:short) %></p>
+                            <p style="margin-left: 4vh">delivered at:  <%= order.delivered_at.to_s(:short) %></p>
+                            <!--<p style="padding-left: 1.22vh"><%= order.delivered_at.to_s(:short) %></p>-->
                             <div class="bill-amount-delivered">
                                 <p>BILL :</p>
                                 <i class="fas fa-rupee-sign"></i>

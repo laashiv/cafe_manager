@@ -602,7 +602,9 @@
 }
 
 .not-delivered {
-  padding-left: 75.47vh;
+  /*padding-left: 75.47vh;*/
+  text-align: right;
+  padding-right: 2vh;
 }
 
 .order-items-name {
@@ -626,6 +628,7 @@
 
 .order-items {
   display: flex;
+  justify-content: space-between;
   padding-left: 1.22vh;
   padding-top: 0.24vh;
   background: rgb(134, 180, 207);
@@ -661,32 +664,47 @@
 
 .order-items-quantity {
   display: flex;
-  margin-left: 61.05vh;
-  width: 25.03vh;
+  /*margin-left: 61.05vh;
+  width: 25.03vh;*/
 }
 
 .order_item.quantity {
   margin-left: 6.1vh;
 }
 
+.order-summary-delivered {
+  justify-content: space-between;
+}
+
 .bill-amount {
-  padding-left: 85.47vh;
+  /*padding-left: 85.47vh;*/
   display: flex;
+}
+
+.order-items-totalprice {
+  padding-right: 2vh;
 }
 
 .order-items-totalprice .fa-rupee-sign {
   font-size: 2.93vh;
   font-weight: 501;
-  padding-left: 0.61vh;
+  /*padding-left: 0.61vh;*/
 }
 
 .bill-amount .fa-rupee-sign {
   margin-left: 1.22vh;
 }
 
+.order-summary {
+  justify-content: flex-end;
+  padding-right: 2vh;
+}
+
 .bill-amount-delivered {
-  padding-left: 8.55vh;
+  /*padding-left: 8.55vh;*/
   display: flex;
+  padding-right: 2vh;
+  /*justify-content: right;*/
 }
 .bill-amount-delivered .fa-rupee-sign {
   margin-left: 1.22vh;
