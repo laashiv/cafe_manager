@@ -1,3 +1,49 @@
+<% if flash[:coupon_error] %>
+	<script type="text/javascript">
+    $(document).ready(function () {
+      $('#modalPush').modal('show');
+    });
+	</script>
+	<div class="modal fade" id="modalPush" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  	<div class="modal-dialog modal-notify modal-info" role="document">
+    	<div class="modal-content text-center">
+      	<div class="modal-header d-flex justify-content-center" style="background-color: #cc0000">
+        	<p class="heading" style="color: white; font-size: 22px; font-weight: 500">Coupon Failed !</p>
+      	</div>
+      	<div class="modal-body">
+        	<i class="fas fa-exclamation-triangle fa-4x" style="color: #cc0000"></i>
+        	<p style="margin-top: 20px"><%= flash[:coupon_error] %></p>
+      	</div>
+      	<div class="modal-footer justify-content-center">
+					<a type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal" style="font-weight: 540">OK</a>
+      	</div>
+    	</div>
+  	</div>
+	</div>
+<% elsif flash[:coupon_success] %>
+	<script type="text/javascript">
+    $(document).ready(function () {
+      $('#modalPush').modal('show');
+    });
+	</script>
+	<div class="modal fade" id="modalPush" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  	<div class="modal-dialog modal-notify modal-info" role="document">
+    	<div class="modal-content text-center">
+      	<div class="modal-header d-flex justify-content-center" style="background-color: #0099ff">
+        	<p class="heading" style="color: white; font-size: 22px; font-weight: 500">Coupon Applied !</p>
+      	</div>
+      	<div class="modal-body">
+        	<i class="fas fa-gift fa-4x" style="color: #0099ff"></i>
+        	<p style="margin-top: 20px"><%= flash[:coupon_success] %></p>
+      	</div>
+      	<div class="modal-footer justify-content-center">
+					<a type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal" style="font-weight: 540">OK</a>
+      	</div>
+    	</div>
+  	</div>
+	</div>
+<% end %>
+
 <% if !(@count == 0) %>
   <main class="cart-main">
     <a href="/cdash" class="close"></a>
@@ -40,12 +86,16 @@
               <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Coupon code</div>
               <div class="p-4">
                 <p class="font-italic mb-4">If you have a coupon code, please enter it in the box below</p>
+                <%= form_with(class: "coupan-form", url: "/cart_items", method: "post") do %>
                 <div class="input-group mb-4 border rounded-pill p-2">
-                  <input type="text" placeholder="Apply coupon" aria-describedby="button-addon3" class="form-control border-0">
-                  <div class="input-group-append border-0">
-                    <button id="button-addon3" type="button" class="btn btn-dark px-4 rounded-pill"><i class="fa fa-gift mr-2"></i>Apply coupon</button>
-                  </div>
+                    <input id="coupan-text" name="coupon" value="<%= @value %>" type="text" placeholder="Apply coupon" aria-describedby="button-addon3" class="form-control border-0">
+                    <div class="input-group-append border-0">
+                      <button id="button-coupan" type="submit" class="btn btn-dark px-4 rounded-pill">
+                        <i class="fa fa-gift mr-2"></i>Apply coupon
+                      </button>
+                    </div>
                 </div>
+                <% end %>
               </div>
               <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Instructions for delivery boy</div>
               <div class="p-4">
@@ -78,6 +128,10 @@
                       <%= submit_tag("Place Order", class: "btn btn-dark rounded-pill py-2 btn-block") %>
                     <% end %>
                 </div>
+                <p class="font-italic mb-4">
+                  * Make sure to apply coupan only after finalising your order.
+                  Any change in order involuntarily removes applied coupan *
+                </p>
               </div>
             </div>
           </div>

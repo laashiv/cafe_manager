@@ -108,6 +108,10 @@ button.text-dark {
   background-color: transparent;
 }
 
+#button-coupan {
+  color: white;
+}
+
 .close {
   position: fixed;
   right: 3.91vh;

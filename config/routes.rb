@@ -18,8 +18,7 @@ Rails.application.routes.draw do
 
   get "/about" => "about#index"
 
-  #get "/cart_items" => "cart_items#index"
-  #delete "/cart_items" => "cart_items#destroy"
+  post "/cart_items" => "cart_items#coupancheck", as: :coupon_path
 
   resources :menus
   resources :orders

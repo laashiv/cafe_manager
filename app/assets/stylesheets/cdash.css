@@ -288,6 +288,7 @@
 }
 
 .swiper-slide {
+  margin-top: 120px;
   background-position: center;
   background-size: cover;
   width: 31.61vh;
@@ -349,6 +350,9 @@
   .menu-items {
     margin-top: 35%;
     margin-left: 30%;
+  }
+  .swiper-slide {
+    margin-top: 160px;
   }
 }
 

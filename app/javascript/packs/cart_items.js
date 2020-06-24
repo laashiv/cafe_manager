@@ -14,16 +14,9 @@ $(document).ready(function () {
       $("#subtotal").text($subtotal.toFixed(1));
       $("#total").text($total.toFixed(1));
       $("#leftform" + id).submit();
+      $("#coupan-text").val("");
     }
   });
-  /*$(".leftarrow").mousedown(function () {
-    var id = $(this).attr("id");
-    $("#" + id).css("BoxShadow", "0px 0px 0px gray");
-  });
-  $(".leftarrow").mouseup(function () {
-    var id = $(this).attr("id");
-    $("#" + id).css("BoxShadow", "0px 2px 1px gray");
-  });*/
   $(".rightarrow").click(function () {
     var id = $(this).attr("id");
     $count = $("#quantity-counter" + id).html();
@@ -37,14 +30,7 @@ $(document).ready(function () {
       $("#subtotal").text($subtotal.toFixed(1));
       $("#total").text($total.toFixed(1));
       $("#rightform" + id).submit();
+      $("#coupan-text").val("");
     }
   });
-  /*$(".rightarrow").mousedown(function () {
-    var id = $(this).attr("id");
-    $("#" + id).css("BoxShadow", "0px 0px 0px gray");
-  });
-  $(".rightarrow").mouseup(function () {
-    var id = $(this).attr("id");
-    $("#" + id).css("BoxShadow", "0px 2px 1px gray");
-  });*/
 });
