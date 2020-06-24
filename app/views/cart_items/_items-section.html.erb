@@ -9,7 +9,6 @@
         <% else %>
           <img src="<%= asset_path('no-image.jpg') %>" class="cart-no-image" width="70" height="110"/>
         <% end %>
-        <!--<img src="test.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">-->
         <div class="ml-3 d-inline-block align-middle">
           <h5 class="mb-0">
             <a id="item-name" href="#" class="text-dark d-inline-block align-middle">
@@ -26,7 +25,6 @@
       <strong id="price<%= citem.id %>" class="citem-price"><%= citem.menu_item_price %></strong>
     </td>
     <td class="border-0 align-middle">
-      <!--<strong><%= citem.quantity %></strong>-->
       <div id="clicker">
         <%= form_with(url: "/cart_items/#{citem.id}?sign=0", method: "put", id: "leftform#{citem.id}") do %>
           <div id="<%= citem.id %>" class="leftarrow">&#9668;</div>
@@ -39,11 +37,9 @@
     </td>
     <td class="border-0 align-middle">
       <%= form_with(url: "/cart_items/#{citem.id}", method: :delete) do %>
-      <!--<a href="/cart_items/<%= citem.id %>" data-method="delete">-->
         <button type="submit" class="text-dark">
           <i class="fas fa-trash"></i>
         </button>
-      <!--</a>-->
       <% end %>
     </td>
   </tr>

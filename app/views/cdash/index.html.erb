@@ -36,15 +36,6 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
       <div class="container-fluid">
         <a href="#" class="navbar-brand"><img src="<%= asset_path('logo.png') %>" /></a>
-        <!--<p class="user-welcome">Welcome <%= @current_user.name %> !</p>-->
-        <!--<button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>-->
         <div class="navbar" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
@@ -98,7 +89,6 @@
           <p class="Category-title" id="<%= item.category.split().join('_') %>"><%= item.category %></p>
         </div>
         <%= render partial: "menu-grid-section", locals: {
-          #menu_items: MenuItem.where(category: item.category),
           menu_items: mitems.where(category: item.category),
           category: item.category }
         %>

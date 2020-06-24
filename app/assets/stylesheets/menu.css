@@ -3,7 +3,6 @@
   margin-left: auto;
   margin-top: auto;
   min-height: 100%;
-  /*overflow-y: scroll;*/
 }
 
 .admin-main::before {
@@ -602,7 +601,6 @@
 }
 
 .not-delivered {
-  /*padding-left: 75.47vh;*/
   text-align: right;
   padding-right: 2vh;
 }
@@ -664,8 +662,6 @@
 
 .order-items-quantity {
   display: flex;
-  /*margin-left: 61.05vh;
-  width: 25.03vh;*/
 }
 
 .order_item.quantity {
@@ -677,7 +673,6 @@
 }
 
 .bill-amount {
-  /*padding-left: 85.47vh;*/
   display: flex;
 }
 
@@ -688,7 +683,6 @@
 .order-items-totalprice .fa-rupee-sign {
   font-size: 2.93vh;
   font-weight: 501;
-  /*padding-left: 0.61vh;*/
 }
 
 .bill-amount .fa-rupee-sign {
@@ -701,10 +695,8 @@
 }
 
 .bill-amount-delivered {
-  /*padding-left: 8.55vh;*/
   display: flex;
   padding-right: 2vh;
-  /*justify-content: right;*/
 }
 .bill-amount-delivered .fa-rupee-sign {
   margin-left: 1.22vh;
