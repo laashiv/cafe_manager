@@ -61,7 +61,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input">
-						<%= form.password_field :password, id: "password-field", type: "password", class: "input100", placeholder: "Password" %>
+						<%= form.password_field :password, id: "password-field", type: "password", class: "input100", placeholder: "Create Password" %>
 						<% if flash[:password_error] %>
 							<span class="alert-validate" data-validate = "<%= flash[:password_error] %>"><i class="fas fa-info-circle"></i></span>
 						<% end %>
@@ -86,7 +86,7 @@
 							<i class="fas fa-lock" aria-hidden="true"></i>
 						</span>
 						<% if !flash[:re_password_error] && !flash[:mismatch_error] %>
-							<span toggle="#re-password-field" class="fas fa-fw fa-eye-slash field-icon toggle-password" id="hide"></span>
+							<span toggle="#re-password-field" class="fas fa-fw fa-eye-slash field-icon toggle-password" id="re-hide"></span>
 						<% end %>
 					</div>
 
