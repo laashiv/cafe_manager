@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin:700);
 .cdash-main {
   position: relative;
+  overflow: hidden;
 }
 
 .cdash-main::before {
