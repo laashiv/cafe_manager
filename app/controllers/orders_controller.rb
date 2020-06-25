@@ -103,7 +103,22 @@ class OrdersController < ApplicationController
     cart.no_of_items = 0
     cart.total = 0
     cart.save!
-    flash[:order_success] = "Your order with Order Id: #chefoodu$#{order.id} has been placed successfully"
+    if session[:coupon]
+      coupon = session[:coupon]
+      if coupon == "CHEFOODU30"
+        coupon_text = " and Rs 30 will be credited to your account on order delivery"
+      elsif coupon == "CHEFOODU100"
+        coupon_text = " and Rs 100 will be credited to your account on order delivery"
+      elsif coupon == "CHEFOODU150"
+        coupon_text = " and Rs 150 will be credited to your account on order delivery"
+      elsif coupon == "CHEFOODU200"
+        coupon_text = " and Rs 200 will be credited to your account on order delivery"
+      end
+    else
+      coupon_text = ""
+    end
+
+    flash[:order_success] = "Your order with Order Id: #chefoodu$#{order.id} has been placed successfully" + coupon_text
     redirect_to "/cdash"
   end
 end
